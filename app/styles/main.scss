@@ -20,7 +20,24 @@ body {
 
 /* Custom page header */
 .header {
-	color: black;
+	color: white;
+	position: absolute;
+	z-index: 1;
+	left: 0;
+	right: 0;
+	text-align: center;
+	margin-top: 10px;
+	letter-spacing: 0.1em;
+	.company-name{
+		text-transform: uppercase;
+		display: block;
+		font-weight: bold;
+		font-size: 20px;
+	}
+	.company-motto{
+		margin-top: 15px;
+		display: block;
+	}
 }
 
 .wrapper{
@@ -32,6 +49,7 @@ body {
 
 .main-view{
 	height: 600vh;
+	letter-spacing: 0.1em;
 }
 
 .header,
@@ -145,6 +163,22 @@ body {
 .footer {
 	color: white;
 	background-color: black;
+	padding: 50px;
+	text-align: center;
+	letter-spacing: 0.1em;
+	.address{
+		text-transform: uppercase;
+	}
+	.phone-number{
+		margin-top: 5px;
+	}
+	.address, .phone-number{
+		display: block;
+	}
+	a{
+		color: white;
+		text-decoration: none;
+	}
 }
 
 /* Responsive: Portrait tablets and up */

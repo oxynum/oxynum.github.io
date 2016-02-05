@@ -13,6 +13,7 @@ angular.module('oxynum2016App')
   	$scope.pageClass = 'main-view';
 
 	$scope.scrollTo = function(id) {
-		$document.scrollToElementAnimated(angular.element(document.getElementById(id)), 0, 1000, null);
+		var memberID = document.getElementById(id);
+		$document.scrollToElementAnimated(angular.element(memberID), 0, 1000, null);
 	}
   }]);
