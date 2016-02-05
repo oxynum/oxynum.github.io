@@ -8,10 +8,11 @@
  * Controller of the oxynum2016App
  */
 angular.module('oxynum2016App')
-  .controller('MainCtrl', function () {
-    this.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma'
-    ];
-  });
+  .controller('MainCtrl', ['$scope', '$document', function ($scope, $document) {
+
+  	$scope.pageClass = 'main-view';
+
+	$scope.scrollTo = function(id) {
+		$document.scrollToElementAnimated(angular.element(document.getElementById(id)), 0, 1000, null);
+	}
+  }]);
