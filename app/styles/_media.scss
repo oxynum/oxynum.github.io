@@ -1,4 +1,7 @@
 @media only screen and (max-width : 1024px){
+	.main-view{
+		height: 100vh;
+	}
 	.team-member {
 		&.thomas, &.hugo, &.pierrick, &.sandrine{
 			background-position: 12%;

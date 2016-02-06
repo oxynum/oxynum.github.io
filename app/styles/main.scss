@@ -26,6 +26,10 @@ body {
 	margin: 0;
 }
 
+* {
+  box-sizing: border-box; /* pour maîtriser width et flex-basis */
+}
+
 /* Custom page header */
 .header {
 	color: white;
