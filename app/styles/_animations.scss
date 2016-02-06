@@ -1,69 +1,35 @@
 // Bouncing elements
 .bounce{
-	animation-name: bounce;
-	animation-duration: 1s;
-	animation-iteration-count: infinite;
+	@include animation-name(bounce);
+	@include animation-duration(1s);
+	@include animation-iteration-count(infinite);
 }
 
-// down-arrow animation
-@keyframes bounce {
+@include keyframes(bounce){
 	0%, 50%, 100% {
-		transform: translateY(0);
-		-webkit-transform: translateY(0);
+		@include transform(translateY(0));
 	}
 	50% {
-		transform: translateY(-10px);
-		-webkit-transform: translateY(-10px);
+		@include transform(translateY(-10px));
 	}
 }
 
-// Logo
-.logo-wrapper{
-	overflow: hidden;
-	width: 200px;
-	height: 200px;
-	@include border-radius(50%);
-	box-shadow: 0px 0px 0px 40px rgba(42, 137, 192, 1) inset;
-	margin: 0 auto;
-}
-
-.clouds-position{
-  width: 100%;
-  height: 30px;
-  bottom: 0px;
-  width: 100%;
-  height: 20px;
-  bottom: 0;
-  display: block;
-  margin: 150px auto;
-  position: relative;
-}
-
-.index{
-  z-index: 2;
-  position: absolute;
-  left: 120px;
-  top: -10px;
-  font-size: 40px;
-  color: #2A89C0;
-  font-family: 'Helvetica';
-}
-
+// Clouds moving animation
 @include keyframes(leftToRight){
-	0%   { left: -100px; }
-    50%   { left: -20px; }
-    100% { left: -100px; }
+	0% { left: -60px; }
+	50% { left: -20px; }
+	100% { left: -60px; }
 }
 
-@include keyframes(rightToLeft) {
-    0%   { right: -100px; }
-    50%   { right: -20px; }
-    100% { right: -100px; }
+@include keyframes(rightToLeft){
+	0% { right: -60px; }
+	50% { right: -20px; }
+	100% { right: -60px; }
 }
 
 .left-to-right {
 	@include animation-name(leftToRight);
-	@include animation-duration(18s);
+	@include animation-duration(14s);
 	@include animation-iteration-count(infinite);
 	@include animation-timing-function(ease-out);
 	@include animation-fill-mode(forwards);
@@ -71,55 +37,25 @@
 
 .right-to-left {
 	@include animation-name(rightToLeft);
-	@include animation-duration(20s);
+	@include animation-duration(18s);
 	@include animation-iteration-count(infinite);
 	@include animation-timing-function(ease-out);
 	@include animation-fill-mode(forwards);
 }
 
-.img-cloud{
-  width: 400px;
-  height: 30px;
-  display: block;
-  position: absolute;
-  background-size: contain;
-  background-repeat: repeat;
-  background-position: center;
+// Blink animation
+@include keyframes(blink) {
+	from {
+		opacity: 1;
+	}
+	to {
+		opacity: .2;
+	}
 }
 
-span.img-cloud.top {
-    top: -10px;
-    height: 40px;
-    z-index: 1;
-    left: -40px;
-}
-
-span.img-cloud.mid-top {
-    height: 35px;
-    top: 0px;
-    z-index: 2;
-}
-
-span.img-cloud.low-top {
-    height: 35px;
-    top: 5px;
-    z-index: 2;
-}
-
-span.img-cloud.low-bottom {
-    height: 35px;
-    top: 10px;
-    z-index: 3;
-}
-
-span.img-cloud.mid-bottom {
-    height: 35px;
-    top: 14px;
-    z-index: 3;
-}
-
-span.img-cloud.bottom {
-    top: 20px;
-    height: 40px;
-    z-index: 4;
+.blink{
+  @include animation-duration(1000ms);
+  @include animation-name(blink);
+  @include animation-iteration-count(infinite);
+  @include animation-direction(alternate);
 }

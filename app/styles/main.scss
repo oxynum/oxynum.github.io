@@ -75,7 +75,7 @@ body {
 	left: 0;
 	right: 0;
 	bottom: 0;
-	background-color: rgba(0, 0, 0, .7);
+	background-color: rgba(0, 0, 0, .9);
 	.container{
 		position: relative;
    	height: 100%;
@@ -87,9 +87,62 @@ body {
 			color: white;
 			padding: 20px;
 			transform-origin: center;
-			transform: translateX(50%);
-			transform: translateY(50%);
+			@include transform(translateX(50%));
+			@include transform(translateY(50%));
    	}
+	}
+}
+
+.logo-wrapper{
+	overflow: hidden;
+	width: 200px;
+	height: 200px;
+	@include border-radius(50%);
+	box-shadow: 0px 0px 0px 40px rgba(42, 137, 192, 1) inset;
+	margin: 0 auto;
+}
+
+.clouds-position{
+	width: 100%;
+	height: 30px;
+	bottom: 0px;
+	width: 100%;
+	height: 20px;
+	bottom: 0;
+	display: block;
+	margin: 150px auto;
+	position: relative;
+}
+
+.index{
+	z-index: 2;
+	position: absolute;
+	left: 120px;
+	top: -10px;
+	font-size: 40px;
+	color: #2A89C0;
+	font-family: 'Helvetica';
+}
+
+.img-cloud{
+	width: 400px;
+	height: 30px;
+	display: block;
+	position: absolute;
+	background-size: contain;
+	background-repeat: repeat;
+	background-position: center;
+	&.top {
+		height: 35px;
+		top: 0px;
+		z-index: 2;
+		@include transform(scale(3));
+	}
+	&.bottom {
+		height: 35px;
+		top: 18px;
+		z-index: 3;
+		@include transform(scale(2));
 	}
 }
 
