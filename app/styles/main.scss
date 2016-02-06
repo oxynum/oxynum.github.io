@@ -11,6 +11,9 @@
 // Colors
 @import "colors";
 
+// Helpers
+@import "helpers";
+
 body {
 	padding: 0;
 	min-height: 100%;
@@ -24,10 +27,6 @@ html{
 html,
 body {
 	margin: 0;
-}
-
-* {
-  box-sizing: border-box; /* pour maîtriser width et flex-basis */
 }
 
 /* Custom page header */
