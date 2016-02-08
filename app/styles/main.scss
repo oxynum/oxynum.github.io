@@ -90,8 +90,8 @@ body {
 			color: white;
 			padding: 20px;
 			transform-origin: center;
-			@include transform(translateX(50%));
-			@include transform(translateY(50%));
+			@include transform(translateY(0));
+			@include transform(translate3D(0, 50%, 0));
    	}
 	}
 }
@@ -118,13 +118,11 @@ body {
 }
 
 .index{
-	z-index: 2;
 	position: absolute;
 	left: 120px;
 	top: -10px;
 	font-size: 40px;
 	color: #2A89C0;
-	font-family: 'Helvetica';
 }
 
 .img-cloud{
@@ -138,13 +136,11 @@ body {
 	&.top {
 		height: 35px;
 		top: 0px;
-		z-index: 2;
 		@include transform(scale(3));
 	}
 	&.bottom {
 		height: 35px;
 		top: 18px;
-		z-index: 3;
 		@include transform(scale(2));
 	}
 }
