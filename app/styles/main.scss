@@ -52,14 +52,13 @@ body {
 }
 
 .wrapper{
-	position: absolute;
 	width: 100%;
 	flex: 1 0 auto;
 	align-items: stretch;
 }
 
 .main-view{
-	height: 600vh;
+	//height: 600vh;
 	letter-spacing: 0.1em;
 }
 
@@ -196,6 +195,7 @@ body {
 	text-align: center;
 	color: white;
 	position: relative;
+	height: 100vh;
 	&.thomas {
 		background: linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)), url("../images/thomas.jpg");
 	}
@@ -241,7 +241,7 @@ body {
 }
 
 .full-screen {
-  height: 100%; /* makes panels the entire window height */
+  //height: 100%; /* makes panels the entire window height */
 }
 
 /* Custom page footer */
