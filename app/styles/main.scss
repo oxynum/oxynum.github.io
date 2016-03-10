@@ -133,14 +133,12 @@ body {
 	background-repeat: repeat;
 	background-position: center;
 	&.top {
-		height: 35px;
-		top: 0px;
-		@include transform(scale(3));
+		height: 75px;
+		top: -20px;
 	}
 	&.bottom {
-		height: 35px;
-		top: 18px;
-		@include transform(scale(2));
+		height: 55px;
+		top: 15px;
 	}
 }
 
