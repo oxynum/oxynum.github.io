@@ -195,22 +195,22 @@ body {
 	position: relative;
 	height: 100vh;
 	&.thomas {
-		background: linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)), url("../images/thomas.jpg");
+		background: linear-gradient(rgba(0, 0, 0, .4), rgba(0, 0, 0, .4)), url("../images/thomas.jpg");
 	}
 	&.hugo {
-		background: linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)), url("../images/hugo.jpg");
+		background: linear-gradient(rgba(0, 0, 0, .4), rgba(0, 0, 0, .4)), url("../images/hugo.jpg");
 	}
 	&.pierrick {
-		background: linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)), url("../images/pierrick.jpg");
+		background: linear-gradient(rgba(0, 0, 0, .4), rgba(0, 0, 0, .4)), url("../images/pierrick.jpg");
 	}
 	&.sandrine {
-		background: linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)), url("../images/sandrine.jpg");
+		background: linear-gradient(rgba(0, 0, 0, .4), rgba(0, 0, 0, .4)), url("../images/sandrine.jpg");
 	}
 	&.yvan {
-		background: linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)), url("../images/yvan.jpg");
+		background: linear-gradient(rgba(0, 0, 0, .4), rgba(0, 0, 0, .4)), url("../images/yvan.jpg");
 	}
 	&.rudy {
-		background: linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)), url("../images/rudy.jpg");
+		background: linear-gradient(rgba(0, 0, 0, .4), rgba(0, 0, 0, .4)), url("../images/rudy.jpg");
 	}
 	&.thomas, &.hugo, &.pierrick, &.sandrine, &.yvan, &.rudy{
 		background-position: center center;
