@@ -1,0 +1,31 @@
+@media only screen and (max-width : 1024px){
+	.team-member {
+		&.thomas, &.hugo, &.pierrick, &.sandrine{
+			background-position: 12%;
+		}
+		&.hugo{
+			background-position: 30%;
+		}
+		&.pierrick, &.sandrine{
+			background-position: left;
+		}
+		.go-down{
+			.next-member{
+				font-size: 12px;
+			}
+		}
+	}
+	.centered-content{
+		padding: 20px;
+		.name{
+			font-size: 40px;
+		}
+		.role, .quote{
+			font-size: 12px;
+		}
+	}
+	.footer{
+		padding: 30px;
+		font-size: 12px;
+	}
+}

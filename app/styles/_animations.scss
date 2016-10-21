@@ -1,0 +1,63 @@
+// Bouncing elements
+.bounce{
+	@include animation-name(bounce);
+	@include animation-duration(1s);
+	@include animation-iteration-count(infinite);
+}
+
+@include keyframes(bounce){
+	0%, 50%, 100% {
+		@include transform(translateY(0));
+		@include transform(translate3D(0, 0, 0));
+	}
+	50% {
+		@include transform(translateY(-10px));
+		@include transform(translate3D(0, -10px, 0));
+	}
+}
+
+// Clouds moving animation
+@include keyframes(leftToRight){
+	0% { left: -60px; }
+	50% { left: -20px; }
+	100% { left: -60px; }
+}
+
+@include keyframes(rightToLeft){
+	0% { right: -60px; }
+	50% { right: -20px; }
+	100% { right: -60px; }
+}
+
+.left-to-right {
+	@include animation-name(leftToRight);
+	@include animation-duration(14s);
+	@include animation-iteration-count(infinite);
+	@include animation-timing-function(ease-out);
+	@include animation-fill-mode(forwards);
+}
+
+.right-to-left {
+	@include animation-name(rightToLeft);
+	@include animation-duration(18s);
+	@include animation-iteration-count(infinite);
+	@include animation-timing-function(ease-out);
+	@include animation-fill-mode(forwards);
+}
+
+// Blink animation
+@include keyframes(blink) {
+	from {
+		opacity: 1;
+	}
+	to {
+		opacity: .2;
+	}
+}
+
+.blink{
+  @include animation-duration(1000ms);
+  @include animation-name(blink);
+  @include animation-iteration-count(infinite);
+  @include animation-direction(alternate);
+}
