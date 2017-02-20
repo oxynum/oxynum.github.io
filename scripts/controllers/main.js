@@ -12,7 +12,7 @@ angular.module('oxynum2016App')
 
   	$scope.pageClass = 'main-view';
   	$scope.welcome = true;
-    $scope.team = true;
+    $scope.team = false;
 
   	if (!sessionStorage.user) {
     	$scope.welcome = false;
