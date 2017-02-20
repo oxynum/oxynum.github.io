@@ -1,22 +1,26 @@
-<!-- <div class="wrapper-welcome" ng-class="{'inactive': welcome}">
-	<div class="container">
-		<div class="content">
-			<div class="logo-wrapper">
-				<div class="clouds-position">
-					<span style="background-image: url(images/cloud.svg)" class="img-cloud top left-to-right"></span>
-					<span class="index">2</span>
-					<span style="background-image: url(images/cloud.svg)" class="img-cloud bottom right-to-left"></span>
-				</div>
-			</div>
-			<button class="button-enter blink" ng-click="welcome = true">Entrer</button>
-		</div>
-	</div>
-</div> -->
+
 <div class="full-screen wrapper" role="main">
-	<div class="full-screen team-member thomas">
+	<div class="full-screen team-member pascal">
 		<div class="centered-content">
 			<div class="role">Open source contributor</div>
 			<div class="name">Thomas</div>
+			<div class="quote">
+				<p>
+					
+				</p>
+			</div>
+		</div>
+		<div class="go-down">
+			<span class="next-member">Pascal</span>
+			<div class="arrow-go-to bounce" ng-click="scrollTo('hugo');" title="Qui est Pascal ?"></div>
+		</div>
+	</div>
+  
+<div class="full-screen wrapper" role="main" ng-if="main.team">
+	<div class="full-screen team-member thomas">
+		<div class="centered-content">
+			<div class="role">Project Manager - Ecommerce Specialist</div>
+			<div class="name">Pascal</div>
 			<div class="quote">
 				<p>
 					
@@ -36,7 +40,7 @@
 			<div class="quote">
 				<p>
 					<span>Hugo, dessine-moi un mouton !</span>
-					<span>- C'est fait, mais j'ai aussi ajouté un loup, une bergerie et la prairie si besoin</span>
+					<span>- Done !</span>
 				</p>
 			</div>
 		</div>
