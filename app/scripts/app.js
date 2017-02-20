@@ -27,7 +27,7 @@ angular
       })
       .when('/team', {
         templateUrl: 'views/main.html',
-        controller: 'MainCtrl',
+        controller: 'AboutCtrl',
         controllerAs: 'main'
       })
       .otherwise({
