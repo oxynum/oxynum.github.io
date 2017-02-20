@@ -212,7 +212,10 @@ body {
 	&.rudy {
 		background: linear-gradient(rgba(0, 0, 0, .4), rgba(0, 0, 0, .4)), url("../images/rudy.jpg");
 	}
-	&.thomas, &.hugo, &.pierrick, &.sandrine, &.yvan, &.rudy{
+  &.pascal {
+		background: linear-gradient(rgba(0, 0, 0, .4), rgba(0, 0, 0, .4)), url("../images/pascal.jpg");
+	}
+	&.thomas, &.hugo, &.pierrick, &.sandrine, &.yvan, &.rudy, &.pascal{
 		background-position: center center;
 		background-size: cover;
 		background-repeat: no-repeat;
