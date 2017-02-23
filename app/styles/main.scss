@@ -214,6 +214,7 @@ body {
 	}
   &.pascal {
 		background: linear-gradient(rgba(0, 0, 0, .4), rgba(0, 0, 0, .4)), url("../images/pascal.jpg");
+		background-position: bottom center !important;
 	}
 	&.thomas, &.hugo, &.pierrick, &.sandrine, &.yvan, &.rudy, &.pascal{
 		background-position: center center;

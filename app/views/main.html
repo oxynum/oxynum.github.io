@@ -1,6 +1,10 @@
 
 <div class="full-screen wrapper" role="main">
-	<div class="full-screen team-member pascal">
+	
+</div>
+  
+<div class="full-screen wrapper" role="main">
+	<div class="full-screen team-member thomas">
 		<div class="centered-content">
 			<div class="role">Open source contributor</div>
 			<div class="name">Thomas</div>
@@ -10,20 +14,23 @@
 				</p>
 			</div>
 		</div>
-		<div class="go-down">
+		<div class="go-down" ng-if="team">
 			<span class="next-member">Pascal</span>
 			<div class="arrow-go-to bounce" ng-click="scrollTo('hugo');" title="Qui est Pascal ?"></div>
 		</div>
+		<div class="go-down" ng-if="!team">
+			<span class="next-member">Hugo</span>
+			<div class="arrow-go-to bounce" ng-click="scrollTo('hugo');" title="Qui est Hugo ?"></div>
+		</div>
 	</div>
-  
-<div class="full-screen wrapper" role="main" ng-if="main.team">
-	<div class="full-screen team-member thomas">
+
+	<div class="full-screen team-member pascal" ng-if="team">
 		<div class="centered-content">
-			<div class="role">Project Manager - Ecommerce Specialist</div>
+			<div class="role">Project Manager</div>
 			<div class="name">Pascal</div>
 			<div class="quote">
 				<p>
-					
+					Ecommerce Specialist
 				</p>
 			</div>
 		</div>
