@@ -16,11 +16,11 @@ angular.module('oxynum2016App')
 
   	if (!sessionStorage.user) {
     	$scope.welcome = false;
-    };
+    }
     sessionStorage.setItem("user", "on");
 
 	$scope.scrollTo = function(id) {
 		var memberID = document.getElementById(id);
 		$document.scrollToElementAnimated(angular.element(memberID), 0, 1000, null);
-	}
+	};
   }]);

@@ -18,7 +18,7 @@ angular
     'ngTouch',
     'duScroll'
   ])
-  .config(function ($routeProvider, $locationProvider) {
+  .config(function ($routeProvider) {
     $routeProvider
       .when('/', {
         templateUrl: 'views/main.html',
@@ -33,6 +33,4 @@ angular
       .otherwise({
         redirectTo: '/'
       });
-    // // use the HTML5 History API
-    // $locationProvider.html5Mode(true);
   });
