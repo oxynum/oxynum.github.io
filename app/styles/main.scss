@@ -193,6 +193,7 @@ body {
 	text-align: center;
 	color: white;
 	position: relative;
+	min-height: 750px;
 	height: 100vh;
 	&.thomas {
 		background: linear-gradient(rgba(0, 0, 0, .4), rgba(0, 0, 0, .4)), url("../images/thomas.jpg");
