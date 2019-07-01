@@ -198,6 +198,12 @@ body {
 	&.thomas {
 		background: linear-gradient(rgba(0, 0, 0, .4), rgba(0, 0, 0, .4)), url("../images/thomas.jpg");
 	}
+	&.jessica {
+		background: linear-gradient(rgba(0, 0, 0, .4), rgba(0, 0, 0, .4)), url("../images/jessica.jpg");
+	}
+	&.benoit {
+		background: linear-gradient(rgba(0, 0, 0, .4), rgba(0, 0, 0, .4)), url("../images/benoit.jpg");
+	}
 	&.hugo {
 		background: linear-gradient(rgba(0, 0, 0, .4), rgba(0, 0, 0, .4)), url("../images/hugo.jpg");
 	}
@@ -213,11 +219,10 @@ body {
 	&.rudy {
 		background: linear-gradient(rgba(0, 0, 0, .4), rgba(0, 0, 0, .4)), url("../images/rudy.jpg");
 	}
-  &.pascal {
+  	&.pascal {
 		background: linear-gradient(rgba(0, 0, 0, .4), rgba(0, 0, 0, .4)), url("../images/pascal.jpg");
 		background-position: bottom center !important;
 	}
-
 	&.maddy {
 		background: linear-gradient(rgba(0, 0, 0, .4), rgba(0, 0, 0, .4)), url("../images/maddy.jpg");
 		background-position: bottom center !important;
@@ -230,7 +235,7 @@ body {
 		background: linear-gradient(rgba(0, 0, 0, .4), rgba(0, 0, 0, .4)), url("../images/maxime.jpg");
 		background-position: bottom center !important;
 	}
-	&.thomas, &.hugo, &.pierrick, &.sandrine, &.yvan, &.rudy, &.pascal{
+	&.benoit, &.jessica, &.thomas, &.hugo, &.pierrick, &.sandrine, &.yvan, &.rudy, &.pascal{
 		background-position: center center;
 		background-size: cover;
 		background-repeat: no-repeat;
@@ -259,10 +264,6 @@ body {
 			background-position: center;
 		}
 	}
-}
-
-.full-screen {
-  //height: 100%; /* makes panels the entire window height */
 }
 
 /* Custom page footer */
