@@ -1,6 +1,6 @@
 var NioApp =(function (jQ, win, doc){
     "use strict";
-    var NioApp = {AppInfo: {name: "GENOX", package: "1.3.0", version: "1.3.0", author: "Softnio"} },
+    var NioApp = {AppInfo: {name: "OXYNUM", package: "1.3.0", version: "1.3.0", author: "Softnio"} },
         components = {docReady: [], docReadyDefer: [], winLoad: [], winLoadDefer: []};
 
     jQ(doc).ready(docReady);
@@ -608,7 +608,7 @@ NioApp = function (NioApp, $, window, document) {
 
 	// Form Validation !Plugin @v1.0
 	NioApp.Plugins.submitform = function () {
-		var $form = $('.genox-form');
+		var $form = $('.oxynum-form');
         
         if( !$().validate && !$().ajaxSubmit ) {
             console.log('jQuery Form and Form Validate not Defined.');

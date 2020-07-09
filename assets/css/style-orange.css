@@ -48,8 +48,8 @@
 @font-face { font-family: 'Roboto'; src: url("../fonts/Roboto-Regular.eot"); src: local("Roboto"), local("Roboto-Regular"), url("../fonts/Roboto-Regular.eot?#iefix") format("embedded-opentype"), url("../fonts/Roboto-Regular.woff2") format("woff2"), url("../fonts/Roboto-Regular.woff") format("woff"), url("../fonts/Roboto-Regular.ttf") format("truetype"); font-weight: normal; font-style: normal; }
 @font-face { font-family: 'Roboto'; src: url("../fonts/Roboto-Medium.eot"); src: local("Roboto Medium"), local("Roboto-Medium"), url("../fonts/Roboto-Medium.eot?#iefix") format("embedded-opentype"), url("../fonts/Roboto-Medium.woff2") format("woff2"), url("../fonts/Roboto-Medium.woff") format("woff"), url("../fonts/Roboto-Medium.ttf") format("truetype"); font-weight: 500; font-style: normal; }
 @font-face { font-family: 'Roboto'; src: url("../fonts/Roboto-Bold.eot"); src: local("Roboto Bold"), local("Roboto-Bold"), url("../fonts/Roboto-Bold.eot?#iefix") format("embedded-opentype"), url("../fonts/Roboto-Bold.woff2") format("woff2"), url("../fonts/Roboto-Bold.woff") format("woff"), url("../fonts/Roboto-Bold.ttf") format("truetype"); font-weight: bold; font-style: normal; }
-@font-face { font-family: 'genox-icon'; src: url("../fonts/genox-icon.ttf?4rdqtr") format("truetype"), url("../fonts/genox-icon.woff?4rdqtr") format("woff"), url("../fonts/genox-icon.svg?4rdqtr#genox-icon") format("svg"); font-weight: normal; font-style: normal; }
-.ikon { /* use !important to prevent issues with browser extensions that change fonts */ font-family: 'genox-icon' !important; speak: none; font-style: normal; font-weight: normal; font-variant: normal; text-transform: none; line-height: 1; /* Better Font Rendering =========== */ -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+@font-face { font-family: 'oxynum-icon'; src: url("../fonts/oxynum-icon.ttf?4rdqtr") format("truetype"), url("../fonts/oxynum-icon.woff?4rdqtr") format("woff"), url("../fonts/oxynum-icon.svg?4rdqtr#oxynum-icon") format("svg"); font-weight: normal; font-style: normal; }
+.ikon { /* use !important to prevent issues with browser extensions that change fonts */ font-family: 'oxynum-icon' !important; speak: none; font-style: normal; font-weight: normal; font-variant: normal; text-transform: none; line-height: 1; /* Better Font Rendering =========== */ -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
 
 .ikon-brain:before { content: "\e90c"; }
 
@@ -1039,7 +1039,7 @@ h6, .h6, .fz-6 { font-size: 0.875rem; }
 .bg-dark-alt { background: #0a1015; }
 .bg-dark-light { background: #0c1319; }
 .bg-light { background: #ffffff !important; }
-.bg-light-s2 { background: #fff4f5; }
+.bg-light-s2 { background: #efdefa61; }
 .bg-light-s3 { background: #fde7e9; }
 .bg-light-alt { background: #eff3f5; }
 .bg-light-gradient { background-image: linear-gradient(to bottom, #eff3f5 0%, rgba(239, 243, 245, 0) 100%); }
@@ -2012,7 +2012,7 @@ h6, .h6, .fz-6 { font-size: 0.875rem; }
 .preloader.preloader-florida:before, .preloader.preloader-florida:after { background: #6838ca; }
 .preloader.preloader-texas:before, .preloader.preloader-texas:after { background: #303150; }
 .preloader.preloader-jackson:before, .preloader.preloader-jackson:after { background: #010103; }
-.preloader.preloader-alaska-light:before, .preloader.preloader-alaska-light:after { background: #f9f4f1; }
+.preloader.preloader-alaska-light:before, .preloader.preloader-alaska-light:after { background: #F9F9F9; }
 .preloader.preloader-alaska-dark:before, .preloader.preloader-alaska-dark:after { background: #0E161D; }
 .preloader.preloader-helena:before, .preloader.preloader-helena:after { background: #230985; }
 .page-loaded .preloader.no-split:before, .page-loaded .preloader.no-split:after { transform: translate(0, 0); }
@@ -2302,7 +2302,7 @@ h6, .h6, .fz-6 { font-size: 0.875rem; }
 .header-sidebar { display: flex; justify-content: space-between; padding: 20px 15px; background: #000000; align-items: center; }
 .header-sidebar:focus { background: #ffffff; }
 .header-sidebar .header-logo { margin: 0; }
-.header-contact { color: #ffd0d5; }
+.header-contact { color: #e0d0ff; }
 .header-contact ul { padding-bottom: 15px; }
 .header-contact ul li { line-height: 2; }
 .header-contact ul li a { font-size: 24px; display: inline-block; color: #ffffff; font-weight: 700; position: relative; }
@@ -2516,12 +2516,12 @@ h6, .h6, .fz-6 { font-size: 0.875rem; }
   .menu-container { max-width: 1427px; }
   .header-main { padding: 30px 0; } }
 .menu-creative .menu-item { border-bottom: none; }
-.menu-creative .menu-item > a { font-size: 22px; font-weight: 700; color: #f5bbc1; text-transform: capitalize; }
+.menu-creative .menu-item > a { font-size: 22px; font-weight: 700; color: #e0d0ff; text-transform: capitalize; }
 .menu-creative .menu-item > a .badge { background: #ffffff; color: #a43602; }
-.menu-creative .menu-item > a .badge-version { background: #fd9faa; color: #ffffff; }
+.menu-creative .menu-item > a .badge-version { background: #e0d0ff; color: #ffffff; }
 .menu-creative .menu-item.open-nav > a, .menu-creative .menu-item.active > a { color: #ffffff; }
 .menu-creative .menu-item.has-sub a:after { display: none; }
-.menu-creative .menu-drop .menu-item > a { font-size: 13px; line-height: 28px; color: #fd9faa; padding: 0; }
+.menu-creative .menu-drop .menu-item > a { font-size: 13px; line-height: 28px; color: #e0d0ff; padding: 0; }
 
 @media (min-width: 320px) and (max-width: 575px) { .header-sidebar .logo img { height: 30px; }
   .header-sidebar .header-logo.mb-auto { margin-bottom: 0 !important; } }
@@ -3805,7 +3805,7 @@ h6, .h6, .fz-6 { font-size: 0.875rem; }
   .contact-text-s3 { box-shadow: 0px 2px 139px 0px rgba(26, 49, 91, 0.25); } }
 /**  05.12 form **/
 form .input { width: 100%; font-size: 1rem; border: 1px solid #ecf6fa; padding: 18px 20px; margin-bottom: 10px; color: #4b4b4b; background: transparent; }
-.genox-form-s2 form .input { color: #4a4a4a; font-weight: 300; }
+.oxynum-form-s2 form .input { color: #4a4a4a; font-weight: 300; }
 form .input::placeholder { color: #4b4b4b; opacity: .7; }
 form .input::-webkit-input-placeholder { color: #4b4b4b; opacity: .7; }
 form .input::-moz-placeholder { color: #4b4b4b; opacity: .7; }
@@ -3843,7 +3843,7 @@ form label.error { display: none !important; }
 .form-dark .input::placeholder { color: #a2a9bf; }
 .form-dark .input::-moz-placeholder { color: #a2a9bf; }
 .form-dark .input-select { color: #a2a9bf; }
-.genox-form-s2 .form-btn { margin-top: 20px; }
+.oxynum-form-s2 .form-btn { margin-top: 20px; }
 .form-ocean .input { border-color: #5647cb; }
 .tc-bunker .form-ocean .input { color: #ffffff; }
 .tc-bunker .form-ocean .input::placeholder { color: #92a6e4; opacity: 1; }
@@ -3858,7 +3858,7 @@ form label.error { display: none !important; }
   form .input-msg { min-height: 120px; } }
 @media (min-width: 992px) { form .input { margin-bottom: 30px; }
   form .input-msg { margin-bottom: 35px; }
-  .genox-form-s2 form-btn { margin-top: 20px; }
+  .oxynum-form-s2 form-btn { margin-top: 20px; }
   .form-v2 .input { margin-bottom: 30px; }
   .form-alt .input { margin-bottom: 15px; }
   .form-alt .input-msg { margin-bottom: 40px; } }
