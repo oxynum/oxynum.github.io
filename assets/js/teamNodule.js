@@ -28,19 +28,21 @@ class Utils {
   isIntoViewport(elm) {
     var rect = elm.getBoundingClientRect();
     var viewHeight = Math.max(document.documentElement.clientHeight, window.innerHeight);
-    return !(rect.bottom < 0 || rect.top - viewHeight >= 0);
+    return !(rect.bottom < 0 || rect.top >= viewHeight);
   }
 
   /**
-   * @description detect if current element is over the viewport's center
+   * @description detect if current element is into the focus area (if element was centered on the viewport's center)
    * @param {HTMLElement} elm - element to check
-   * @param {String} direction - scroll direction ('up' or 'down')
-   * @returns {Boolean} true if current element is over the viewport's center, false if not
+   * @returns {Boolean} true if current element is into the focus area, false if not
    */
-  isOverCenter(elm, direction){
+  isIntoFocusArea(elm){
     var rect = elm.getBoundingClientRect();
+    var rectSize = rect.bottom - rect.top;
     var viewportCenter = Math.max(document.documentElement.clientHeight, window.innerHeight) / 2;
-    return direction.toLowerCase() === 'down' ? viewportCenter - rect.top >= 0 : rect.bottom - viewportCenter >= 0 ; /** @todo: to improve */
+    var focusAreaTop = viewportCenter - rectSize / 2;
+    var focusAreaBottom = viewportCenter + rectSize / 2;
+    return rect.top <= focusAreaBottom && rect.bottom >= focusAreaTop;
   }
 
   /**
@@ -119,7 +121,7 @@ var TeamNodule = (function ($, window, document, Utils){
         if (!Utils.isIntoViewport(element)){
           continue;
         }
-        if (Utils.isOverCenter(element, Utils.getScrollDirection())){
+        if (Utils.isIntoFocusArea(element, Utils.getScrollDirection())){
           _unblur(element, forParams.initialValue);
         } else {
           _blur(element);
