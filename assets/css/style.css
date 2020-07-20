@@ -4070,33 +4070,4 @@ body.search-show { overflow: hidden; }
   .ath-body-pdy { padding: 0; } }
 @media (max-width: 991px) { .sign-up .banner-block { min-height: auto; padding: 120px 0 70px; } }
 
-
-/** 06. Custom */
-.logo-link img {
-  max-width: 60px;
-}
-
-.client-carousel .tes-item {
-  height: 10rem;
-  padding-top: 20px;
-  display: flex !important;
-}
-
-.client-carousel .tes-item .logo-item-s2 {
-  display: flex;
-  height: 8rem;
-}
-
-.client-carousel .tes-item .logo-container {
-  display: flex;
-  align-items: center;
-}
-
-.tes-s1 .slick-arrow {
-  border-radius: 50%;
-  background-color: #e7e4ed;
-}
-.tes-s1 .slick-arrow:hover {
-  background-color: #c9c5d9;
-}
 /* END */

@@ -1,0 +1,137 @@
+/** 06. Custom */
+
+:root {
+  --shadow-key-umbra-opacity:      0.2;
+  --shadow-key-penumbra-opacity:   0.14;
+  --shadow-ambient-shadow-opacity: 0.12;
+
+  --teammate-picture-default-size: 250px;
+  --teammate-picture-medium-size: 175px;
+}
+
+.logo-link img {
+  max-width: 60px;
+}
+
+/* [TEAM SECTION : begin] */
+.section.section-x.team.team-startup {
+  cursor: url("../../assets/images/eye-cursor.svg") 16 16, auto;
+}
+
+
+.team-image img {
+  display: none;
+}
+
+.team-image {
+  width: var(--teammate-picture-default-size);
+  height: var(--teammate-picture-default-size);
+  
+  margin: auto;
+  border-radius: 100%;
+  box-shadow: 0px 0px 0px rgb(176, 76, 178);
+  transition: box-shadow .3s .2s;
+}
+@media screen and (min-width: 576px) and (max-width: 992px){
+  .team-image {
+    width: var(--teammate-picture-medium-size);
+    height: var(--teammate-picture-medium-size);
+  }
+}
+.team-image::before {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  content: "";
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  filter: blur(8px) grayscale(1) brightness(0.5);
+  transition: filter .3s ease-out .2s;
+}
+
+.team-single.unblur > .team-image,
+.team-image.unblur,
+.team-image:hover {
+  box-shadow: 0px 6px 6px -3px rgba(176, 76, 178, var(--shadow-key-umbra-opacity)), 0px 10px 14px 1px rgba(176, 76, 178, var(--shadow-key-penumbra-opacity)), 0px 4px 18px 3px rgba(176, 76, 178, var(--shadow-ambient-shadow-opacity));
+  transition: box-shadow .3s ease-in;
+  cursor: none;
+}
+
+.team-single.unblur > .team-image::before,
+.team-image.unblur::before,
+.team-image:hover::before {
+  filter: blur(0) grayscale(1) brightness(1.1);
+  transition: filter .3s ease-in;
+} 
+
+#david .team-image::before {
+  background-image: url('../../images/team/david.jpeg');
+  background-size: 175%;
+}
+#madeleine .team-image::before {
+  background-image: url('../../images/team/maddy.jpg');
+  background-position: 60%;
+}
+#maxime .team-image::before {
+  background-image: url('../../images/team/maxime.jpg');
+  background-size: 200%;
+}
+#hugo .team-image::before {
+  background-image: url('../../images/team/hugo.jpg');
+  background-position: right;
+}
+#jessica .team-image::before {
+  background-image: url('../../images/team/jessica.jpg');
+  background-position: right;
+}
+#benoit .team-image::before {
+  background-image: url('../../images/team/benoit.jpg');
+  background-position: left;
+}
+#sandrine .team-image::before {
+  background-image: url('../../images/team/sandrine.jpg');
+  background-position: left;
+}
+#rudy .team-image::before {
+  background-image: url('../../images/team/rudy.jpg');
+  background-position: left;
+}
+#thomas .team-image::before {
+  background-image: url('../../images/team/thomas.jpg');
+  background-position: left;
+}
+#pascal .team-image::before {
+  background-image: url('../../images/team/pascal.jpg');
+  background-position: center;
+  background-size: 250%;
+}
+/* [TEAM SECTION : end] */
+
+/* [CLIENT CAROUSEL : begin] */
+.client-carousel .tes-item {
+  height: 10rem;
+  padding-top: 20px;
+  display: flex !important;
+}
+
+.client-carousel .tes-item .logo-item-s2 {
+  display: flex;
+  height: 8rem;
+}
+
+.client-carousel .tes-item .logo-container {
+  display: flex;
+  align-items: center;
+}
+
+.tes-s1 .slick-arrow {
+  border-radius: 50%;
+  background-color: #e7e4ed;
+}
+.tes-s1 .slick-arrow:hover {
+  background-color: #c9c5d9;
+}
+/* [CLIENT CAROUSEL : end] */
