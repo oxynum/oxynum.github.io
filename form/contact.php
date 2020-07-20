@@ -6,10 +6,10 @@ $mail = new PHPMailer();
 $emailTO = $emailBCC =  $emailCC = array();
 
 ### Enter Your Sitename 
-$sitename = 'Your Site Name';
+$sitename = 'Oxynum';
 
 ### Enter your email addresses: @required
-$emailTO[] = array( 'email' => 'email@yoursite.com', 'name' => 'Your Name' ); 
+$emailTO[] = array( 'email' => 'team@oxynum.fr', 'name' => 'Oxynum' ); 
 
 // Enable bellow parameters & update your BCC email if require.
 //$emailBCC[] = array( 'email' => 'email@yoursite.com', 'name' => 'Your Name' );
