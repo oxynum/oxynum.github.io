@@ -53,6 +53,7 @@
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
+  border-radius: 50%; /* to avoid safari bug on hover */
   filter: blur(8px) grayscale(1) brightness(0.5);
   transition: filter .3s ease-out .2s;
 }
