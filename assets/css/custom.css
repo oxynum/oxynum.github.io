@@ -13,6 +13,11 @@
   max-width: 60px;
 }
 
+.header-contact a {
+  color: white;
+  text-decoration: none;
+}
+
 /* [TEAM SECTION : begin] */
 .section.section-x.team.team-startup {
   cursor: url("../../assets/images/eye-cursor.svg") 16 16, auto;
