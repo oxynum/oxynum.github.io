@@ -48,8 +48,8 @@
 @font-face { font-family: 'Roboto'; src: url("../fonts/Roboto-Regular.eot"); src: local("Roboto"), local("Roboto-Regular"), url("../fonts/Roboto-Regular.eot?#iefix") format("embedded-opentype"), url("../fonts/Roboto-Regular.woff2") format("woff2"), url("../fonts/Roboto-Regular.woff") format("woff"), url("../fonts/Roboto-Regular.ttf") format("truetype"); font-weight: normal; font-style: normal; }
 @font-face { font-family: 'Roboto'; src: url("../fonts/Roboto-Medium.eot"); src: local("Roboto Medium"), local("Roboto-Medium"), url("../fonts/Roboto-Medium.eot?#iefix") format("embedded-opentype"), url("../fonts/Roboto-Medium.woff2") format("woff2"), url("../fonts/Roboto-Medium.woff") format("woff"), url("../fonts/Roboto-Medium.ttf") format("truetype"); font-weight: 500; font-style: normal; }
 @font-face { font-family: 'Roboto'; src: url("../fonts/Roboto-Bold.eot"); src: local("Roboto Bold"), local("Roboto-Bold"), url("../fonts/Roboto-Bold.eot?#iefix") format("embedded-opentype"), url("../fonts/Roboto-Bold.woff2") format("woff2"), url("../fonts/Roboto-Bold.woff") format("woff"), url("../fonts/Roboto-Bold.ttf") format("truetype"); font-weight: bold; font-style: normal; }
-@font-face { font-family: 'oxynum-icon'; src: url("../fonts/oxynum-icon.ttf?4rdqtr") format("truetype"), url("../fonts/oxynum-icon.woff?4rdqtr") format("woff"), url("../fonts/oxynum-icon.svg?4rdqtr#oxynum-icon") format("svg"); font-weight: normal; font-style: normal; }
-.ikon { /* use !important to prevent issues with browser extensions that change fonts */ font-family: 'oxynum-icon' !important; speak: none; font-style: normal; font-weight: normal; font-variant: normal; text-transform: none; line-height: 1; /* Better Font Rendering =========== */ -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+@font-face { font-family: 'genox-icon'; src: url("../fonts/genox-icon.ttf?4rdqtr") format("truetype"), url("../fonts/genox-icon.woff?4rdqtr") format("woff"), url("../fonts/genox-icon.svg?4rdqtr#genox-icon") format("svg"); font-weight: normal; font-style: normal; }
+.ikon { /* use !important to prevent issues with browser extensions that change fonts */ font-family: 'genox-icon' !important; speak: none; font-style: normal; font-weight: normal; font-variant: normal; text-transform: none; line-height: 1; /* Better Font Rendering =========== */ -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
 
 .ikon-brain:before { content: "\e90c"; }
 
@@ -4069,11 +4069,5 @@ body.search-show { overflow: hidden; }
   .ath-body { padding-right: 60px; }
   .ath-body-pdy { padding: 0; } }
 @media (max-width: 991px) { .sign-up .banner-block { min-height: auto; padding: 120px 0 70px; } }
-
-
-/** 06. Custom */
-.logo-link img {
-  max-width: 60px;
-}
 
 /* END */
