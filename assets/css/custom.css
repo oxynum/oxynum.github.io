@@ -9,6 +9,15 @@
   --teammate-picture-medium-size: 175px;
 }
 
+.spinner-brand { 
+  position: absolute; 
+  left: 50%; 
+  top: 50%; 
+  transform: 
+  translate(-50%, -50%); 
+  width: 100px;
+}
+
 .logo-link img {
   max-width: 60px;
 }
