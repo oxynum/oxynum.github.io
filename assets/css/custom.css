@@ -18,14 +18,54 @@
   width: 100px;
 }
 
-.logo-link img {
+.logo-link img[srcset*="brand-logo"], .logo-link img[srcset*="brand-block"] {
   max-width: 60px;
+}
+
+.logo-link img[srcset*="brand-typography"], .logo-link img[srcset*="brand-inline"],
+  .footer-logo img {
+  max-width: 180px;
 }
 
 .header-contact a {
   color: white;
   text-decoration: none;
 }
+
+/* [FOOTER : begin] */
+.social-s5 li {
+  width: initial;
+}
+
+.bg-ocean-pattern  .social-s5 li a.bubble-icon--gradient {
+  display: flex;
+}
+.bg-ocean-pattern  .social-s5 li a.bubble-icon--gradient::before {
+  display: inline-block;
+  position: relative;
+  content: "";
+  width: 30px;
+  height: 30px;
+  border: none;
+  background: -webkit-linear-gradient(145deg, #3F51B5, #E91E63) !important;
+  line-height: 30px;
+  padding: 0;
+  border-radius: 50%;
+  transition: all 0.5s;
+}
+
+.bg-ocean-pattern .social-s5 li a:hover {
+  color: white !important;
+}
+.social-s5 li a .icon {
+  position: absolute;
+}
+
+.social-s5 li a:hover .icon {
+  background-color: transparent !important;
+  transition: all 0.5s;
+}
+/* [FOOTER : end] */
 
 /* [TEAM SECTION : begin] */
 .section.section-x.team {
