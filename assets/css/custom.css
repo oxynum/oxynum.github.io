@@ -32,6 +32,16 @@
   text-decoration: none;
 }
 
+/* [BUTTONS : begin] */
+.btn-creative { height: 60px; padding: 0 40px; color: #A53DA6; font-weight: 700; font-size: 0.9rem; line-height: 60px; text-transform: uppercase; display: inline-flex; align-items: center; position: relative; z-index: 1; transition: all 0.5s; border: none; background: transparent; }
+.tc-light .btn-creative { color: #A53DA6; }
+.btn-creative:after { position: absolute; left: 0; top: 0; width: 60px; height: 100%; background: white; border-radius: 30px; box-shadow: 1px 3px 7px #A53DA6; content: ""; z-index: -1; transition: all 0.5s; }
+.btn-creative:hover { color: #ffffff; }
+.btn-creative:hover:after { width: 100%; background: -webkit-linear-gradient(145deg, #3F51B5, #E91E63); box-shadow: 1px 3px 7px transparent; }
+/* .btn-creative:hover:before { width: 0; transition: width 0.5s; } */
+.btn-creative:before { width: 40px; height: 2px; background: currentColor; margin-right: 10px; content: ""; transition: width 0.5s ease-in; }
+/* [BUTTONS : end] */
+
 /* [FOOTER : begin] */
 .social-s5 li {
   width: initial;
