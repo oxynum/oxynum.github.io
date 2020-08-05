@@ -39,6 +39,10 @@
 }
 /* .btn-creative:hover:before { width: 0; transition: width 0.5s; } */
 .btn-creative:before { width: 40px; height: 2px; background: currentColor; margin-right: 10px; content: ""; transition: width 0.5s ease-in; }
+
+.icon.fas.fa-phone {
+  transform: rotate(90deg);
+}
 /* [BUTTONS : end] */
 
 .logo img {
