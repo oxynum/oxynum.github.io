@@ -27,10 +27,27 @@
   max-width: 180px;
 }
 
+/* [HEADER : begin] */
 .header-contact a {
   color: white;
   text-decoration: none;
 }
+.bg-ocean-pattern .header-main {
+  backdrop-filter: blur(0px);
+  border-bottom-left-radius: 0px;
+  transition: all 0.4s, backdrop-filter 0.4s 0.2s;
+}
+
+.bg-ocean-pattern .has-fixed .header-main {
+  background: #1b0768bf;
+  backdrop-filter: blur(10px);
+  transition: all 0.4s, backdrop-filter 0.4s 0.4s;
+}
+
+.has-fixed.is-shrink .header-main {
+  border-bottom-left-radius: 110px;
+}
+/* [HEADER : end] */
 
 /* [BUTTONS : begin] */
 .btn-creative { height: 60px; padding: 0 40px; color: #A53DA6; font-weight: 700; font-size: 0.9rem; line-height: 60px; text-transform: uppercase; display: inline-flex; align-items: center; position: relative; z-index: 1; transition: all 0.5s; border: none; background: transparent; }
