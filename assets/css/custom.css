@@ -133,7 +133,7 @@
 /* [FOOTER : end] */
 
 /* [TEAM SECTION : begin] */
-.section.section-x.team {
+.section.section-x.team .slick-list {
   cursor: url("../../assets/images/eye-cursor.svg") 16 16, auto;
 }
 
@@ -172,6 +172,7 @@
   transition: filter .3s ease-out .2s;
 }
 
+.slick-current .team-image,
 .team-single.unblur > .team-image,
 .team-image.unblur,
 .team-image:hover {
@@ -180,6 +181,7 @@
   cursor: none;
 }
 
+.slick-current .team-image::before,
 .team-single.unblur > .team-image::before,
 .team-image.unblur::before,
 .team-image:hover::before {
