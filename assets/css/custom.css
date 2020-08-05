@@ -9,6 +9,10 @@
   --teammate-picture-medium-size: 175px;
 }
 
+.margin-top-60 {
+  margin-top: 60px;
+}
+
 .spinner-brand { 
   position: absolute; 
   left: 50%; 
@@ -137,6 +141,9 @@
   cursor: url("../../assets/images/eye-cursor.svg") 16 16, auto;
 }
 
+.team-content {
+  padding-bottom: 25px;
+}
 
 .team-image img {
   display: none;
