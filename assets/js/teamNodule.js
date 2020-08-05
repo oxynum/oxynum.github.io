@@ -65,6 +65,7 @@ var TeamNodule = (function ($, window, document, Utils){
     var $win		= $(window), 
 		    $doc		= $(document),
         teammates = $(".team-image"),
+        slider = $("#team-slider"),
         currentFocus; // current pictures on which the focus is 
   // [VARIABLES : end]
 
@@ -98,6 +99,24 @@ var TeamNodule = (function ($, window, document, Utils){
       }
     }
 
+    function setSlider() {
+      if(slider && !(Utils.isMobileBrowser() || window.matchMedia("(max-width: 576px)").matches)) {
+        slider.slick({
+          dots:true,
+          autoplay: true,
+          infinite : true,
+          slidesToScroll: 1,
+          slidesToShow: 2,
+          arrows: false,
+          responsive: [
+            {
+              breakpoint: 576,
+              settings: "unslick" // destroys slick
+            }
+          ]
+        });
+      }
+    }
   // [MAIN METHODS: end]
   
   // [PRIVATE METHODS: begin]
@@ -225,9 +244,11 @@ var TeamNodule = (function ($, window, document, Utils){
   
   // [EVENTS: begin]
     $doc.ready(function(){
+      setSlider();
       executeOnSmallScreen();
     });
     $win.resize(function(){
+      setSlider();
       executeOnSmallScreen();
     });
   // [EVENTS: end]
