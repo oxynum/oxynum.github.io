@@ -245,11 +245,11 @@ var TeamNodule = (function ($, window, document, Utils){
   // [EVENTS: begin]
     $doc.ready(function(){
       setSlider();
-      executeOnSmallScreen();
+      // executeOnSmallScreen();
     });
     $win.resize(function(){
       setSlider();
-      executeOnSmallScreen();
+      // executeOnSmallScreen();
     });
   // [EVENTS: end]
 }(jQuery, window, document, new Utils()));
