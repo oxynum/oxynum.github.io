@@ -115,24 +115,78 @@
 				<div class="gshape-wrapper">
 					<div class="gshape gshape-sm t4"></div>
 					<div class="gshape gshape-md gshape-md-alt r55 t20"></div>
-					<div class="gshape gshape-md r10 t50 d-none d-sm-block gshape-none"></div>
+					<div class="gshape gshape-md r10 t50 d-none gshape-none"></div>
 				</div>
 				<div class="banner-block banner-helena">
-					<div class="container">
-						<div class="row align-items-center gutter-vr-50px">
-							<div class="col-sm-6 col-xl-5 offset-xl-0">
-								<div class="banner-content text-center text-sm-left pdl-0 mgl-0">
-									<h1 class="banner-heading banner-heading-s3">Que la technique ne soit plus une limite</h1>
+					<div class="container margin-top-120" id="contact-form">
+						<div class="row">
+							<div class="col-xl-4 col-lg-8">
+								<div class="section-head section-md text-center text-md-left">
+									<h5 class="heading-xs tc-primary">Compléter le Formulaire</h5>
+									<h2>Décrivez-nous votre projet et laissez-nous votre contact</h2>
+								</div>
+							</div><!-- .col -->
+						</div><!-- .row -->
+						<div class="row gutter-vr-30px">
+							<div class="col-lg-4 order-lg-last">
+								<div class="contact-text contact-text-s2 bg-ocean-light box-pad ">
+									<div class="text-box">
+										<h4>Oxynum Studio</h4>
+										<p class="lead">3 rue de Colombes  92600 Asnières-sur-Seine</p>
+									</div>
+									<ul class="contact-list">
+										<li>
+											<em class="contact-icon ti-mobile"></em>
+											<div class="contact-content">
+												<a href="tel:+33661027526">+33 6 61 02 75 26</a>
+											</div>
+										</li>
+										<li>
+											<em class="contact-icon ti-email"></em>
+											<div class="contact-content">
+												<a href="mailto:team@oxynum.fr">team@oxynum.fr</a>
+											</div>
+										</li>
+										<li>
+											<em class="contact-icon ti-map-alt"></em>
+											<div class="contact-content">
+												<a href="#">Nous localiser</a>
+											</div>
+										</li>
+									</ul>
 								</div>
 							</div>
-							<div class="col-sm-6 col-xl-7 order-first order-sm-last">
-								<div class="image-block-s2 round-full">
-									<img src="images/banner-right.png" class="round-full" alt="">
-									<div class="gshape gshape-xl gshape-block"></div>
-								</div>
-							</div>
+							<!-- .col -->
+							<div class="col-lg-8">
+								<form id="contact-form" class="oxynum-form form-dark form-ocean mt-10" action="form/contact.php" method="POST">
+									<div class="form-results"></div>
+									<div class="row">
+										<div class="form-field col-md-6">
+											<input name="cf_name" type="text" placeholder="Qui êtes-vous?" class="input bdr-b required">
+										</div>
+										<div class="form-field col-md-6">
+											<input name="cf_email" type="email" placeholder="À quel email peut-on vous répondre?" class="input bdr-b required">
+										</div>
+									</div>
+									<div class="row">
+										<div class="form-field col-md-6">
+											<input name="cf_company" type="text" placeholder="Quelle est votre entreprise?" class="input bdr-b">
+										</div>
+										<div class="form-field col-md-6">
+											<input name="cf_address" type="text" placeholder="Où se situe votre entreprise?" class="input bdr-b">
+										</div>
+									</div>
+									<div class="row">
+										<div class="form-field col-md-12">
+											<textarea name="cf_msg" placeholder="Briefez-nous en quelques mots" class="input input-msg bdr-b required" required></textarea>
+											<input type="text" class="d-none" name="form-anti-honeypot" value="">
+											<button type="submit" class="btn-creative active-on-mobile">Envoyer</button>
+										</div>
+									</div>
+								</form>
+							</div><!-- .col -->
 						</div>
-					</div>
+					</div><!-- .container -->
 				</div>
 				<div class="nk-ovm mask-a"></div>
 			</div>
@@ -142,76 +196,8 @@
 	<!-- end header -->
 
 	<!-- section -->
-	<div class="section section-x tc-bunker pt-0 margin-top-60" id="contact-form">
-		<div class="container">
-			<div class="row">
-				<div class="col-xl-4 col-lg-8">
-					<div class="section-head section-md text-center text-md-left">
-						<h5 class="heading-xs tc-primary">Compléter le Formulaire</h5>
-						<h2>Décrivez-nous votre projet et laissez-nous votre contact</h2>
-					</div>
-				</div><!-- .col -->
-			</div><!-- .row -->
-			<div class="row gutter-vr-30px">
-				<div class="col-lg-4 order-lg-last">
-					<div class="contact-text contact-text-s2 bg-ocean-light box-pad ">
-						<div class="text-box">
-							<h4>Oxynum Studio</h4>
-							<p class="lead">3 rue de Colombes  92600 Asnières-sur-Seine</p>
-						</div>
-						<ul class="contact-list">
-							<li>
-								<em class="contact-icon ti-mobile"></em>
-								<div class="contact-content">
-									<a href="tel:+33661027526">+33 6 61 02 75 26</a>
-								</div>
-							</li>
-							<li>
-								<em class="contact-icon ti-email"></em>
-								<div class="contact-content">
-									<a href="mailto:team@oxynum.fr">team@oxynum.fr</a>
-								</div>
-							</li>
-							<li>
-								<em class="contact-icon ti-map-alt"></em>
-								<div class="contact-content">
-									<a href="#">Nous localiser</a>
-								</div>
-							</li>
-						</ul>
-					</div>
-				</div>
-				<!-- .col -->
-				<div class="col-lg-8">
-					<form id="contact-form" class="oxynum-form form-dark form-ocean mt-10" action="form/contact.php" method="POST">
-						<div class="form-results"></div>
-						<div class="row">
-							<div class="form-field col-md-6">
-								<input name="cf_name" type="text" placeholder="Qui êtes-vous?" class="input bdr-b required">
-							</div>
-							<div class="form-field col-md-6">
-								<input name="cf_email" type="email" placeholder="À quel email peut-on vous répondre?" class="input bdr-b required">
-							</div>
-						</div>
-						<div class="row">
-							<div class="form-field col-md-6">
-								<input name="cf_company" type="text" placeholder="Quelle est votre entreprise?" class="input bdr-b">
-							</div>
-							<div class="form-field col-md-6">
-								<input name="cf_address" type="text" placeholder="Où se situe votre entreprise?" class="input bdr-b">
-							</div>
-						</div>
-						<div class="row">
-							<div class="form-field col-md-12">
-								<textarea name="cf_msg" placeholder="Briefez-nous en quelques mots" class="input input-msg bdr-b required" required></textarea>
-								<input type="text" class="d-none" name="form-anti-honeypot" value="">
-								<button type="submit" class="btn-creative active-on-mobile">Envoyer</button>
-							</div>
-						</div>
-					</form>
-				</div><!-- .col -->
-			</div>
-		</div><!-- .container -->
+	<div class="section section-x tc-bunker pt-0">
+		
 	</div>
 	<!-- .section -->
 
