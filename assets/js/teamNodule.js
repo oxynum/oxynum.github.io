@@ -245,11 +245,15 @@ var TeamNodule = (function ($, window, document, Utils){
   // [EVENTS: begin]
     $doc.ready(function(){
       setSlider();
-      // executeOnSmallScreen();
     });
     $win.resize(function(){
       setSlider();
-      // executeOnSmallScreen();
+    });
+    var supportsOrientationChange = "onorientationchange" in window,
+    orientationEvent = supportsOrientationChange ? "orientationchange" : "resize";
+
+    $win.on(orientationEvent, function() {
+      setSlider();
     });
   // [EVENTS: end]
 }(jQuery, window, document, new Utils()));
