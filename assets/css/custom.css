@@ -273,3 +273,12 @@
   background-color: #c9c5d9;
 }
 /* [CLIENT CAROUSEL : end] */
+
+/* [RESPONSIVE : begin] */
+@media (max-width:768px) {
+  .btn-creative.active-on-mobile::before, .btn-creative.active-on-mobile::before {
+    width: 0;
+    margin-right: 0;
+  }
+}
+/* [RESPONSIVE : end] */
