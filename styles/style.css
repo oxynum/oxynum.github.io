@@ -1,0 +1,15 @@
+@font-face {
+  font-family: 'Martel Sans', sans-serif;
+  src: url("https://fonts.googleapis.com/css2?family=Martel+Sans:wght@200;300;400;600;700;800;900&display=swap");
+}
+
+.page-home {
+  background-color: #2A2A2A;
+}
+
+html, body {
+  font-family: "Martel Sans";
+  height: 100vh;
+  width: 100vw;
+}
+/*# sourceMappingURL=style.css.map */
