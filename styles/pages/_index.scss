@@ -1,3 +1,79 @@
 .page-home{
   background-color: $base-background-color;
+
+  header {
+    display: flex;
+    height: 70px;
+  }
 }
+
+// Extra small devices
+@media screen and (max-width: $breakpoint-mobile){
+  .logo-desktop {
+    display: none;
+  }
+  .logo-mobile > img{
+    height: 19px;
+    width: 37px;
+    justify-content: flex-start;
+  }
+  nav{
+    justify-content: flex-end;
+    .nav-item-contact{
+      display: none;
+    }
+    .nav-item-team{
+      display: none;
+    }
+  }
+
+  .home-title{
+    font-weight: bold;
+    font-size: 52px;
+    line-height: 100%;
+    color: $base-white;
+    width: 356px;
+    height: 156px;
+    margin-left: 41px;
+  }
+  .home-presentation{
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 21px;
+    line-height: 25px;
+    text-align: justify;
+    letter-spacing: 0.03em;
+    color: $base-grey-light;
+    margin-left: 41px;
+    width: 327px;
+  }
+  .home-image > img{
+    max-width: 414px;
+    max-height: 605.05px;
+    right: 0px;
+  }
+  .logo-clients{
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 52px;
+
+    img{
+      flex: 1;
+      min-width: 45%;
+      margin: 10px;
+    }
+  }
+}
+
+// Small devices
+@media screen and (min-width: $breakpoint-mobile){}
+
+// Medium devices
+@media screen and (min-width: $breakpoint-tablet){}
+
+// Large devices
+@media screen and (min-width: $breakpoint-desktop){}
+
+// Extra large devices
+@media screen and (min-width: $breakpoint-extra-large){}

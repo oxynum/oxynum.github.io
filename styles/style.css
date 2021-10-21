@@ -7,6 +7,78 @@
   background-color: #2A2A2A;
 }
 
+.page-home header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 70px;
+}
+
+@media screen and (max-width: 600px) {
+  .logo-desktop {
+    display: none;
+  }
+  .logo-mobile > img {
+    height: 19px;
+    width: 37px;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+  nav {
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+  }
+  nav .nav-item-contact {
+    display: none;
+  }
+  nav .nav-item-team {
+    display: none;
+  }
+  .home-title {
+    font-weight: bold;
+    font-size: 52px;
+    line-height: 100%;
+    color: #FFFFFF;
+    width: 356px;
+    height: 156px;
+    margin-left: 41px;
+  }
+  .home-presentation {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 21px;
+    line-height: 25px;
+    text-align: justify;
+    letter-spacing: 0.03em;
+    color: #E5E5E5;
+    margin-left: 41px;
+    width: 327px;
+  }
+  .home-image > img {
+    max-width: 414px;
+    max-height: 605.05px;
+    right: 0px;
+  }
+  .logo-clients {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    margin-top: 52px;
+  }
+  .logo-clients img {
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+    min-width: 45%;
+    margin: 10px;
+  }
+}
+
 html, body {
   font-family: "Martel Sans";
   height: 100vh;

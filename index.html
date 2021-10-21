@@ -2,32 +2,38 @@
 <html lang="fr">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Accueil-Oxynum</title>
   <meta name="description" content="page d'accueil du site internet Oxynum"/>
+  <meta name="viewport" content="width=device-width">
   <!--styles-->
   <link rel="stylesheet" href="styles/base/reset.css">
   <link rel="stylesheet" href="styles/style.css">
-  <title>Accueil-Oxynum</title>
 </head>
 
 <body class="page-home">
   <header>
-    <div id="logo">
+    <div class="logo-mobile">
       <img 
         src="assets/logo-oxynum/Logo_Short_Light.png" 
-        alt="logo oxynum"
-      />
+        alt="logo oxynum version mbile"
+      >
+    </div>
+    <div class="logo-desktop">
+      <img 
+        src="assets/logo-oxynum/Logo_Full_Light.png" 
+        alt="logo oxynum version desktop"
+      >
     </div>
     <nav>
       <ul>
-        <li>
+        <li class="nav-item-contact">
           <a href="mailto:team@oxynum.fr">contactez-nous</a>
         </li>
-        <li>
-          <a href="">notre equipe</a>
+        <li class="nav-item-team">
+          <a href="teams.html">notre equipe</a>
         </li>
-        <li>
-          <a href="">
+        <li class="nav-item-burger">
+          <a href="navigation.html">
             <img 
               src="assets/Icon/Menu-burger.png"
               alt="icone menu burger pour ouvrir la page de navigation"
@@ -40,12 +46,12 @@
     </nav>
   </header>
   <main>
-    <h1>Creative Agency:</h1>
+    <h1 class="home-title">Creative Agency:</h1>
     <section>
-      <p>
+      <p class="home-presentation">
         Nous produisons des solutions pour répondre à vos enjeux stratégiques. Coding Base, Design System, Intelligence artificielle, Machine learning. SEO, Social Content Management, Mobile app, Web app, Digital Signage...
       </p>
-      <figure>
+      <figure class="home-image">
         <img 
           src="assets/site-cover-photos/cover-home.jpg" 
           alt="Image d'illustration pour la page d'accueil"
@@ -53,7 +59,7 @@
       </figure>
     </section>
     <section>
-      <figure>
+      <figure class="logo-clients">
         <img 
           src="assets/logo-clients/ImVitro.png" 
           alt="logo ImVitro"
