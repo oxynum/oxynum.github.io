@@ -2,66 +2,109 @@
   background-color: $base-background-color;
 
   header {
-    display: flex;
-    height: 70px;
+    position: fixed;
+    height: 40px;
+    width: 100%;
+    top: 0;
+    z-index: 100;
+    background-color: transparent;
+
+    & > nav{
+      display: flex;
+    }
+  }
+
+  main {
+    margin-top: 45px;
   }
 }
 
 // Extra small devices
-@media screen and (max-width: $breakpoint-mobile){
-  .logo-desktop {
-    display: none;
-  }
-  .logo-mobile > img{
-    height: 19px;
-    width: 37px;
-    justify-content: flex-start;
-  }
-  nav{
-    justify-content: flex-end;
-    .nav-item-contact{
-      display: none;
+@media screen and (max-width: $breakpoint-mobile) {
+
+  .navbar{
+    justify-content: space-between;
+
+    &-logo{
+      margin-top: 20px;
+      margin-left: 23px;
+      &--mobile{
+        max-height: 19px;
+        max-width: 37px;
+      }
+      &--desktop{
+        display: none;
+      }
     }
-    .nav-item-team{
-      display: none;
+
+    &-item{
+      &-contact{
+        display: none;
+      }
+      &-team{
+        display: none;
+      }
+      &-burger{
+        margin-top: 23px;
+        margin-right: 20px;
+        &-image{
+          max-height: 24px;
+          max-width: 24px;
+        }
+      }
     }
   }
 
-  .home-title{
-    font-weight: bold;
-    font-size: 52px;
-    line-height: 100%;
-    color: $base-white;
-    width: 356px;
-    height: 156px;
-    margin-left: 41px;
-  }
-  .home-presentation{
-    font-family: Roboto;
-    font-style: normal;
-    font-weight: 300;
-    font-size: 21px;
-    line-height: 25px;
-    text-align: justify;
-    letter-spacing: 0.03em;
-    color: $base-grey-light;
-    margin-left: 41px;
-    width: 327px;
-  }
-  .home-image > img{
-    max-width: 414px;
-    max-height: 605.05px;
-    right: 0px;
-  }
-  .logo-clients{
+  .section-agency{
     display: flex;
-    flex-wrap: wrap;
-    margin-top: 52px;
+    flex-direction: column;
 
-    img{
-      flex: 1;
-      min-width: 45%;
-      margin: 10px;
+    &-title{
+      font-weight: bold;
+      font-size: 52px;
+      line-height: 100%;
+      color: $base-white;
+      margin-left: 41px;
+      order:2;
+    }
+
+    &-presentation{
+      font-family: $second-font-family;
+      font-style: normal;
+      font-weight: 300;
+      font-size: 21px;
+      line-height: 25px;
+      text-align: justify;
+      letter-spacing: 0.03em;
+      color: $base-grey-light;
+      margin: 50px 46px 52px 41px;
+      order:3;
+    }
+
+    &-image {
+      order:1;
+
+      &--mobile{
+        max-width: 100%;
+        max-height: 100%;
+        right: 0px;
+      }
+      &--desktop{
+        display: none;
+      }
+    }
+  }
+
+  .section-clients{
+    &-logo{
+      display: flex;
+      flex-wrap: wrap;
+
+      & > img{
+        flex: 1;
+        min-width: 40%;
+        margin: 10px;
+      }
     }
   }
 }

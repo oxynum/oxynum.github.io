@@ -12,54 +12,69 @@
 
 <body class="page-home">
   <header>
-    <div class="logo-mobile">
-      <img 
-        src="assets/logo-oxynum/Logo_Short_Light.png" 
-        alt="logo oxynum version mbile"
-      >
-    </div>
-    <div class="logo-desktop">
-      <img 
-        src="assets/logo-oxynum/Logo_Full_Light.png" 
-        alt="logo oxynum version desktop"
-      >
-    </div>
-    <nav>
-      <ul>
-        <li class="nav-item-contact">
-          <a href="mailto:team@oxynum.fr">contactez-nous</a>
-        </li>
-        <li class="nav-item-team">
-          <a href="teams.html">notre equipe</a>
-        </li>
-        <li class="nav-item-burger">
-          <a href="navigation.html">
-            <img 
-              src="assets/Icon/Menu-burger.png"
-              alt="icone menu burger pour ouvrir la page de navigation"
-              height="12"
-              width="18"
-            >
-          </a>
-        </li>
-      </ul>
+    <nav class="navbar">
+      <div class="navbar-logo">
+        <a 
+          href="index.html" 
+          class="navbar-logo--mobile"
+        >
+          <img 
+            src="assets/logo-oxynum/Logo_Short_Light.png" 
+            alt="logo oxynum version mobile"
+          >
+        </a>
+        <a 
+          href="index.html" 
+          class="navbar-logo--desktop"
+        >
+          <img 
+            src="assets/logo-oxynum/Logo_Full_Light.png" 
+            alt="logo oxynum version desktop"
+          >
+        </a>
+      </div>
+      <div class="navbar-item">
+        <ul>
+          <li class="navbar-item-contact">
+            <a href="mailto:team@oxynum.fr">contactez-nous</a>
+          </li>
+          <li class="navbar-item-team">
+            <a href="teams.html">notre equipe</a>
+          </li>
+          <li class="navbar-item-burger">
+            <a href="navigation.html">
+              <img 
+                src="assets/Icon/Menu-Burger.png"
+                alt="icone menu burger pour ouvrir la page de navigation"
+                class="navbar-item-burger-image"
+              >
+            </a>
+          </li>
+        </ul>
+      </div>
     </nav>
   </header>
   <main>
-    <h1 class="home-title">Creative Agency:</h1>
-    <section>
-      <p class="home-presentation">
+    <section class="section-agency">
+      <h1 class="section-agency-title">Creative Agency:</h1>
+      <p class="section-agency-presentation">
         Nous produisons des solutions pour répondre à vos enjeux stratégiques. Coding Base, Design System, Intelligence artificielle, Machine learning. SEO, Social Content Management, Mobile app, Web app, Digital Signage...
       </p>
-      <figure class="home-image">
+       <figure class="section-agency-image">
+        <img 
+          src="assets/site-cover-photos/home-mobile-cover.png" 
+          alt="Image d'illustration pour la page d'accueil (mobile)"
+          class="section-agency-image--mobile"
+        >
         <img 
           src="assets/site-cover-photos/cover-home.jpg" 
-          alt="Image d'illustration pour la page d'accueil"
+          alt="Image d'illustration pour la page d'accueil (desktop)"
+          class="section-agency-image--desktop"
         >
       </figure>
     </section>
-    <section>
-      <figure class="logo-clients">
+    <section class="section-clients">
+      <figure class="section-clients-logo">
         <img 
           src="assets/logo-clients/ImVitro.png" 
           alt="logo ImVitro"
