@@ -15,8 +15,10 @@ $base-font-family: 'Martel Sans';
 $second-font-family: 'Roboto';
 
 // Breakpoints Media Queries
-$breakpoint-mobile: 600px;
+$breakpoint-mobile: 320px;
 $breakpoint-tablet: 768px;
 $breakpoint-desktop: 992px;
-$breakpoint-extra-large: 1200px;
+
+// Assets Paths
+$assetPath : "../images";
 

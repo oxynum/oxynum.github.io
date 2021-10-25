@@ -11,6 +11,8 @@
 
     & > nav{
       display: flex;
+      justify-content: space-between;
+      align-items: center;
     }
   }
 
@@ -20,11 +22,9 @@
 }
 
 // Extra small devices
-@media screen and (max-width: $breakpoint-mobile) {
+@media screen and (min-width: $breakpoint-mobile) and (max-width: $breakpoint-tablet - 1){
 
   .navbar{
-    justify-content: space-between;
-
     &-logo{
       margin-top: 20px;
       margin-left: 23px;
@@ -59,31 +59,30 @@
     display: flex;
     flex-direction: column;
 
-    &-title{
-      font-weight: bold;
-      font-size: 52px;
-      line-height: 100%;
-      color: $base-white;
-      margin-left: 41px;
+    &-text{
       order:2;
-    }
-
-    &-presentation{
-      font-family: $second-font-family;
-      font-style: normal;
-      font-weight: 300;
-      font-size: 21px;
-      line-height: 25px;
-      text-align: justify;
-      letter-spacing: 0.03em;
-      color: $base-grey-light;
-      margin: 50px 46px 52px 41px;
-      order:3;
+      &-title{
+        font-weight: bold;
+        font-size: 52px;
+        line-height: 100%;
+        color: $base-white;
+        margin-left: 41px;
+      }
+      &-presentation{
+        font-family: $second-font-family;
+        font-style: normal;
+        font-weight: 300;
+        font-size: 21px;
+        line-height: 25px;
+        text-align: justify;
+        letter-spacing: 0.03em;
+        color: $base-grey-light;
+        margin: 50px 46px 52px 41px;
+      }
     }
 
     &-image {
       order:1;
-
       &--mobile{
         max-width: 100%;
         max-height: 100%;
@@ -109,14 +108,185 @@
   }
 }
 
-// Small devices
-@media screen and (min-width: $breakpoint-mobile){}
-
 // Medium devices
-@media screen and (min-width: $breakpoint-tablet){}
+@media screen and (min-width: $breakpoint-tablet) and (max-width: $breakpoint-desktop - 1){
+  .navbar{
+    &-logo{
+      margin-top: 20px;
+      margin-left: 23px;
+      &--mobile{
+        max-height: 19px;
+        max-width: 37px;
+      }
+      &--desktop{
+        display: none;
+      }
+    }
 
-// Large devices
-@media screen and (min-width: $breakpoint-desktop){}
+    &-item{
+      &-contact{
+        display: none;
+      }
+      &-team{
+        display: none;
+      }
+      &-burger{
+        margin-top: 23px;
+        margin-right: 20px;
+        &-image{
+          max-height: 24px;
+          max-width: 24px;
+        }
+      }
+    }
+  }
 
-// Extra large devices
-@media screen and (min-width: $breakpoint-extra-large){}
+  .section-agency{
+    display: flex;
+    flex-direction: column;
+
+    &-text{
+      order:2;
+      &-title{
+        font-weight: bold;
+        font-size: 52px;
+        line-height: 100%;
+        color: $base-white;
+        margin-left: 41px;
+      }
+      &-presentation{
+        font-family: $second-font-family;
+        font-style: normal;
+        font-weight: 300;
+        font-size: 21px;
+        line-height: 25px;
+        text-align: justify;
+        letter-spacing: 0.03em;
+        color: $base-grey-light;
+        margin: 50px 46px 52px 41px;
+      }
+    }
+
+    &-image {
+      order:1;
+
+      &--mobile{
+        display: none;
+      }
+      &--desktop{
+        max-width: 100%;
+        max-height: 100%;
+        right: 0px;
+      }
+    }
+  }
+
+  .section-clients{
+    &-logo{
+      display: flex;
+      flex-wrap: wrap;
+
+      & > img{
+        flex: 1;
+        min-width: 40%;
+        margin: 10px;
+      }
+    }
+  }
+}
+
+// Large and Extra large devices
+@media screen and (min-width: $breakpoint-desktop) {
+  .navbar {
+    &-logo{
+      margin-top: 48px;
+      margin-left: 23px;
+      &--mobile{
+        display: none;
+      }
+      &--desktop{
+        max-height: 27px;
+        max-width: 147px;
+      }
+    }
+    & .nav-links {
+      display: flex;
+      margin-top: 52px;
+    }
+    &-item {
+      &-contact > a, &-team > a {
+        color: $base-white;
+        text-decoration: none;
+        text-transform: uppercase;
+        font-family: $second-font-family;
+        font-weight: bold;
+        font-size: 14px;
+        line-height: 16.8px;
+        letter-spacing: 0.03em;
+        margin-right: 86px;
+      }
+      &-burger {
+        margin-right: 52px;
+        &-image{
+          max-height: 24px;
+          max-width: 24px;
+        }
+      }
+    }
+  }
+
+  .section-agency{
+    display: flex;
+    position: relative;
+    &-text{
+      max-width: 35rem;
+      padding: 10rem 0rem 10rem 15rem;
+      z-index: 10;
+
+      &-title{
+        font-weight: bold;
+        font-size: 90px;
+        line-height: 100%;
+        color: $base-white;
+      }
+  
+      &-presentation{
+        font-family: $second-font-family;
+        font-weight: 300;
+        font-size: 21px;
+        line-height: 25px;
+        letter-spacing: 0.03em;
+        color: $base-grey-light;
+        margin: 34px 46px 52px 0px;
+      }
+    }
+
+    &-image {
+      &--mobile{
+        display: none;
+      }
+      &--desktop{
+        width: 85%;
+        position:absolute;
+        top: 0;
+        right: 0;
+        height: auto;
+      }
+    }
+  }
+
+  .section-clients{
+    &-logo{
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      grid-gap: 3rem;
+      margin: 0 8rem 8rem 8rem;
+
+      & > img{
+        width: 100%;
+        height: auto;
+      }
+    }
+  }
+}
+

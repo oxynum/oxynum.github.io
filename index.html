@@ -19,7 +19,7 @@
           class="navbar-logo--mobile"
         >
           <img 
-            src="assets/logo-oxynum/Logo_Short_Light.png" 
+            src="images/logo-oxynum/Logo_Short_Light.png" 
             alt="logo oxynum version mobile"
           >
         </a>
@@ -28,13 +28,13 @@
           class="navbar-logo--desktop"
         >
           <img 
-            src="assets/logo-oxynum/Logo_Full_Light.png" 
+            src="images/logo-oxynum/Logo_Full_Light.png" 
             alt="logo oxynum version desktop"
           >
         </a>
       </div>
       <div class="navbar-item">
-        <ul>
+        <ul class="nav-links">
           <li class="navbar-item-contact">
             <a href="mailto:team@oxynum.fr">contactez-nous</a>
           </li>
@@ -44,7 +44,7 @@
           <li class="navbar-item-burger">
             <a href="navigation.html">
               <img 
-                src="assets/Icon/Menu-Burger.png"
+                src="images/Icon/Menu-Burger.png"
                 alt="icone menu burger pour ouvrir la page de navigation"
                 class="navbar-item-burger-image"
               >
@@ -56,75 +56,82 @@
   </header>
   <main>
     <section class="section-agency">
-      <h1 class="section-agency-title">Creative Agency:</h1>
-      <p class="section-agency-presentation">
-        Nous produisons des solutions pour répondre à vos enjeux stratégiques. Coding Base, Design System, Intelligence artificielle, Machine learning. SEO, Social Content Management, Mobile app, Web app, Digital Signage...
-      </p>
-       <figure class="section-agency-image">
+      <div class="section-agency-text">
+        <h1 class="section-agency-text-title">Creative Agency:</h1>
+        <p class="section-agency-text-presentation">
+          Nous produisons des solutions pour répondre à vos enjeux stratégiques. Coding Base, Design System, Intelligence artificielle, Machine learning. SEO, Social Content Management, Mobile app, Web app, Digital Signage...
+        </p>
+      </div>
+      <div class="section-agency-image">
         <img 
-          src="assets/site-cover-photos/home-mobile-cover.png" 
+          src="images/site-cover-photos/home-mobile-cover.png" 
           alt="Image d'illustration pour la page d'accueil (mobile)"
           class="section-agency-image--mobile"
         >
         <img 
-          src="assets/site-cover-photos/cover-home.jpg" 
+          src="images/site-cover-photos/cover-home.jpg" 
           alt="Image d'illustration pour la page d'accueil (desktop)"
           class="section-agency-image--desktop"
         >
-      </figure>
+      </div>
     </section>
     <section class="section-clients">
       <figure class="section-clients-logo">
         <img 
-          src="assets/logo-clients/ImVitro.png" 
+          src="images/logo-clients/ImVitro.png" 
           alt="logo ImVitro"
+          onclick="displayPresentationImage(this);"
+          onmouseover="displayPresentationVideo(this);"
         >
         <img 
-          src="assets/logo-clients/Logo-Accor.png" 
+          src="images/logo-clients/Logo-Accor.png" 
           alt="logo Accor"
+          onclick="displayPresentationImage(this);"
+          onmouseover="displayPresentationVideo(this);"
         >
         <img 
-          src="assets/logo-clients/Logo-Novotel.png" 
+          src="images/logo-clients/Logo-Novotel.png" 
           alt="logo Novotel"
         >
         <img 
-          src="assets/logo-clients/Logo-Ibis-Music.png" 
+          src="images/logo-clients/Logo-Ibis-Music.png" 
           alt="logo Ibis Music"
         >
         <img 
-          src="assets/logo-clients/Logo-L_OREAL.png" 
+          src="images/logo-clients/Logo-L_OREAL.png" 
           alt="logo L'Oreal Paris"
         >
         <img 
-          src="assets/logo-clients/Clubmed-Logo.png" 
+          src="images/logo-clients/Clubmed-Logo.png" 
           alt="logo Club Med"
         >
         <img 
-          src="assets/logo-clients/Logo-Peugeot.png" 
+          src="images/logo-clients/Logo-Peugeot.png" 
           alt="logo Peugeot"
         >
         <img 
-          src="assets/logo-clients/Maison-du-monde-Logo.png" 
+          src="images/logo-clients/Maison-du-monde-Logo.png" 
           alt="logo Maisons du monde"
         >
         <img 
-          src="assets/logo-clients/Logo-Marionnaud.png" 
+          src="images/logo-clients/Logo-Marionnaud.png" 
           alt="logo Marionnaud Paris"
         >
         <img 
-          src="assets/logo-clients/Vitalliance-logo.png" 
+          src="images/logo-clients/Vitalliance-logo.png" 
           alt="logo Vitalliance"
         >
         <img 
-          src="assets/logo-clients/Logo-EMMAUS.png" 
+          src="images/logo-clients/Logo-EMMAUS.png" 
           alt="logo Emmaus France"
         >
         <img 
-          src="assets/logo-clients/Antonelle-Logo.png" 
+          src="images/logo-clients/Antonelle-Logo.png" 
           alt="logo Antonelle Paris"
         >
       </figure>
     </section>
   </main>
+  <script src="scripts/index.js"></script>
 </body>
 </html>
