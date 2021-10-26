@@ -2,35 +2,52 @@
 <html lang="fr">
 <head>
   <meta charset="utf-8">
+  <title>Page Not Found</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="page d'erreur 404 du site internet Oxynum"/>
   <!--styles-->
   <link rel="stylesheet" href="styles/reset.css">
-  <title>Page Not Found</title>
+  <link rel="stylesheet" href="styles/style.css">
 </head>
 
-<body>
+<body class="page-error">
   <header>
-    <div id="logo">
-      <img 
-        src="images/logo-oxynum/Logo_Short_Light.png"  
-        alt="logo oxynum blanc"
-        height="19"
-        width="37"
-      />
-      <span>oxynum</span>
+    <div class="header-logo">
+      <a 
+        href="index.html" 
+        class="header-logo--mobile"
+      >
+        <img 
+          src="images/logo-oxynum/Logo_Short_Light.png" 
+          alt="logo oxynum version mobile"
+        >
+      </a>
+      <a 
+        href="index.html" 
+        class="header-logo--desktop"
+      >
+        <img 
+          src="images/logo-oxynum/Logo_Full_Light.png" 
+          alt="logo oxynum version desktop"
+        >
+      </a>
     </div>
   </header>
-  <main>
-    <h1>Erreur 404</h1>
-    <span>Page non trouvée...</span>
+  <main class="page-error-container">
+    <div>
+      <h1 class="error-title">Erreur 404</h1>
+      <span class="error-text">Page non trouvée...</span>
+    </div>
   </main>
-  <footer>
-    <img 
-      src="images/Icon/Fleche.png"
-      alt="flèche tournée vers la gauche pour retourner à la page d'accueil"
-    >
-    <span>Accueil</span>
+  <footer class="page-error-footer">
+    <a href="index.html" class="page-error-backlink">
+      <img 
+        src="images/Icon/Arrow-left.png"
+        alt="flèche tournée vers la gauche pour retourner à la page d'accueil"
+        class="page-error-backlink-icon"
+      >
+      <span class="page-error-backlink-back-home">Accueil</span>
+    </a>
   </footer>
 </body>
 </html>

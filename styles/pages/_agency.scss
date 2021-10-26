@@ -1,0 +1,14 @@
+// Extra small devices
+@media screen and (min-width: $breakpoint-mobile) and (max-width: $breakpoint-tablet - 1){}
+
+// Medium devices
+@media screen and (min-width: $breakpoint-tablet) and (max-width: $breakpoint-desktop - 1){}
+
+// Large devices
+@media screen and (min-width: $breakpoint-desktop) and (max-width: $breakpoint-large - 1){}
+
+// Desktop Large devices
+@media screen and (min-width: $breakpoint-large) and (max-width: $breakpoint-extra-large - 1){}
+
+// Desktop Extra large devices
+@media screen and (min-width: $breakpoint-extra-large){}

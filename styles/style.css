@@ -88,6 +88,9 @@
   .navbar-logo--desktop {
     display: none;
   }
+  .navbar-item {
+    margin-top: 20px;
+  }
   .navbar-item-contact {
     display: none;
   }
@@ -156,6 +159,9 @@
   .navbar-logo--desktop {
     display: none;
   }
+  .navbar-item {
+    margin-top: 20px;
+  }
   .navbar-item-contact {
     display: none;
   }
@@ -223,6 +229,9 @@
     max-height: 27px;
     max-width: 147px;
   }
+  .navbar-item {
+    margin-top: 48px;
+  }
   .navbar-item-burger {
     margin-right: 52px;
   }
@@ -276,6 +285,9 @@
   .navbar-logo--desktop {
     max-height: 27px;
     max-width: 147px;
+  }
+  .navbar-item {
+    margin-top: 48px;
   }
   .navbar-item-burger {
     margin-right: 52px;
@@ -331,6 +343,9 @@
     max-height: 27px;
     max-width: 147px;
   }
+  .navbar-item {
+    margin-top: 48px;
+  }
   .navbar-item-burger {
     margin-right: 52px;
   }
@@ -371,6 +386,213 @@
   .section-clients-logo > img {
     width: 100%;
     height: auto;
+  }
+}
+
+.page-error {
+  background-color: #1C1B1B;
+}
+
+.page-error-container {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.page-error-container > div {
+  text-align: center;
+  margin: auto;
+}
+
+.page-error-container > div .error-title {
+  font-weight: bold;
+  line-height: 100%;
+  color: #ADADAD;
+  margin-bottom: 8px;
+}
+
+.page-error-container > div .error-text {
+  color: #ADADAD;
+}
+
+.page-error-footer {
+  text-align: center;
+}
+
+.page-error-footer .page-error-backlink {
+  text-decoration: none;
+}
+
+.page-error-footer .page-error-backlink-back-home {
+  font-weight: bold;
+  line-height: 100%;
+  color: #ADADAD;
+}
+
+@media screen and (min-width: 320px) and (max-width: 767px) {
+  .page-error .header-logo {
+    padding-left: 23px;
+    padding-top: 20px;
+  }
+  .page-error .header-logo--mobile {
+    width: 37px;
+    height: 19px;
+  }
+  .page-error .header-logo--desktop {
+    display: none;
+  }
+  .page-error-container {
+    height: 486px;
+    margin-top: 2.5rem;
+    background-image: url(../images/Icon/Circle.png);
+    background-size: contain;
+  }
+  .page-error-container > div .error-title {
+    font-size: 36px;
+  }
+  .page-error-container > div .error-text {
+    font-size: 24px;
+  }
+  .page-error-footer {
+    margin-top: 1.12rem;
+  }
+  .page-error-footer .page-error-backlink-icon {
+    width: 25.33px;
+    height: 12.67px;
+    margin-right: 10.33px;
+  }
+  .page-error-footer .page-error-backlink-back-home {
+    font-size: 24px;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  .page-error .header-logo {
+    padding-left: 23px;
+    padding-top: 20px;
+  }
+  .page-error .header-logo--mobile {
+    display: none;
+  }
+  .page-error .header-logo--desktop {
+    width: 147px;
+    height: 27px;
+  }
+  .page-error-container {
+    height: 486px;
+    margin-top: 8rem;
+    background-image: url(../images/Icon/Circle-Large.png);
+    background-size: contain;
+  }
+  .page-error-container > div .error-title {
+    font-size: 36px;
+  }
+  .page-error-container > div .error-text {
+    font-size: 24px;
+  }
+  .page-error-footer {
+    margin-top: 5rem;
+  }
+  .page-error-footer .page-error-backlink-icon {
+    width: 25.33px;
+    height: 12.67px;
+    margin-right: 10.33px;
+  }
+  .page-error-footer .page-error-backlink-back-home {
+    font-size: 24px;
+  }
+}
+
+@media screen and (min-width: 992px) and (max-width: 1199px) {
+  .page-error {
+    position: relative;
+    background-image: url(../images/Icon/Circle-Large.png);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  .page-error .header-logo {
+    padding-left: 29px;
+    padding-top: 48px;
+  }
+  .page-error .header-logo--mobile {
+    display: none;
+  }
+  .page-error .header-logo--desktop {
+    width: 147px;
+    height: 27px;
+  }
+  .page-error-container {
+    position: absolute;
+    top: 40%;
+  }
+  .page-error-container > div .error-title {
+    font-size: 36px;
+  }
+  .page-error-container > div .error-text {
+    font-size: 24px;
+  }
+  .page-error-footer {
+    position: absolute;
+    top: 59%;
+    margin-top: 5rem;
+    left: 44%;
+  }
+  .page-error-footer .page-error-backlink-icon {
+    width: 25.33px;
+    height: 12.67px;
+    margin-right: 10.33px;
+  }
+  .page-error-footer .page-error-backlink-back-home {
+    font-size: 24px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .page-error {
+    background-image: url(../images/Icon/Circle-Large.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  .page-error .header-logo {
+    padding-left: 29px;
+    padding-top: 48px;
+  }
+  .page-error .header-logo--mobile {
+    display: none;
+  }
+  .page-error .header-logo--desktop {
+    width: 147px;
+    height: 27px;
+  }
+  .page-error-container {
+    height: 50vh;
+    margin: auto;
+  }
+  .page-error-container > div .error-title {
+    font-size: 72px;
+  }
+  .page-error-container > div .error-text {
+    font-size: 48px;
+  }
+  .page-error-footer {
+    margin-top: 5rem;
+  }
+  .page-error-footer .page-error-backlink-icon {
+    width: 34.67px;
+    height: 17.33px;
+    margin-right: 10.33px;
+  }
+  .page-error-footer .page-error-backlink-back-home {
+    font-size: 36px;
   }
 }
 
