@@ -13,24 +13,73 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
+
+      & .nav-links {
+        display: flex;
+      }
+      & .navbar-item {
+        &-contact > a, &-team > a {
+          color: $base-white;
+          text: {
+            decoration: none;
+            transform: uppercase;
+          }
+          font: {
+            family: $second-font-family;
+            weight: bold;
+            size: 14px;
+          }
+          line-height: 16.8px;
+          letter-spacing: 0.03em;
+          margin-right: 86px;
+        }
+      }
     }
   }
 
   main {
-    margin-top: 45px;
+    padding-top: 45px;
+
+    & .section-agency{
+      display: flex;
+
+      &-text{
+        &-title{
+          font: {
+            weight: bold;
+          }
+          line-height: 100%;
+          color: $base-white;
+        }
+    
+        &-presentation{
+          font: {
+            family: $second-font-family;
+            weight: 300;
+            size: 21px;
+          }
+          line-height: 25px;
+          letter-spacing: 0.03em;
+          color: $base-grey-light;
+        }
+      }
+    }
   }
 }
 
 // Extra small devices
 @media screen and (min-width: $breakpoint-mobile) and (max-width: $breakpoint-tablet - 1){
-
   .navbar{
     &-logo{
-      margin-top: 20px;
-      margin-left: 23px;
+      margin: {
+        top: 20px;
+        left: 23px;
+      }
       &--mobile{
-        max-height: 19px;
-        max-width: 37px;
+        max: {
+          height: 19px;
+          width: 37px;
+        }
       }
       &--desktop{
         display: none;
@@ -45,52 +94,39 @@
         display: none;
       }
       &-burger{
-        margin-top: 23px;
-        margin-right: 20px;
+        margin: {
+          top: 23px;
+          right: 20px;
+        }
         &-image{
-          max-height: 24px;
-          max-width: 24px;
+          max: {
+            height: 24px;
+            width: 24px;
+          }
         }
       }
     }
   }
-
   .section-agency{
-    display: flex;
     flex-direction: column;
 
     &-text{
       order:2;
-      &-title{
-        font-weight: bold;
+      &-title {
         font-size: 52px;
-        line-height: 100%;
-        color: $base-white;
         margin-left: 41px;
       }
-      &-presentation{
-        font-family: $second-font-family;
-        font-style: normal;
-        font-weight: 300;
-        font-size: 21px;
-        line-height: 25px;
-        text-align: justify;
-        letter-spacing: 0.03em;
-        color: $base-grey-light;
+      &-presentation {
         margin: 50px 46px 52px 41px;
       }
     }
-
-    &-image {
+    &-image > picture > img {
       order:1;
-      &--mobile{
-        max-width: 100%;
-        max-height: 100%;
-        right: 0px;
+      max: {
+        width: 100%;
+        height: 100%;
       }
-      &--desktop{
-        display: none;
-      }
+      right: 0px;
     }
   }
 
@@ -101,7 +137,7 @@
 
       & > img{
         flex: 1;
-        min-width: 40%;
+        min-width: 30%;
         margin: 10px;
       }
     }
@@ -112,11 +148,15 @@
 @media screen and (min-width: $breakpoint-tablet) and (max-width: $breakpoint-desktop - 1){
   .navbar{
     &-logo{
-      margin-top: 20px;
-      margin-left: 23px;
+      margin: {
+        top: 20px;
+        left: 23px;
+      }
       &--mobile{
-        max-height: 19px;
-        max-width: 37px;
+        max: {
+          height: 19px;
+          width: 37px;
+        }
       }
       &--desktop{
         display: none;
@@ -131,53 +171,37 @@
         display: none;
       }
       &-burger{
-        margin-top: 23px;
-        margin-right: 20px;
+        margin: {
+          top: 23px;
+          right: 20px;
+        }
         &-image{
-          max-height: 24px;
-          max-width: 24px;
+          max: {
+            height: 24px;
+            width: 24px;
+          }
         }
       }
     }
   }
-
   .section-agency{
-    display: flex;
     flex-direction: column;
 
     &-text{
       order:2;
       &-title{
-        font-weight: bold;
         font-size: 52px;
-        line-height: 100%;
-        color: $base-white;
         margin-left: 41px;
       }
       &-presentation{
-        font-family: $second-font-family;
-        font-style: normal;
-        font-weight: 300;
-        font-size: 21px;
-        line-height: 25px;
-        text-align: justify;
-        letter-spacing: 0.03em;
-        color: $base-grey-light;
         margin: 50px 46px 52px 41px;
       }
     }
 
-    &-image {
+    &-image > picture > img {
       order:1;
-
-      &--mobile{
-        display: none;
-      }
-      &--desktop{
-        max-width: 100%;
-        max-height: 100%;
-        right: 0px;
-      }
+      width: 100%;
+      margin-bottom: 8rem;
     }
   }
 
@@ -195,92 +219,222 @@
   }
 }
 
-// Large and Extra large devices
-@media screen and (min-width: $breakpoint-desktop) {
+// Large devices
+@media screen and (min-width: $breakpoint-desktop) and (max-width: $breakpoint-large - 1){
   .navbar {
     &-logo{
-      margin-top: 48px;
-      margin-left: 23px;
+      margin: {
+        top: 48px;
+        left: 23px;
+      }
       &--mobile{
         display: none;
       }
       &--desktop{
-        max-height: 27px;
-        max-width: 147px;
+        max: {
+          height: 27px;
+          width: 147px;
+        }
       }
-    }
-    & .nav-links {
-      display: flex;
-      margin-top: 52px;
     }
     &-item {
-      &-contact > a, &-team > a {
-        color: $base-white;
-        text-decoration: none;
-        text-transform: uppercase;
-        font-family: $second-font-family;
-        font-weight: bold;
-        font-size: 14px;
-        line-height: 16.8px;
-        letter-spacing: 0.03em;
-        margin-right: 86px;
-      }
       &-burger {
         margin-right: 52px;
         &-image{
-          max-height: 24px;
-          max-width: 24px;
+          max: {
+            height: 24px;
+            width: 24px;
+          }
         }
       }
     }
   }
 
   .section-agency{
-    display: flex;
     position: relative;
     &-text{
-      max-width: 35rem;
-      padding: 10rem 0rem 10rem 15rem;
+      max-width: 28rem;
+      padding: 8rem 0rem 8rem 8rem;
       z-index: 10;
 
       &-title{
-        font-weight: bold;
-        font-size: 90px;
-        line-height: 100%;
-        color: $base-white;
+        font: {
+          size: 90px;
+        }
       }
   
       &-presentation{
-        font-family: $second-font-family;
-        font-weight: 300;
-        font-size: 21px;
-        line-height: 25px;
-        letter-spacing: 0.03em;
-        color: $base-grey-light;
-        margin: 34px 46px 52px 0px;
+        margin-top: 34px;
       }
     }
 
-    &-image {
-      &--mobile{
-        display: none;
-      }
-      &--desktop{
-        width: 85%;
-        position:absolute;
-        top: 0;
-        right: 0;
-        height: auto;
-      }
+    &-image > picture > img {
+      width: 60%;
+      position:absolute;
+      top: 4rem;
+      right: 0;
+      height: auto;
     }
   }
 
   .section-clients{
     &-logo{
       display: grid;
-      grid-template-columns: repeat(6, 1fr);
-      grid-gap: 3rem;
+      grid: {
+        template-columns: repeat(6, 1fr);
+        gap: 3rem;
+      }
       margin: 0 8rem 8rem 8rem;
+
+      & > img{
+        width: 100%;
+        height: auto;
+      }
+    }
+  }
+}
+
+// Desktop Large devices
+@media screen and (min-width: $breakpoint-large) and (max-width: $breakpoint-extra-large - 1){
+
+  .navbar {
+    &-logo{
+      margin: {
+        top: 48px;
+        left: 23px;
+      }
+      &--mobile{
+        display: none;
+      }
+      &--desktop{
+        max: {
+          height: 27px;
+          width: 147px;
+        }
+      }
+    }
+    &-item {
+      &-burger {
+        margin-right: 52px;
+        &-image{
+          max: {
+            height: 24px;
+            width: 24px;
+          }
+        }
+      }
+    }
+  }
+
+  .section-agency{
+    position: relative;
+    &-text{
+      max-width: 35rem;
+      padding: 10rem 0rem 10rem 12rem;
+      z-index: 10;
+
+      &-title{
+        font-size: 132px;
+      }
+  
+      &-presentation{
+        margin-top: 34px;
+      }
+    }
+
+    &-image > picture > img {
+      width: 60%;
+      position:absolute;
+      top: 3rem;
+      right: 1rem;
+      height: auto;
+    }
+  }
+
+  .section-clients{
+    &-logo{
+      display: grid;
+      grid: {
+        template-columns: repeat(6, 1fr);
+        gap: 3rem;
+      }
+      margin: 0 10rem 5rem 10rem;
+
+      & > img{
+        width: 100%;
+        height: auto;
+      }
+    }
+  }
+}
+
+// Desktop Extra large devices
+@media screen and (min-width: $breakpoint-extra-large) {
+  .navbar {
+    &-logo{
+      margin: { 
+        top: 48px;
+        left: 23px;
+      }
+      &--mobile{
+        display: none;
+      }
+      &--desktop{
+        max: {
+          height: 27px;
+          width: 147px;
+        }
+      }
+    }
+    &-item {
+      &-burger {
+        margin-right: 52px;
+        &-image{
+          max: {
+            height: 24px;
+            width: 24px;
+          }
+        }
+      }
+    }
+  }
+
+  .section-agency{
+    position: relative;
+    &-text{
+      max: {
+        width: 45rem;
+        height: 25rem;
+      }
+      padding: 15rem 0rem 0rem 38rem;
+      z-index: 10;
+
+      &-title{
+        font-size: 132px;
+      }
+  
+      &-presentation{
+        margin-top: 34px;
+      }
+    }
+
+    &-image > picture > img {
+      width: auto;
+      position:absolute;
+      top: 0;
+      right: 20rem;
+      height: 53rem;
+    }
+  }
+
+  .section-clients{
+    &-logo{
+      display: grid;
+      grid: {
+        template-columns: repeat(6, 1fr);
+        gap: 6rem;
+      }
+      margin: 15rem 33rem 0rem 33rem;
 
       & > img{
         width: 100%;
