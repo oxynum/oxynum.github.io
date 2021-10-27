@@ -1,14 +1,494 @@
+.page-navigation {
+  background-color: $base-background-light;
+  
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    height: auto;
+
+    &__closing {
+      width: 24px;
+      height: 24px;
+      margin: {
+        top: 22px;
+        right: 22px;
+      }
+    }
+  }
+
+  .content {
+    &-item {
+      display: flex;
+      flex-direction: column;
+      list-style-type: none; 
+
+      & > li {
+        padding-bottom: 6px;
+
+        & > a {
+          text-decoration: none;
+          font: {
+            family: $base-font-family;
+            weight: bold;
+          }
+          line-height: 100%;
+          color: $base-grey-medium;
+        }
+      }
+    }
+  }
+
+  footer {
+    & .footer-contact {
+      font-family: $second-font-family;
+
+      &__title {
+        font-weight: bold;
+        color: $base-grey-dark;
+      }
+      &__address{
+        font-weight: 300;
+        color: $base-grey-dark-2;
+      }
+      &__mail {
+        text-decoration: none;
+        color: $base-grey-dark-2;
+      }
+    }
+  }
+}
+
 // Extra small devices
-@media screen and (min-width: $breakpoint-mobile) and (max-width: $breakpoint-tablet - 1){}
+@media screen and (min-width: $breakpoint-mobile) and (max-width: $breakpoint-tablet - 1){
+  .page-navigation {
+    background: {
+      image: url(#{$assetPath}/Icon/cover-circle-white-mobile.png);
+      position: center 60px;
+      repeat: no-repeat;
+    }
+  
+    .navbar {
+      &__logo {
+        margin: {
+          top: 20px;
+          left: 23px;
+        }
+        &--mobile{
+          max: {
+            width: 37px;
+            height: 19px;
+          }
+        }
+        &--desktop{
+          display: none;
+        }
+      }
+      &__closing {
+        margin: {
+          top: 22px;
+          right: 22px;
+        }
+      }
+    }
+  
+    .content {
+      &-item {
+        margin-top: 100px;
+        margin-left: 41px;
+  
+        & > li > a{
+          font-size: 70px;
+        }
+        &__home{
+          order: 1;
+        }
+        &__agency{
+          order: 2;
+        }
+        &__team{
+          order: 3;
+          &__illustration{
+            display: none;
+          }
+        }
+        &__clients{
+          display: none;
+        }
+      }
+    }
+  
+    footer {
+      margin-top: 94px;
+  
+      & .footer-contact {
+        width: 276px;
+        margin-left: 47px;
+        margin-bottom: 46px;
+        font-size: 18px;
+        line-height: 100%;
+
+        &__address{
+          margin-top: 12px;
+        }
+      }
+  
+      & .footer-social-link{
+        display: none;
+      }
+    }
+  }
+}
 
 // Medium devices
-@media screen and (min-width: $breakpoint-tablet) and (max-width: $breakpoint-desktop - 1){}
+@media screen and (min-width: $breakpoint-tablet) and (max-width: $breakpoint-desktop - 1){
+  .page-navigation {
+    background: {
+      image: url(#{$assetPath}/Icon/cover-circle-white-mobile.png);
+      position: center 100px;
+      size: 99.9% 100%;
+      repeat: no-repeat;
+    }
+  
+    .navbar {
+      &__logo {
+        margin: {
+          top: 30px;
+          left: 23px;
+        }
+        &--mobile{
+          max: {
+            width: 37px;
+            height: 19px;
+          }
+        }
+        &--desktop{
+          display: none;
+        }
+      }
+      &__closing {
+        margin: {
+          top: 30px;
+          right: 22px;
+        }
+      }
+    }
+  
+    .content {
+      &-item {
+        margin-top: 100px;
+        margin-left: 87px;
+  
+        & > li > a{
+          font-size: 70px;
+        }
+        &__home{
+          order: 1;
+        }
+        &__agency{
+          order: 2;
+        }
+        &__team{
+          order: 3;
+          &__illustration{
+            display: none;
+          }
+        }
+        &__clients{
+          display: none;
+        }
+      }
+    }
+  
+    footer {
+      margin-top: 94px;
+  
+      & .footer-contact {
+        width: 276px;
+        margin-left: 87px;
+        margin-bottom: 46px;
+        font-size: 18px;
+        line-height: 100%;
+  
+        &__address{
+          margin-top: 12px;
+        }
+      }
+  
+      & .footer-social-link {
+        margin-top: 90px;
+  
+        & > a {
+          font-family: $second-font-family;
+          font-weight: 300;
+          font-size: 18px;
+          line-height: 100%;
+          color: $base-grey-medium-2;
+          text-decoration: none;
+          margin-left: 87px;
+        }
+      }
+    }
+  }
+}
 
 // Large devices
-@media screen and (min-width: $breakpoint-desktop) and (max-width: $breakpoint-large - 1){}
+@media screen and (min-width: $breakpoint-desktop) and (max-width: $breakpoint-large - 1){
+  .page-navigation {
+    background: {
+      image: url(#{$assetPath}/Icon/cover-circle-white.png);
+      position: right;
+      size: contain;
+      repeat: no-repeat;
+    }
+  
+    .navbar {
+      &__logo {
+        margin: {
+          top: 48px;
+          left: 29px;
+        }
+        &--mobile{
+          display: none;
+        }
+        &--desktop{
+          max: {
+            width: 147px;
+            height: 27px;
+          }
+        }
+      }
+      &__closing {
+        margin: {
+          top: 48px;
+          right: 23px;
+        }
+      }
+    }
+  
+    .content {
+      &-item {
+        margin-top: 30px;
+        margin-left: 160px;
+  
+        & > li > a {
+          font-size: 70px;
+        }
+
+        &__team__illustration{
+          margin-left: -80px;
+          padding-right: 37px;
+        }
+      }
+    }
+  
+    footer {
+      display: flex;
+      margin-left: 160px;
+      margin-bottom: 57px;
+      margin-top: 34px;
+  
+      & .footer-contact {
+        font-size: 18px;
+        line-height: 100%;
+        margin-right: 61px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        &__address {
+          margin-top: 12px;
+        }
+      }
+  
+      & .footer-social-link {
+        display: flex;
+        align-self: flex-end;
+      
+        & > a{
+          font-family: $second-font-family;
+          font-weight: 300;
+          font-size: 18px;
+          line-height: 100%;
+          color: $base-grey-medium-2;
+          text-decoration: none;
+          margin-right: 40px;
+        }
+      }
+    }
+  }
+}
 
 // Desktop Large devices
-@media screen and (min-width: $breakpoint-large) and (max-width: $breakpoint-extra-large - 1){}
+@media screen and (min-width: $breakpoint-large) and (max-width: $breakpoint-extra-large - 1){
+  .page-navigation {
+    background: {
+      image: url(#{$assetPath}/Icon/cover-circle-white.png);
+      position: right;
+      size: contain;
+      repeat: no-repeat;
+    }
+  
+    .navbar {
+      &__logo {
+        margin: {
+          top: 48px;
+          left: 29px;
+        }
+        &--mobile{
+          display: none;
+        }
+        &--desktop{
+          max: {
+            width: 147px;
+            height: 27px;
+          }
+        }
+      }
+      &__closing {
+        margin: {
+          top: 48px;
+          right: 23px;
+        }
+      }
+    }
+  
+    .content {
+      &-item {
+        margin-top: 130px;
+        margin-left: 293px;
+  
+        & > li > a {
+          font-size: 80px;
+        }
+
+        &__team__illustration{
+          margin-left: -80px;
+          padding-right: 37px;
+        }
+      }
+    }
+  
+    footer {
+      display: flex;
+      margin-left: 293px;;
+      margin-bottom: 57px;
+      margin-top: 110px;
+  
+      & .footer-contact {
+        font-size: 18px;
+        line-height: 100%;
+        margin-right: 61px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        &__address {
+          margin-top: 12px;
+        }
+      }
+  
+      & .footer-social-link {
+        display: flex;
+        align-self: flex-end;
+        margin-left: 99px;
+      
+        & > a{
+          font-family: $second-font-family;
+          font-weight: 300;
+          font-size: 18px;
+          line-height: 100%;
+          color: $base-grey-medium-2;
+          text-decoration: none;
+          margin-right: 50px;
+        }
+      }
+    }
+  }
+}
 
 // Desktop Extra large devices
-@media screen and (min-width: $breakpoint-extra-large){}
+@media screen and (min-width: $breakpoint-extra-large){
+  .page-navigation {
+    background: {
+      image: url(#{$assetPath}/Icon/cover-circle-white.png);
+      position: right;
+      size: contain;
+      repeat: no-repeat;
+    }
+  
+    .navbar {
+      &__logo {
+        margin: {
+          top: 48px;
+          left: 29px;
+        }
+        &--mobile{
+          display: none;
+        }
+        &--desktop{
+          max: {
+            width: 147px;
+            height: 27px;
+          }
+        }
+      }
+      &__closing {
+        margin: {
+          top: 48px;
+          right: 23px;
+        }
+      }
+    }
+  
+    .content {
+      &-item {
+        margin-top: 130px;
+        margin-left: 293px;
+  
+        & > li > a {
+          font-size: 150px;
+        }
+
+        &__team__illustration{
+          margin-left: -80px;
+          padding-right: 37px;
+        }
+      }
+    }
+  
+    footer {
+      display: flex;
+      margin-left: 293px;
+      margin-top: 110px;
+  
+      & .footer-contact {
+        font-size: 18px;
+        line-height: 100%;
+        margin-right: 61px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        &__address {
+          margin-top: 12px;
+        }
+      }
+  
+      & .footer-social-link {
+        display: flex;
+        align-self: flex-end;
+        margin-left: 99px;
+      
+        & > a{
+          font-family: $second-font-family;
+          font-weight: 300;
+          font-size: 18px;
+          line-height: 100%;
+          color: $base-grey-medium-2;
+          text-decoration: none;
+          margin-right: 50px;
+        }
+      }
+    }
+  }
+}

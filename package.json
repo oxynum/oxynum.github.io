@@ -1,0 +1,21 @@
+{
+  "name": "oxynum.github.io",
+  "version": "1.0.0",
+  "description": "Update site web Oxynum",
+  "main": "index.html",
+  "scripts": {
+    "sass": "sass --watch ./styles/style.scss:./public/css/style.css",
+    "prefix": "postcss ./public/css/style.css --use autoprefixer -d ./public/css/prefixed/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/oxynum/oxynum.github.io.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/oxynum/oxynum.github.io/issues"
+  },
+  "homepage": "https://github.com/oxynum/oxynum.github.io#readme",
+  "browserslist": "last 4 versions"
+}

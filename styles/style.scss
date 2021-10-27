@@ -1,7 +1,8 @@
-@import "helpers/variables";
+@import "utils/variables";
 
 @import "pages/index";
 @import "pages/404";
+@import "pages/navigation";
 
 html, body {
 	font-family: $base-font-family;
