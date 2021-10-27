@@ -2,37 +2,41 @@
 <html lang="fr">
 <head>
   <meta charset="utf-8">
+  <title>Clients-Oxynum</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="Cette page affiche la liste de l'ensemble des clients qui ont fait confiance à l'agence Oxynum"/>
   <!--styles-->
-  <link rel="stylesheet" href="styles/reset.css">
-  <title>Clients-Oxynum</title>
+  <link rel="stylesheet" href="styles/base/reset.css">
+  <link rel="stylesheet" href="styles/style.css">
 </head>
 
-<body>
-  <header>
-    <div id="logo">
-      <img 
-        src="images/logo-oxynum/Logo_Short_Dark.png"  
-        alt="logo oxynum"
-      />
-      <span>oxynum</span>
+<body class="page-clients">
+  <header class="navbar">
+    <div class="navbar__logo">
+        <a href="index.html" class="navbar__logo--desktop">
+          <img 
+            src="images/logo-oxynum/Logo_Full_Dark.png" 
+            alt="logo oxynum version desktop"
+          >
+        </a>
     </div>
-    <div>
-      <img 
-        src="images/Icon/Croix.png" 
-        alt="image pour fermer la page de navigation"
-      />
+    <div class="navbar__closing">
+      <a href="index.html">
+        <img 
+          src="images/Icon/Croix.png" 
+          alt="image pour fermer la page de navigation"
+        />
+      </a>
     </div>
   </header>
-  <main>
-    <div>
+  <main class="content">
+    <div class="content__arrow">
       <img 
         src="images/Icon/arrow_left_alt.png" 
         alt="image de flèche tournée vers la droite"
       />
     </div>
-    <ul>
+    <ul class="content__list-clients">
       <li>Accor</li>
       <li>Fenty</li>
       <li>Dior</li>

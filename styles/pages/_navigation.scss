@@ -1,20 +1,8 @@
-.page-navigation {
-  background-color: $base-background-light;
-  
-  .navbar {
-    display: flex;
-    justify-content: space-between;
-    height: auto;
+@import "../layouts/cover";
+@import "../layouts/navbar";
 
-    &__closing {
-      width: 24px;
-      height: 24px;
-      margin: {
-        top: 22px;
-        right: 22px;
-      }
-    }
-  }
+.page-navigation {
+  @include cover-light;
 
   .content {
     &-item {
@@ -66,30 +54,7 @@
       position: center 60px;
       repeat: no-repeat;
     }
-  
-    .navbar {
-      &__logo {
-        margin: {
-          top: 20px;
-          left: 23px;
-        }
-        &--mobile{
-          max: {
-            width: 37px;
-            height: 19px;
-          }
-        }
-        &--desktop{
-          display: none;
-        }
-      }
-      &__closing {
-        margin: {
-          top: 22px;
-          right: 22px;
-        }
-      }
-    }
+    @include navbar-full-dark--mobile;
   
     .content {
       &-item {
@@ -149,29 +114,7 @@
       repeat: no-repeat;
     }
   
-    .navbar {
-      &__logo {
-        margin: {
-          top: 30px;
-          left: 23px;
-        }
-        &--mobile{
-          max: {
-            width: 37px;
-            height: 19px;
-          }
-        }
-        &--desktop{
-          display: none;
-        }
-      }
-      &__closing {
-        margin: {
-          top: 30px;
-          right: 22px;
-        }
-      }
-    }
+    @include navbar-full-dark--mobile;
   
     .content {
       &-item {
@@ -241,29 +184,7 @@
       repeat: no-repeat;
     }
   
-    .navbar {
-      &__logo {
-        margin: {
-          top: 48px;
-          left: 29px;
-        }
-        &--mobile{
-          display: none;
-        }
-        &--desktop{
-          max: {
-            width: 147px;
-            height: 27px;
-          }
-        }
-      }
-      &__closing {
-        margin: {
-          top: 48px;
-          right: 23px;
-        }
-      }
-    }
+    @include navbar-full-dark--desktop;
   
     .content {
       &-item {
@@ -327,30 +248,7 @@
       size: contain;
       repeat: no-repeat;
     }
-  
-    .navbar {
-      &__logo {
-        margin: {
-          top: 48px;
-          left: 29px;
-        }
-        &--mobile{
-          display: none;
-        }
-        &--desktop{
-          max: {
-            width: 147px;
-            height: 27px;
-          }
-        }
-      }
-      &__closing {
-        margin: {
-          top: 48px;
-          right: 23px;
-        }
-      }
-    }
+    @include navbar-full-dark--desktop;
   
     .content {
       &-item {
@@ -416,29 +314,7 @@
       repeat: no-repeat;
     }
   
-    .navbar {
-      &__logo {
-        margin: {
-          top: 48px;
-          left: 29px;
-        }
-        &--mobile{
-          display: none;
-        }
-        &--desktop{
-          max: {
-            width: 147px;
-            height: 27px;
-          }
-        }
-      }
-      &__closing {
-        margin: {
-          top: 48px;
-          right: 23px;
-        }
-      }
-    }
+    @include navbar-full-dark--desktop;
   
     .content {
       &-item {

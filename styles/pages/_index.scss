@@ -1,5 +1,7 @@
+@import "../layouts/cover";
+
 .page-home{
-  background-color: $base-background-color;
+  @include cover-dark;
 
   header {
     position: fixed;

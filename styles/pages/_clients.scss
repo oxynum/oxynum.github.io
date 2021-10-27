@@ -1,5 +1,28 @@
-// Extra small devices
-@media screen and (min-width: $breakpoint-mobile) and (max-width: $breakpoint-tablet - 1){}
+@import "../layouts/cover";
+@import "../layouts/navbar";
+
+.page-clients {
+  @include cover-light;
+  background: {
+    image: url(#{$assetPath}/Icon/cover-circle-white.png);
+    position: right;
+    size: contain;
+    repeat: no-repeat;
+  }
+  @include navbar-full-dark--desktop;
+  
+
+  // .content {
+
+  //   // &__arrow{
+      
+  //   // } 
+    
+  // }
+}
+
+
+
 
 // Medium devices
 @media screen and (min-width: $breakpoint-tablet) and (max-width: $breakpoint-desktop - 1){}

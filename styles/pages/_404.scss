@@ -1,5 +1,7 @@
+@import "../layouts/cover";
+
 .page-error {
-  background-color: $base-background-dark;
+  @include cover-dark;
 
   &-container {
     width: 100%;

@@ -9,7 +9,7 @@
 }
 
 .page-home {
-  background-color: #2A2A2A;
+  background-color: #1C1B1B;
 }
 
 .page-home header {
@@ -594,23 +594,6 @@
   background-color: #F0F0F0;
 }
 
-.page-navigation .navbar {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  height: auto;
-}
-
-.page-navigation .navbar__closing {
-  width: 24px;
-  height: 24px;
-  margin-top: 22px;
-  margin-right: 22px;
-}
-
 .page-navigation .content-item {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -658,6 +641,15 @@
     background-image: url(../images/Icon/cover-circle-white-mobile.png);
     background-position: center 60px;
     background-repeat: no-repeat;
+  }
+  .page-navigation .navbar {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    height: auto;
   }
   .page-navigation .navbar__logo {
     margin-top: 20px;
@@ -727,8 +719,17 @@
     background-size: 99.9% 100%;
     background-repeat: no-repeat;
   }
+  .page-navigation .navbar {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    height: auto;
+  }
   .page-navigation .navbar__logo {
-    margin-top: 30px;
+    margin-top: 20px;
     margin-left: 23px;
   }
   .page-navigation .navbar__logo--mobile {
@@ -739,7 +740,7 @@
     display: none;
   }
   .page-navigation .navbar__closing {
-    margin-top: 30px;
+    margin-top: 22px;
     margin-right: 22px;
   }
   .page-navigation .content-item {
@@ -804,6 +805,15 @@
     background-size: contain;
     background-repeat: no-repeat;
   }
+  .page-navigation .navbar {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    height: auto;
+  }
   .page-navigation .navbar__logo {
     margin-top: 48px;
     margin-left: 29px;
@@ -816,8 +826,10 @@
     max-height: 27px;
   }
   .page-navigation .navbar__closing {
+    width: 24px;
+    height: 24px;
     margin-top: 48px;
-    margin-right: 23px;
+    margin-right: 29px;
   }
   .page-navigation .content-item {
     margin-top: 30px;
@@ -881,6 +893,15 @@
     background-size: contain;
     background-repeat: no-repeat;
   }
+  .page-navigation .navbar {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    height: auto;
+  }
   .page-navigation .navbar__logo {
     margin-top: 48px;
     margin-left: 29px;
@@ -893,8 +914,10 @@
     max-height: 27px;
   }
   .page-navigation .navbar__closing {
+    width: 24px;
+    height: 24px;
     margin-top: 48px;
-    margin-right: 23px;
+    margin-right: 29px;
   }
   .page-navigation .content-item {
     margin-top: 130px;
@@ -959,6 +982,15 @@
     background-size: contain;
     background-repeat: no-repeat;
   }
+  .page-navigation .navbar {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    height: auto;
+  }
   .page-navigation .navbar__logo {
     margin-top: 48px;
     margin-left: 29px;
@@ -971,8 +1003,10 @@
     max-height: 27px;
   }
   .page-navigation .navbar__closing {
+    width: 24px;
+    height: 24px;
     margin-top: 48px;
-    margin-right: 23px;
+    margin-right: 29px;
   }
   .page-navigation .content-item {
     margin-top: 130px;
@@ -1027,6 +1061,45 @@
     text-decoration: none;
     margin-right: 50px;
   }
+}
+
+.page-clients {
+  background-color: #F0F0F0;
+  background-image: url(../images/Icon/cover-circle-white.png);
+  background-position: right;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.page-clients .navbar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: auto;
+}
+
+.page-clients .navbar__logo {
+  margin-top: 48px;
+  margin-left: 29px;
+}
+
+.page-clients .navbar__logo--mobile {
+  display: none;
+}
+
+.page-clients .navbar__logo--desktop {
+  max-width: 147px;
+  max-height: 27px;
+}
+
+.page-clients .navbar__closing {
+  width: 24px;
+  height: 24px;
+  margin-top: 48px;
+  margin-right: 29px;
 }
 
 html, body {
