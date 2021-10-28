@@ -3,7 +3,7 @@
 .page-error {
   @include cover-base;
 
-  &-container {
+  &__container {
     width: 100%;
     display: flex; 
     flex-direction: column;
@@ -16,27 +16,27 @@
       text-align: center;
       margin: auto;
 
-      & .error {
-        &-title {
+      .error {
+        &__title {
           font-weight: bold;
           line-height: 100%;
           color: $base-grey-medium;
           margin-bottom: 8px;
         }
-        &-text{
+        &__text{
           color: $base-grey-medium;
         }
       }
     }
   }
 
-  &-footer{
+  &__footer{
     text-align: center;
 
-    & .page-error-backlink{
+    .page-error__backlink{
       text-decoration: none;
 
-      &-back-home {
+      &__back-home {
         font-weight: bold;
         line-height: 100%;
         color: $base-grey-medium;
@@ -48,7 +48,7 @@
 // Extra small devices
 @media screen and (min-width: $breakpoint-mobile) and (max-width: $breakpoint-tablet - 1){
   .page-error {
-    & .header-logo{
+    .header__logo{
       padding: {
         left: 23px;
         top: 20px;
@@ -63,7 +63,7 @@
       }
     }
 
-    &-container {
+    &__container {
       height: 486px;
       margin-top: 2.5rem;
       background: {
@@ -72,27 +72,27 @@
       }
 
       & > div {
-        & .error {
-          &-title {
+        .error {
+          &__title {
             font-size: 36px;
           }
-          &-text{
+          &__text{
             font-size: 24px;
           }
         }
       }
     }
 
-    &-footer{
+    &__footer{
       margin-top: 1.12rem;
 
-      & .page-error-backlink{
-        &-icon {
+      & .page-error__backlink{
+        &__icon {
           width: 25.33px;
           height: 12.67px;
           margin-right: 10.33px;
         }
-        &-back-home {
+        &__back-home {
           font-size: 24px;
         }
       }
@@ -104,7 +104,7 @@
 @media screen and (min-width: $breakpoint-tablet) and (max-width: $breakpoint-desktop - 1){
   .page-error {
     
-    & .header-logo{
+    .header__logo{
       padding: {
         left: 23px;
         top: 20px;
@@ -119,7 +119,7 @@
       }
     }
 
-    &-container {
+    &__container {
       height: 486px;
       margin-top: 8rem;
       background: {
@@ -128,27 +128,27 @@
       }
 
       & > div {
-        & .error {
-          &-title {
+        .error {
+          &__title {
             font-size: 36px;
           }
-          &-text{
+          &__text{
             font-size: 24px;
           }
         }
       }
     }
 
-    &-footer{
+    &__footer{
       margin-top: 5rem;
 
-      & .page-error-backlink{
-        &-icon {
+      .page-error__backlink{
+        &__icon {
           width: 25.33px;
           height: 12.67px;
           margin-right: 10.33px;
         }
-        &-back-home {
+        &__back-home {
           font-size: 24px;
         }
       }
@@ -167,7 +167,7 @@
       repeat: no-repeat;
     }
 
-    & .header-logo{
+    .header__logo{
       padding: {
         left: 29px;
         top: 48px;
@@ -182,36 +182,36 @@
       }
     }
 
-    &-container {
+    &__container {
       position: absolute;
       top: 40%;
       
       & > div {
-        & .error {
-          &-title {
+        .error {
+          &__title {
             font-size: 36px;
           }
-          &-text{
+          &__text{
             font-size: 24px;
           }
         }
       }
     }
 
-    &-footer{
+    &__footer{
       position: absolute;
       top: 59%;
       margin-top: 5rem;
       left: 44%;
 
-      & .page-error-backlink{
+      .page-error__backlink{
         
-        &-icon {
+        &__icon {
           width: 25.33px;
           height: 12.67px;
           margin-right: 10.33px;
         }
-        &-back-home {
+        &__back-home {
           font-size: 24px;
         }
       }
@@ -229,7 +229,7 @@
       position: center;
     }
 
-    & .header-logo{
+    .header__logo{
       padding: {
         left: 29px;
         top: 48px;
@@ -244,32 +244,32 @@
       }
     }
 
-    &-container {
+    &__container {
       height: 50vh;
       margin: auto;
       
       & > div {
-        & .error {
-          &-title {
+        .error {
+          &__title {
             font-size: 72px;
           }
-          &-text{
+          &__text{
             font-size: 48px;
           }
         }
       }
     }
 
-    &-footer{
+    &__footer{
       margin-top: 5rem;
 
-      & .page-error-backlink{
-        &-icon {
+      .page-error__backlink{
+        &__icon {
           width: 34.67px;
           height: 17.33px;
           margin-right: 10.33px;
         }
-        &-back-home {
+        &__back-home {
           font-size: 36px;
         }
       }

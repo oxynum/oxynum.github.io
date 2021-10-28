@@ -2,47 +2,60 @@
 <html lang="fr">
 <head>
   <meta charset="utf-8">
+  <title>Agence-Oxynum</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="Page dédiée à la présentation de l'agence Oxynum"/>
   <!--styles-->
-  <link rel="stylesheet" href="styles/reset.css">
-  <title>Agence-Oxynum</title>
+  <link rel="stylesheet" href="styles/base/reset.css">
+  <link rel="stylesheet" href="styles/style.css">
 </head>
 
-<body>
+<body class="page-agency">
   <header>
-    <div id="logo">
-      <img 
-        src="images/logo-oxynum/Logo_Short_Light.png"  
-        alt="logo oxynum blanc"
-        height="19"
-        width="37"
-      />
-      <span>oxynum</span>
-    </div>
-    <nav>
-      <ul>
-        <li>
-          <a href="mailto:teams@oxynum.fr">contactez-nous</a>
-        </li>
-        <li>
-          <a href="teams.html">notre equipe</a>
-        </li>
-        <li>
-          <a href="navigation.html">
-            <img 
-              src="images/Icon/Menu-burger.png"
-              alt="icone menu burger pour ouvrir la page de navigation"
-              height="12"
-              width="18"
-            >
-          </a>
-        </li>
-      </ul>
+    <nav class="navbar">
+      <div class="navbar__logo">
+        <a 
+          href="index.html" 
+          class="navbar__logo--mobile"
+        >
+          <img 
+            src="images/logo-oxynum/Logo_Short_Light.png" 
+            alt="logo oxynum version mobile"
+          >
+        </a>
+        <a 
+          href="index.html" 
+          class="navbar__logo--desktop"
+        >
+          <img 
+            src="images/logo-oxynum/Logo_Full_Light.png" 
+            alt="logo oxynum version desktop"
+          >
+        </a>
+      </div>
+      <div class="navbar__items">
+        <ul class="navbar__links">
+          <li class="navbar__links__contact">
+            <a href="mailto:team@oxynum.fr">contactez-nous</a>
+          </li>
+          <li class="navbar__links__team">
+            <a href="teams.html">notre equipe</a>
+          </li>
+          <li class="navbar__links__burger">
+            <a href="navigation.html">
+              <img 
+                src="images/Icon/Menu-Burger.png"
+                alt="icone menu burger pour ouvrir la page de navigation"
+                class="navbar__links__burger__image"
+              >
+            </a>
+          </li>
+        </ul>
+      </div>
     </nav>
   </header>
   <main>
-    <div>
+    <div class="back-home">
       <a href="index.html">
         <img 
           src="images/Icon/arrow_right_alt.png"
@@ -50,27 +63,21 @@
         >
       </a>
     </div>
-    <section>
-      <h1>Pourquoi nous faire confiance ?</h1>
-      <p>
+    <section class="text-presentation">
+      <h1 class="text-presentation__title">Pourquoi nous faire confiance ?</h1>
+      <p class="text-presentation__content">
         Créatifs, force de propositions et innovants. <br> Nous avons bâti notre succès sur l'écoute et la qualité de nos productions. Nous avons éprouvé nos méthodes et consolidé notre force de production durant des années pour vous garantir aujourd'hui l'aboutissement de vos projets.
       </p>
-      <p>
+      <p class="text-presentation__content">
         Comprendre pleinement l'activité de chaque client, l'environnement dans lequel il opère, et le public ciblé pour optimiser l'intéraction avec les produits numériques que nous allons produire.
       </p>
-      <p>
+      <p class="text-presentation__content"> 
         Allier les connaissances acquises sur le projet pour créer des visuels attrayants tout en conservant l'expérience de l'utilisateur. <br> Traduire la créativité à travers une mise en oeuvre complète de qualité.
       </p>
-      <p>
+      <p class="text-presentation__content">
         Transmettre à notre client la fiertè induite par l'aboutissement du projet avec une mise en production simple, efficace, documentée.
       </p>
     </section>
-    <figure>
-      <img 
-        src="images/site-cover-photos/pexels-aidan-roof-3244608.jpg"
-        alt="image d'illustration main tendue vers un cercle lumineux"
-      >
-    </figure>
   </main>
 </body>
 </html>

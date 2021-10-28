@@ -1,5 +1,6 @@
 @import "../layouts/cover";
 @import "../layouts/navbar";
+@import "../utils/typo";
 
 .page-navigation {
   @include cover-light;
@@ -15,11 +16,6 @@
 
         & > a {
           text-decoration: none;
-          font: {
-            family: $base-font-family;
-            weight: bold;
-          }
-          line-height: 100%;
           color: $base-grey-medium;
         }
       }
@@ -49,7 +45,8 @@
 // Extra small devices
 @media screen and (min-width: $breakpoint-mobile) and (max-width: $breakpoint-tablet - 1){
   .page-navigation {
-    @include navbar-full-dark--mobile;
+    @include navbar-short-dark;
+
     background: {
       image: url(#{$assetPath}/Icon/cover-circle-white-mobile.png);
       position: center 60px;
@@ -62,7 +59,7 @@
         margin-left: 41px;
   
         & > li > a{
-          font-size: 70px;
+          @include list-item-small;
         }
         &__home{
           order: 1;
@@ -107,22 +104,22 @@
 // Medium devices
 @media screen and (min-width: $breakpoint-tablet) and (max-width: $breakpoint-desktop - 1){
   .page-navigation {
+    @include navbar-short-dark;
+
     background: {
       image: url(#{$assetPath}/Icon/cover-circle-white-mobile.png);
       position: center 100px;
       size: 99.9% 100%;
       repeat: no-repeat;
     }
-  
-    @include navbar-full-dark--mobile;
-  
+
     .content {
       &-item {
         margin-top: 100px;
         margin-left: 87px;
   
         & > li > a{
-          font-size: 70px;
+          @include list-item-small;
         }
         &__home{
           order: 1;
@@ -177,6 +174,8 @@
 // Large devices
 @media screen and (min-width: $breakpoint-desktop) and (max-width: $breakpoint-large - 1){
   .page-navigation {
+    @include navbar-full-dark;
+
     background: {
       image: url(#{$assetPath}/Icon/cover-circle-white.png);
       position: right;
@@ -184,15 +183,13 @@
       repeat: no-repeat;
     }
   
-    @include navbar-full-dark--desktop;
-  
     .content {
       &-item {
         margin-top: 30px;
         margin-left: 160px;
   
         & > li > a {
-          font-size: 70px;
+          @include list-item-small;
         }
 
         &__team__illustration{
@@ -242,21 +239,22 @@
 // Desktop Large devices
 @media screen and (min-width: $breakpoint-large) and (max-width: $breakpoint-extra-large - 1){
   .page-navigation {
+    @include navbar-full-dark;
+
     background: {
       image: url(#{$assetPath}/Icon/cover-circle-white.png);
       position: right;
       size: contain;
       repeat: no-repeat;
     }
-    @include navbar-full-dark--desktop;
-  
+    
     .content {
       &-item {
         margin-top: 130px;
         margin-left: 293px;
   
         & > li > a {
-          font-size: 80px;
+          @include list-item-medium;
         }
 
         &__team__illustration{
@@ -307,6 +305,8 @@
 // Desktop Extra large devices
 @media screen and (min-width: $breakpoint-extra-large){
   .page-navigation {
+    @include navbar-full-dark;
+
     background: {
       image: url(#{$assetPath}/Icon/cover-circle-white.png);
       position: right;
@@ -314,15 +314,13 @@
       repeat: no-repeat;
     }
   
-    @include navbar-full-dark--desktop;
-  
     .content {
       &-item {
         margin-top: 130px;
         margin-left: 293px;
   
         & > li > a {
-          font-size: 150px;
+          @include list-item-large;
         }
 
         &__team__illustration{

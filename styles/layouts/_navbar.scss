@@ -1,4 +1,39 @@
-@mixin navbar-full-dark--desktop {
+@mixin navbar-short-dark {
+  header {
+    position: sticky;
+    top: 0;
+    background-color: transparent;
+  
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+        
+      &__logo {
+        margin: {
+          top: 20px;
+          left: 23px;
+        }   
+        &--mobile{
+          max: {
+            width: 37px;
+            height: 19px;
+          }
+        }
+        &--desktop{
+          display: none;
+        }
+      }
+      &__closing {
+        margin: {
+          top: 22px;
+          right: 22px;
+        }
+      }
+    }
+  }
+}
+
+@mixin navbar-full-dark {
   header {
     position: sticky;
     top: 0;
@@ -35,38 +70,113 @@
     }
   }
 }
-  
-@mixin navbar-full-dark--mobile {
+
+@mixin navbar-full-light {
   header {
     position: sticky;
+    height: 40px;
+    width: 100%;
     top: 0;
-    background-color: transparent;
-  
-    .navbar {
+    z-index: 100;
+
+    & > nav {
       display: flex;
       justify-content: space-between;
-        
-      &__logo {
+      align-items: center;
+
+      .navbar__logo {
+        margin: {
+          top: 48px;
+          left: 23px;
+        }
+        &--mobile{
+          display: none;
+        }
+        &--desktop{
+          max: {
+            height: 27px;
+            width: 147px;
+          }
+        }
+      }
+
+      .navbar__items {
+        margin-top: 48px;
+
+        .navbar__links {
+          display: flex;
+
+          &__contact > a, &__team > a {
+            @include navbar-link;
+            margin-right: 86px;
+          }
+  
+          &__burger {
+          margin-right: 52px;
+            &__image{
+              max: {
+                height: 24px;
+                width: 24px;
+              }
+            }
+          }
+        }        
+      }
+    }
+  }
+}
+
+@mixin navbar-short-light {
+  header {
+    position: sticky;
+    height: 40px;
+    width: 100%;
+    top: 0;
+    z-index: 100;
+
+    & > nav{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      .navbar__logo{
         margin: {
           top: 20px;
           left: 23px;
-        }   
+        }
         &--mobile{
           max: {
-            width: 37px;
             height: 19px;
+            width: 37px;
           }
         }
         &--desktop{
           display: none;
         }
       }
-      &__closing {
+      
+      
+      .navbar__items {
         margin: {
-          top: 22px;
-          right: 22px;
+          top: 20px;
+          right: 23px;
+        }
+        .navbar__links {
+          display: flex;
+
+          &__contact, &__team{
+            display: none;
+          }
+  
+          &__burger__image {
+            max: {
+              height: 24px;
+              width: 24px;
+            }
+          }
         }
       }
     }
   }
 }
+  

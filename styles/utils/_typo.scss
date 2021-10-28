@@ -1,0 +1,84 @@
+@mixin navbar-link {
+  color: $base-white;
+  text: {
+    decoration: none;
+    transform: uppercase;
+  }
+  font: {
+    family: $second-font-family;
+    weight: bold;
+    size: 14px;
+  }
+  line-height: 16.8px;
+  letter-spacing: 0.03em;
+}
+
+@mixin title-h1-small {
+  font: {
+    family: $base-font-family;
+    style: normal;
+    weight: bold;
+    size: 52px;
+  }
+  line-height: 100%;
+}
+
+@mixin title-h1-medium {
+  font: {
+    family: $base-font-family;
+    style: normal;
+    weight: bold;
+    size: 90px;
+  }
+  line-height: 100%;
+}
+
+@mixin title-h1-large {
+  font: {
+    family: $base-font-family;
+    style: normal;
+    weight: bold;
+    size: 132px;
+  }
+  line-height: 100%;
+}
+
+@mixin text-body {
+  font: {
+    family: $second-font-family;
+    weight: 300;
+    size: 21px;
+  }
+  line-height: 25.2px;
+  letter-spacing: 0.03em;
+}
+
+@mixin list-item-small {
+  font: {
+    family: $second-font-family;
+    style: normal;
+    weight: bold;
+    size: 70px;
+  }
+  line-height: 100%;
+}
+
+@mixin list-item-medium {
+  font: {
+    family: $second-font-family;
+    style: normal;
+    weight: bold;
+    size: 80px;
+  }
+  line-height: 100%;
+}
+
+@mixin list-item-large {
+  font: {
+    family: $second-font-family;
+    style: normal;
+    weight: bold;
+    size: 150px;
+  }
+  line-height: 100%;
+}

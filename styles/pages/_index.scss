@@ -1,128 +1,45 @@
+@import "../utils/typo";
 @import "../layouts/cover";
+@import "../layouts/navbar";
 
 .page-home{
   @include cover-base;
 
-  header {
-    position: fixed;
-    height: 40px;
-    width: 100%;
-    top: 0;
-    z-index: 100;
-    background-color: transparent;
-
-    & > nav{
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-
-      & .nav-links {
-        display: flex;
-      }
-      & .navbar-item {
-        &-contact > a, &-team > a {
-          color: $base-white;
-          text: {
-            decoration: none;
-            transform: uppercase;
-          }
-          font: {
-            family: $second-font-family;
-            weight: bold;
-            size: 14px;
-          }
-          line-height: 16.8px;
-          letter-spacing: 0.03em;
-          margin-right: 86px;
-        }
-      }
-    }
-  }
-
   main {
     padding-top: 45px;
 
-    & .section-agency{
+    .section-agency { 
       display: flex;
-
-      &-text{
-        &-title{
-          font: {
-            weight: bold;
-          }
-          line-height: 100%;
-          color: $base-white;
-        }
-    
-        &-presentation{
-          font: {
-            family: $second-font-family;
-            weight: 300;
-            size: 21px;
-          }
-          line-height: 25px;
-          letter-spacing: 0.03em;
-          color: $base-grey-light;
-        }
+      &__text__title {
+        color: $base-white;
       }
+      &__text__presentation{
+        @include text-body;
+        color: $base-grey-light;
+      }
+
     }
   }
 }
 
 // Extra small devices
 @media screen and (min-width: $breakpoint-mobile) and (max-width: $breakpoint-tablet - 1){
-  .navbar{
-    &-logo{
-      margin: {
-        top: 20px;
-        left: 23px;
-      }
-      &--mobile{
-        max: {
-          height: 19px;
-          width: 37px;
-        }
-      }
-      &--desktop{
-        display: none;
-      }
-    }
+  @include navbar-short-light;
 
-    &-item{
-      &-contact{
-        display: none;
-      }
-      &-team{
-        display: none;
-      }
-      &-burger{
-        margin: {
-          top: 20px;
-          right: 20px;
-        }
-        &-image{
-          max: {
-            height: 24px;
-            width: 24px;
-          }
-        }
-      }
-    }
-  }
   .section-agency{
     flex-direction: column;
 
-    &-text{
+    &__text{
       order:2;
-      &-title {
-        font-size: 52px;
+      &__title {
+        @include title-h1-small;
         margin-left: 41px;
       }
-      &-presentation {
+      &__presentation {
         margin: 50px 46px 52px 41px;
       }
     }
-    &-image > picture > img {
+    &__image > picture > img {
       order:1;
       max: {
         width: 100%;
@@ -133,7 +50,7 @@
   }
 
   .section-clients{
-    &-logo{
+    &__logo{
       display: flex;
       flex-wrap: wrap;
 
@@ -148,59 +65,23 @@
 
 // Medium devices
 @media screen and (min-width: $breakpoint-tablet) and (max-width: $breakpoint-desktop - 1){
-  .navbar{
-    &-logo{
-      margin: {
-        top: 20px;
-        left: 23px;
-      }
-      &--mobile{
-        max: {
-          height: 19px;
-          width: 37px;
-        }
-      }
-      &--desktop{
-        display: none;
-      }
-    }
+  @include navbar-short-light;
 
-    &-item{
-      &-contact{
-        display: none;
-      }
-      &-team{
-        display: none;
-      }
-      &-burger{
-        margin: {
-          top: 20px;
-          right: 20px;
-        }
-        &-image{
-          max: {
-            height: 24px;
-            width: 24px;
-          }
-        }
-      }
-    }
-  }
   .section-agency{
     flex-direction: column;
 
-    &-text{
+    &__text{
       order:2;
-      &-title{
-        font-size: 52px;
+      &__title{
+        @include title-h1-small;
         margin-left: 41px;
       }
-      &-presentation{
+      &__presentation{
         margin: 50px 46px 52px 41px;
       }
     }
 
-    &-image > picture > img {
+    &__image > picture > img {
       order:1;
       width: 100%;
       margin-bottom: 8rem;
@@ -208,7 +89,7 @@
   }
 
   .section-clients{
-    &-logo{
+    &__logo{
       display: flex;
       flex-wrap: wrap;
 
@@ -223,55 +104,25 @@
 
 // Large devices
 @media screen and (min-width: $breakpoint-desktop) and (max-width: $breakpoint-large - 1){
-  .navbar {
-    &-logo{
-      margin: {
-        top: 48px;
-        left: 23px;
-      }
-      &--mobile{
-        display: none;
-      }
-      &--desktop{
-        max: {
-          height: 27px;
-          width: 147px;
-        }
-      }
-    }
-    &-item {
-      margin-top: 48px;
-      &-burger {
-        margin-right: 52px;
-        &-image{
-          max: {
-            height: 24px;
-            width: 24px;
-          }
-        }
-      }
-    }
-  }
+  @include navbar-full-light;
 
   .section-agency{
     position: relative;
-    &-text{
+    &__text{
       max-width: 28rem;
       padding: 8rem 0rem 8rem 8rem;
       z-index: 10;
 
-      &-title{
-        font: {
-          size: 90px;
-        }
+      &__title{
+        @include title-h1-medium;
       }
   
-      &-presentation{
+      &__presentation{
         margin-top: 34px;
       }
     }
 
-    &-image > picture > img {
+    &__image > picture > img {
       width: 60%;
       position:absolute;
       top: 4rem;
@@ -281,7 +132,7 @@
   }
 
   .section-clients{
-    &-logo{
+    &__logo{
       display: grid;
       grid: {
         template-columns: repeat(6, 1fr);
@@ -299,54 +150,25 @@
 
 // Desktop Large devices
 @media screen and (min-width: $breakpoint-large) and (max-width: $breakpoint-extra-large - 1){
-
-  .navbar {
-    &-logo{
-      margin: {
-        top: 48px;
-        left: 23px;
-      }
-      &--mobile{
-        display: none;
-      }
-      &--desktop{
-        max: {
-          height: 27px;
-          width: 147px;
-        }
-      }
-    }
-    &-item {
-      margin-top: 48px;
-      &-burger {
-        margin-right: 52px;
-        &-image{
-          max: {
-            height: 24px;
-            width: 24px;
-          }
-        }
-      }
-    }
-  }
+  @include navbar-full-light;
 
   .section-agency{
     position: relative;
-    &-text{
+    &__text{
       max-width: 35rem;
       padding: 10rem 0rem 10rem 12rem;
       z-index: 10;
 
-      &-title{
-        font-size: 132px;
+      &__title{
+        @include title-h1-large;
       }
   
-      &-presentation{
+      &__presentation{
         margin-top: 34px;
       }
     }
 
-    &-image > picture > img {
+    &__image > picture > img {
       width: 60%;
       position:absolute;
       top: 3rem;
@@ -356,7 +178,7 @@
   }
 
   .section-clients{
-    &-logo{
+    &__logo{
       display: grid;
       grid: {
         template-columns: repeat(6, 1fr);
@@ -374,39 +196,11 @@
 
 // Desktop Extra large devices
 @media screen and (min-width: $breakpoint-extra-large) {
-  .navbar {
-    &-logo{
-      margin: { 
-        top: 48px;
-        left: 23px;
-      }
-      &--mobile{
-        display: none;
-      }
-      &--desktop{
-        max: {
-          height: 27px;
-          width: 147px;
-        }
-      }
-    }
-    &-item {
-      margin-top: 48px;
-      &-burger {
-        margin-right: 52px;
-        &-image{
-          max: {
-            height: 24px;
-            width: 24px;
-          }
-        }
-      }
-    }
-  }
+  @include navbar-full-light;
 
   .section-agency{
     position: relative;
-    &-text{
+    &__text{
       max: {
         width: 45rem;
         height: 25rem;
@@ -414,16 +208,16 @@
       padding: 15rem 0rem 0rem 38rem;
       z-index: 10;
 
-      &-title{
-        font-size: 132px;
+      &__title{
+        @include title-h1-large;
       }
   
-      &-presentation{
+      &__presentation{
         margin-top: 34px;
       }
     }
 
-    &-image > picture > img {
+    &__image > picture > img {
       width: auto;
       position:absolute;
       top: 0;
@@ -433,7 +227,7 @@
   }
 
   .section-clients{
-    &-logo{
+    &__logo{
       display: grid;
       grid: {
         template-columns: repeat(6, 1fr);

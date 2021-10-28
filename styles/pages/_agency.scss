@@ -1,5 +1,62 @@
+@import "../utils/typo";
+@import "../layouts/cover";
+@import "../layouts/navbar";
+
+.page-agency { 
+  @include cover-dark;
+
+  main {
+    .text-presentation { 
+      display: flex;
+      flex-direction: column;
+      overflow-wrap: break-word;
+  
+      &__title {
+        @include title-h1-small;
+        color: $base-white;
+      }
+      &__content {
+        @include text-body;
+        color: $base-grey-light;
+        text-align: justify; 
+        padding-bottom: 25px;
+      }
+    }
+  }
+}
+
+
 // Extra small devices
-@media screen and (min-width: $breakpoint-mobile) and (max-width: $breakpoint-tablet - 1){}
+@media screen and (min-width: $breakpoint-mobile) and (max-width: $breakpoint-tablet - 1){
+  .page-agency { 
+    @include navbar-short-light;
+    background: {
+      image: url(#{$assetPath}/site-cover-photos/cover-agency-mobile.png);
+      repeat: no-repeat;
+    }
+  
+    main {
+      .back-home {
+        display: none;
+      }
+  
+      .text-presentation { 
+        margin: {
+          left: 41px;
+          right: 46px;
+          bottom: 75px;
+          top: 480px;
+        }
+    
+        &__title {
+          height: 156px;
+          max-width: 356px;
+          margin-bottom: 45px;
+        }
+      }
+    }
+  }  
+}
 
 // Medium devices
 @media screen and (min-width: $breakpoint-tablet) and (max-width: $breakpoint-desktop - 1){}

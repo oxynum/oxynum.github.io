@@ -1,9 +1,11 @@
 @import "../layouts/cover";
 @import "../layouts/navbar";
+@import "../utils/typo";
 
 .page-clients {
   @include cover-light;
-  @include navbar-full-dark--desktop;
+  @include navbar-full-dark;
+  
   background: {
     image: url(#{$assetPath}/Icon/cover-circle-white.png);
     position: right;
@@ -31,9 +33,6 @@
 
     &__list-clients{
       width: 100%;
-      font-family: $base-font-family;
-      font-weight: bold;
-      line-height: 100%;
       color: $base-grey-medium;
 
       & > li {
@@ -44,7 +43,7 @@
 }
 
 // Large devices
-@media screen and (min-width: $breakpoint-desktop) and (max-width: $breakpoint-large - 1){
+@media screen and (min-width: $breakpoint-desktop) and (max-width: $breakpoint-large - 1) {
   .content {
     margin-top: 100px;
     
@@ -53,7 +52,7 @@
     } 
 
     &__list-clients{
-      font-size: 90px;
+      @include list-item-medium;
 
       & > li {
         padding-bottom: 60px;
@@ -64,26 +63,26 @@
 }
 
 // Desktop Large devices
-@media screen and (min-width: $breakpoint-large) and (max-width: $breakpoint-extra-large - 1){
+@media screen and (min-width: $breakpoint-large) and (max-width: $breakpoint-extra-large - 1) {
   .content {
-    margin-top: 100px;
+    margin-top: 110px;
     
     &__sidebar {
-      top: 55%;
+      top: 50%;
     } 
 
     &__list-clients{
-      font-size: 110px;
+      @include list-item-large;
 
       & > li {
-        height: 198px;
+        height: 190px;
       }
     }
   }
 }
 
 // Desktop Extra large devices
-@media screen and (min-width: $breakpoint-extra-large){
+@media screen and (min-width: $breakpoint-extra-large) {
   .content {
     margin-top: 320px;
     
@@ -92,7 +91,7 @@
     } 
 
     &__list-clients{
-      font-size: 150px;
+      @include list-item-large;
 
       & > li {
         padding-bottom: 30px;
