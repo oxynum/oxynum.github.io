@@ -3,35 +3,101 @@
 
 .page-clients {
   @include cover-light;
+  @include navbar-full-dark--desktop;
   background: {
     image: url(#{$assetPath}/Icon/cover-circle-white.png);
     position: right;
     size: contain;
     repeat: no-repeat;
+    attachment: fixed;
   }
-  @include navbar-full-dark--desktop;
-  
 
-  // .content {
-
-  //   // &__arrow{
-      
-  //   // } 
+  .content {
+    display: flex;
+    justify-content: space-between;
     
-  // }
+    &__sidebar {
+      width: 294px;
+      position: sticky;
+      height: 100%;
+     
+      & > img {
+        width: 34.67px;
+        height: 17.33px;
+        float:right;
+        padding-right: 47.67px;
+      }
+    } 
+
+    &__list-clients{
+      width: 100%;
+      font-family: $base-font-family;
+      font-weight: bold;
+      line-height: 100%;
+      color: $base-grey-medium;
+
+      & > li {
+        width: auto;
+      }
+    }
+  }
 }
 
-
-
-
-// Medium devices
-@media screen and (min-width: $breakpoint-tablet) and (max-width: $breakpoint-desktop - 1){}
-
 // Large devices
-@media screen and (min-width: $breakpoint-desktop) and (max-width: $breakpoint-large - 1){}
+@media screen and (min-width: $breakpoint-desktop) and (max-width: $breakpoint-large - 1){
+  .content {
+    margin-top: 100px;
+    
+    &__sidebar {
+      top: 60%;
+    } 
+
+    &__list-clients{
+      font-size: 90px;
+
+      & > li {
+        padding-bottom: 60px;
+        height: auto;
+      }
+    }
+  }
+}
 
 // Desktop Large devices
-@media screen and (min-width: $breakpoint-large) and (max-width: $breakpoint-extra-large - 1){}
+@media screen and (min-width: $breakpoint-large) and (max-width: $breakpoint-extra-large - 1){
+  .content {
+    margin-top: 100px;
+    
+    &__sidebar {
+      top: 55%;
+    } 
+
+    &__list-clients{
+      font-size: 110px;
+
+      & > li {
+        height: 198px;
+      }
+    }
+  }
+}
 
 // Desktop Extra large devices
-@media screen and (min-width: $breakpoint-extra-large){}
+@media screen and (min-width: $breakpoint-extra-large){
+  .content {
+    margin-top: 320px;
+    
+    &__sidebar {
+      top: 50%;
+    } 
+
+    &__list-clients{
+      font-size: 150px;
+
+      & > li {
+        padding-bottom: 30px;
+        height: 198px;
+      }
+    }
+  }
+}

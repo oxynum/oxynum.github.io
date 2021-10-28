@@ -1,3 +1,7 @@
+@mixin cover-base {
+  background-color: $base-background-color;
+}
+
 @mixin cover-light {
   background-color: $base-background-light;
 }

@@ -49,12 +49,12 @@
 // Extra small devices
 @media screen and (min-width: $breakpoint-mobile) and (max-width: $breakpoint-tablet - 1){
   .page-navigation {
+    @include navbar-full-dark--mobile;
     background: {
       image: url(#{$assetPath}/Icon/cover-circle-white-mobile.png);
       position: center 60px;
       repeat: no-repeat;
     }
-    @include navbar-full-dark--mobile;
   
     .content {
       &-item {

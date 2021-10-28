@@ -1,7 +1,7 @@
 @import "../layouts/cover";
 
 .page-home{
-  @include cover-dark;
+  @include cover-base;
 
   header {
     position: fixed;
