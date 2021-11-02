@@ -500,7 +500,7 @@
     display: grid;
     -ms-grid-columns: (1fr)[6];
         grid-template-columns: repeat(6, 1fr);
-    grid-gap: 6rem;
+    grid-gap: 1rem 6rem;
     margin: 15rem 33rem 0rem 33rem;
   }
   .section-clients__logo > img {
@@ -1087,6 +1087,7 @@
   }
   .page-navigation .content-item__team__illustration {
     margin-left: -80px;
+    margin-bottom: 10px;
     padding-right: 37px;
   }
   .page-navigation footer {
@@ -1185,6 +1186,7 @@
   }
   .page-navigation .content-item__team__illustration {
     margin-left: -80px;
+    margin-bottom: 40px;
     padding-right: 37px;
   }
   .page-navigation footer {

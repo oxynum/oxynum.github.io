@@ -11,43 +11,55 @@
 
 <body>
   <header>
-    <div id="logo">
-      <img 
-        src="images/logo-oxynum/Logo_Short_Light.png"  
-        alt="logo oxynum"
-        height="19"
-        width="37"
-      />
-      <span>oxynum</span>
-    </div>
-    <nav>
-      <ul>
-        <li>
-          <a href="mailto:teams@oxynum.fr">contactez-nous</a>
-        </li>
-        <li>
-          <a href="teams.html">notre equipe</a>
-        </li>
-        <li>
-          <a href="navigation.html">
-            <img 
-              src="images/Icon/Menu-burger.png"
-              alt="icone menu burger pour ouvrir la page de navigation"
-              height="12"
-              width="18"
-            >
-          </a>
-        </li>
-      </ul>
+    <nav class="navbar">  
+      <div class="navbar__logo">
+        <a 
+          href="index.html" 
+          class="navbar__logo--mobile"
+        >
+          <img 
+            src="images/logo-oxynum/Logo_Short_Light.png" 
+            alt="logo oxynum version mobile"
+          >
+        </a>
+        <a 
+          href="index.html" 
+          class="navbar__logo--desktop"
+        >
+          <img 
+            src="images/logo-oxynum/Logo_Full_Light.png" 
+            alt="logo oxynum version desktop"
+          >
+        </a>
+      </div>
+      <div class="navbar__items">
+        <ul class="navbar__links">
+          <li class="navbar__links__contact">
+            <a href="mailto:team@oxynum.fr">contactez-nous</a>
+          </li>
+          <li class="navbar__links__team">
+            <a href="teams.html">notre equipe</a>
+          </li>
+          <li class="navbar__links__burger">
+            <a href="navigation.html">
+              <img 
+                src="images/Icon/Menu-Burger.png"
+                alt="icone menu burger pour ouvrir la page de navigation"
+                class="navbar__links__burger__image"
+              >
+            </a>
+          </li>
+        </ul>
+      </div>
     </nav>
   </header>
   <main>
     <div class="team-carousel">
-      <div class="team-carousel-slide">
+      <div class="team-carousel__slide">
         <figure>
           <img src="images/photos-teams/benoit.jpg" alt="Photo de Benoit" />
           <figcaption>
-            <h2 class="team-carousel-slide-title">
+            <h2 class="team-carousel__slide__title">
               Benoit
             </h2>
             <p>
@@ -56,11 +68,11 @@
           </figcaption>
         </figure>
       </div>
-      <div class="team-carousel-slide">
+      <div class="team-carousel__slide">
         <figure>
           <img src="images/photos-teams/maxime.jpg" alt="Photo de Maxime" />
           <figcaption>
-            <h2 class="team-carousel-slide-title">
+            <h2 class="team-carousel__slide__title">
               Maxime
             </h2>
             <p>
@@ -69,11 +81,11 @@
           </figcaption>
         </figure>
       </div>
-      <div class="team-carousel-slide">
+      <div class="team-carousel__slide">
         <figure>
           <img src="images/photos-teams/thomas.jpg" alt="Photo de Thomas" />
           <figcaption>
-            <h2 class="team-carousel-slide-title">
+            <h2 class="team-carousel__slide__title">
               Thomas
             </h2>
             <p>
@@ -82,11 +94,11 @@
           </figcaption>
         </figure>
       </div>
-      <div class="team-carousel-slide">
+      <div class="team-carousel__slide">
         <figure>
           <img src="images/photos-teams/maddy.jpg" alt="Photo de Madeleine" />
           <figcaption>
-            <h2 class="team-carousel-slide-title">
+            <h2 class="team-carousel__slide__title">
               Madeleine
             </h2>
             <p>
@@ -95,11 +107,11 @@
           </figcaption>
         </figure>
       </div>
-      <div class="team-carousel-slide">
+      <div class="team-carousel__slide">
         <figure>
           <img src="images/photos-teams/hugo.jpg" alt="Photo de Hugo" />
           <figcaption>
-            <h2 class="team-carousel-slide-title">
+            <h2 class="team-carousel__slide__title">
               Hugo
             </h2>
             <p>
@@ -108,11 +120,11 @@
           </figcaption>
         </figure>
       </div>
-      <div class="team-carousel-slide">
+      <div class="team-carousel__slide">
         <figure>
           <img src="images/photos-teams/jessica.jpg" alt="Photo de Jessica" />
           <figcaption>
-            <h2 class="team-carousel-slide-title">
+            <h2 class="team-carousel__slide__title">
               Jessica
             </h2>
             <p>
@@ -121,11 +133,11 @@
           </figcaption>
         </figure>
       </div>
-      <div class="team-carousel-slide">
+      <div class="team-carousel__slide">
         <figure>
           <img src="images/photos-teams/jonathan.jpg" alt="Photo de Jonathan" />
           <figcaption>
-            <h2 class="team-carousel-slide-title">
+            <h2 class="team-carousel__slide__title">
               Jonathan
             </h2>
             <p>
@@ -134,11 +146,11 @@
           </figcaption>
         </figure>
       </div>
-      <div class="team-carousel-slide">
+      <div class="team-carousel__slide">
         <figure>
           <img src="images/photos-teams/pascal.jpg" alt="Photo de Pascal" />
           <figcaption>
-            <h2 class="team-carousel-slide-title">
+            <h2 class="team-carousel__slide__title">
               Pascal
             </h2>
             <p>
@@ -147,11 +159,11 @@
           </figcaption>
         </figure>
       </div>
-      <div class="team-carousel-slide">
+      <div class="team-carousel__slide">
         <figure>
           <img src="images/photos-teams/pierrick.jpg" alt="Photo de Pierrick" />
           <figcaption>
-            <h2 class="team-carousel-slide-title">
+            <h2 class="team-carousel__slide__title">
               Pierrick
             </h2>
             <p>
@@ -160,11 +172,11 @@
           </figcaption>
         </figure>
       </div>
-      <div class="team-carousel-slide">
+      <div class="team-carousel__slide">
         <figure>
           <img src="images/photos-teams/rudy.jpg" alt="Photo de Rudy" />
           <figcaption>
-            <h2 class="team-carousel-slide-title">
+            <h2 class="team-carousel__slide__title">
               Rudy
             </h2>
             <p>
@@ -173,11 +185,11 @@
           </figcaption>
         </figure>
       </div>
-      <div class="team-carousel-slide">
+      <div class="team-carousel__slide">
         <figure>
           <img src="images/photos-teams/sandrine.jpg" alt="Photo de Sandrine" />
           <figcaption>
-            <h2 class="team-carousel-slide-title">
+            <h2 class="team-carousel__slide__title">
               Sandrine
             </h2>
             <p>
@@ -186,11 +198,11 @@
           </figcaption>
         </figure>
       </div>
-      <div class="team-carousel-slide">
+      <div class="team-carousel__slide">
         <figure>
           <img src="images/photos-teams/a-laure.jpg" alt="Photo de Anne-Laure" />
           <figcaption>
-            <h2 class="team-carousel-slide-title">
+            <h2 class="team-carousel__slide__title">
               Anne-Laure
             </h2>
             <p>

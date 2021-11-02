@@ -258,7 +258,10 @@
         }
 
         &__team__illustration{
-          margin-left: -80px;
+          margin: {
+            left: -80px;
+            bottom: 10px;
+          }
           padding-right: 37px;
         }
       }
@@ -324,7 +327,10 @@
         }
 
         &__team__illustration{
-          margin-left: -80px;
+          margin: {
+            left: -80px;
+            bottom: 40px;
+          }
           padding-right: 37px;
         }
       }
