@@ -1369,7 +1369,7 @@
 }
 
 .page-agency {
-  background-color: #01080C;
+  background-color: #021017;
 }
 
 .page-agency main .text-presentation {
@@ -1384,11 +1384,6 @@
 }
 
 .page-agency main .text-presentation__title {
-  font-family: "Martel Sans";
-  font-style: normal;
-  font-weight: bold;
-  font-size: 52px;
-  line-height: 100%;
   color: #FFFFFF;
 }
 
@@ -1399,7 +1394,6 @@
   line-height: 25.2px;
   letter-spacing: 0.03em;
   color: #E5E5E5;
-  text-align: justify;
   padding-bottom: 25px;
 }
 
@@ -1464,9 +1458,383 @@
     margin-top: 480px;
   }
   .page-agency main .text-presentation__title {
+    font-family: "Martel Sans";
+    font-style: normal;
+    font-weight: bold;
+    font-size: 52px;
+    line-height: 100%;
     height: 156px;
     max-width: 356px;
     margin-bottom: 45px;
+  }
+  .page-agency main .text-presentation__content {
+    text-align: justify;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  .page-agency {
+    background-image: url(../images/site-cover-photos/cover-agency-large.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: top center;
+  }
+  .page-agency header {
+    position: -webkit-sticky;
+    position: sticky;
+    height: 40px;
+    width: 100%;
+    top: 0;
+    z-index: 100;
+  }
+  .page-agency header > nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .page-agency header > nav .navbar__logo {
+    margin-top: 20px;
+    margin-left: 23px;
+  }
+  .page-agency header > nav .navbar__logo--mobile {
+    max-height: 19px;
+    max-width: 37px;
+  }
+  .page-agency header > nav .navbar__logo--desktop {
+    display: none;
+  }
+  .page-agency header > nav .navbar__items {
+    margin-top: 20px;
+    margin-right: 23px;
+  }
+  .page-agency header > nav .navbar__items .navbar__links {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .page-agency header > nav .navbar__items .navbar__links__contact, .page-agency header > nav .navbar__items .navbar__links__team {
+    display: none;
+  }
+  .page-agency header > nav .navbar__items .navbar__links__burger__image {
+    max-height: 24px;
+    max-width: 24px;
+  }
+  .page-agency main .back-home {
+    display: none;
+  }
+  .page-agency main .text-presentation {
+    margin-left: 51px;
+    margin-right: 56px;
+    margin-bottom: 75px;
+    margin-top: 650px;
+  }
+  .page-agency main .text-presentation__title {
+    font-family: "Martel Sans";
+    font-style: normal;
+    font-weight: bold;
+    font-size: 52px;
+    line-height: 100%;
+    height: 156px;
+    max-width: 456px;
+    margin-bottom: 10px;
+  }
+  .page-agency main .text-presentation__content {
+    text-align: justify;
+  }
+}
+
+@media screen and (min-width: 992px) and (max-width: 1199px) {
+  .page-agency {
+    background-image: url(../images/site-cover-photos/cover-agency-large.png);
+    background-repeat: no-repeat;
+    background-position: top right;
+    background-size: 300px 100px;
+  }
+  .page-agency header {
+    position: -webkit-sticky;
+    position: sticky;
+    height: 40px;
+    width: 100%;
+    top: 0;
+    z-index: 100;
+  }
+  .page-agency header > nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .page-agency header > nav .navbar__logo {
+    margin-top: 48px;
+    margin-left: 23px;
+  }
+  .page-agency header > nav .navbar__logo--mobile {
+    display: none;
+  }
+  .page-agency header > nav .navbar__logo--desktop {
+    max-height: 27px;
+    max-width: 147px;
+  }
+  .page-agency header > nav .navbar__items {
+    margin-top: 48px;
+  }
+  .page-agency header > nav .navbar__items .navbar__links {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .page-agency header > nav .navbar__items .navbar__links__contact > a, .page-agency header > nav .navbar__items .navbar__links__team > a {
+    color: #FFFFFF;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: "Roboto";
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 16.8px;
+    letter-spacing: 0.03em;
+    margin-right: 86px;
+  }
+  .page-agency header > nav .navbar__items .navbar__links__burger {
+    margin-right: 52px;
+  }
+  .page-agency header > nav .navbar__items .navbar__links__burger__image {
+    max-height: 24px;
+    max-width: 24px;
+  }
+  .page-agency main {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .page-agency main .back-home {
+    width: 15%;
+  }
+  .page-agency main .back-home > a > img {
+    position: absolute;
+    top: 150px;
+    bottom: 0%;
+    left: 8%;
+  }
+  .page-agency main .text-presentation {
+    margin-right: 56px;
+    margin-top: 100px;
+  }
+  .page-agency main .text-presentation__title {
+    font-family: "Martel Sans";
+    font-style: normal;
+    font-weight: bold;
+    font-size: 52px;
+    line-height: 100%;
+    max-width: 70%;
+    margin-bottom: 34px;
+  }
+  .page-agency main .text-presentation__content {
+    width: 400px;
+    height: 100%;
+  }
+}
+
+@media screen and (min-width: 1200px) and (max-width: 1599px) {
+  .page-agency {
+    background-image: url(../images/site-cover-photos/cover-agency-large.png);
+    background-repeat: no-repeat;
+    background-position: top right;
+    background-size: contain;
+  }
+  .page-agency header {
+    position: -webkit-sticky;
+    position: sticky;
+    height: 40px;
+    width: 100%;
+    top: 0;
+    z-index: 100;
+  }
+  .page-agency header > nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .page-agency header > nav .navbar__logo {
+    margin-top: 48px;
+    margin-left: 23px;
+  }
+  .page-agency header > nav .navbar__logo--mobile {
+    display: none;
+  }
+  .page-agency header > nav .navbar__logo--desktop {
+    max-height: 27px;
+    max-width: 147px;
+  }
+  .page-agency header > nav .navbar__items {
+    margin-top: 48px;
+  }
+  .page-agency header > nav .navbar__items .navbar__links {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .page-agency header > nav .navbar__items .navbar__links__contact > a, .page-agency header > nav .navbar__items .navbar__links__team > a {
+    color: #FFFFFF;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: "Roboto";
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 16.8px;
+    letter-spacing: 0.03em;
+    margin-right: 86px;
+  }
+  .page-agency header > nav .navbar__items .navbar__links__burger {
+    margin-right: 52px;
+  }
+  .page-agency header > nav .navbar__items .navbar__links__burger__image {
+    max-height: 24px;
+    max-width: 24px;
+  }
+  .page-agency main {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .page-agency main .back-home {
+    width: 20%;
+  }
+  .page-agency main .back-home > a > img {
+    position: absolute;
+    top: 150px;
+    bottom: 0%;
+    left: 8%;
+  }
+  .page-agency main .text-presentation {
+    margin-right: 56px;
+    margin-top: 100px;
+  }
+  .page-agency main .text-presentation__title {
+    font-family: "Martel Sans";
+    font-style: normal;
+    font-weight: bold;
+    font-size: 52px;
+    line-height: 100%;
+    max-height: 285px;
+    margin-bottom: 34px;
+  }
+  .page-agency main .text-presentation__content {
+    width: 450px;
+    height: 100%;
+  }
+}
+
+@media screen and (min-width: 1600px) {
+  .page-agency {
+    background-image: url(../images/site-cover-photos/cover-agency-large.png);
+    background-repeat: no-repeat;
+    background-position: top right;
+    background-size: contain;
+  }
+  .page-agency header {
+    position: -webkit-sticky;
+    position: sticky;
+    height: 40px;
+    width: 100%;
+    top: 0;
+    z-index: 100;
+  }
+  .page-agency header > nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .page-agency header > nav .navbar__logo {
+    margin-top: 48px;
+    margin-left: 23px;
+  }
+  .page-agency header > nav .navbar__logo--mobile {
+    display: none;
+  }
+  .page-agency header > nav .navbar__logo--desktop {
+    max-height: 27px;
+    max-width: 147px;
+  }
+  .page-agency header > nav .navbar__items {
+    margin-top: 48px;
+  }
+  .page-agency header > nav .navbar__items .navbar__links {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .page-agency header > nav .navbar__items .navbar__links__contact > a, .page-agency header > nav .navbar__items .navbar__links__team > a {
+    color: #FFFFFF;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: "Roboto";
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 16.8px;
+    letter-spacing: 0.03em;
+    margin-right: 86px;
+  }
+  .page-agency header > nav .navbar__items .navbar__links__burger {
+    margin-right: 52px;
+  }
+  .page-agency header > nav .navbar__items .navbar__links__burger__image {
+    max-height: 24px;
+    max-width: 24px;
+  }
+  .page-agency main {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .page-agency main .back-home {
+    width: 577px;
+  }
+  .page-agency main .back-home > a > img {
+    position: absolute;
+    top: 340px;
+    bottom: 0%;
+    left: 427.5px;
+  }
+  .page-agency main .text-presentation {
+    margin-right: 56px;
+    margin-top: 249px;
+  }
+  .page-agency main .text-presentation__title {
+    font-family: "Martel Sans";
+    font-style: normal;
+    font-weight: bold;
+    font-size: 132px;
+    line-height: 100%;
+    max-height: 285px;
+    width: 1331px;
+    margin-bottom: 34px;
+  }
+  .page-agency main .text-presentation__content {
+    width: 702px;
+    height: 100%;
   }
 }
 
