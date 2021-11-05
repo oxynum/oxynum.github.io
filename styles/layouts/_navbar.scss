@@ -74,7 +74,6 @@
 @mixin navbar-full-light {
   header {
     position: sticky;
-    height: 40px;
     width: 100%;
     top: 0;
     z-index: 100;
@@ -85,7 +84,7 @@
       align-items: center;
 
       .navbar__logo {
-        margin: {
+        padding: {
           top: 48px;
           left: 23px;
         }
@@ -99,9 +98,8 @@
           }
         }
       }
-
       .navbar__items {
-        margin-top: 48px;
+        padding-top: 48px;
 
         .navbar__links {
           display: flex;
@@ -154,8 +152,6 @@
           display: none;
         }
       }
-      
-      
       .navbar__items {
         margin: {
           top: 20px;

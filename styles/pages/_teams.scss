@@ -1,3 +1,68 @@
+@import "../layouts/cover";
+@import "../layouts/navbar";
+@import "../utils/typo";
+
+.page-teams {
+  @include navbar-full-light;
+  @include cover-base;
+
+  .team-carousel {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+
+    &__slide {
+      position: relative;
+      color: $base-white;
+
+      &__image {
+        width: 100vw;
+        height: 100vh;
+        opacity: 0.45;
+      }
+
+      &__title {
+        @include title-h1-large;
+        position: absolute;
+        left: 148px;
+        bottom: 236px;
+        width: 927px;
+        height: 93px;
+        margin-bottom: 30px;
+      }
+
+      &__text {
+        @include text-body;
+        position: absolute;
+        left: 148px;
+        bottom: 125px;
+        width: 550px;
+        height: 81px;
+        color: $base-grey-light;
+      }
+
+      &__arrow {
+        position: absolute;
+        bottom: 100px;
+        left: 50%;
+        display: flex;
+        flex-direction: column;
+        cursor: pointer;
+
+        & > a {
+          margin-bottom: 65px;
+        }
+      }
+    }
+    
+  }
+
+  
+  
+}
+
+
+
 // Extra small devices
 @media screen and (min-width: $breakpoint-mobile) and (max-width: $breakpoint-tablet - 1){}
 
