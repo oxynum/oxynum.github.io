@@ -3,77 +3,225 @@
 @import "../utils/typo";
 
 .page-teams {
-  @include navbar-full-light;
   @include cover-base;
-
+  
   .team-carousel {
-    width: 100vw;
-    height: 100vh;
-    overflow: hidden;
+    overflow:hidden;
+    left:0; 
+    right:0; 
+    top:0; 
+    bottom:0; 
+    display: block;
+    position:absolute; 
 
-    &__slide {
-      position: relative;
-      color: $base-white;
+    &__slide { 
+      height: 100%;
+      width: 100%;
+      position:absolute; 
+      background: {
+        size: cover;
+        position: center;
+        repeat: no-repeat;
+      };
+      display: none;
 
-      &__image {
-        width: 100vw;
-        height: 100vh;
-        opacity: 0.45;
+      &::before {
+        content: "";
+        position: absolute;
+        top: 0px;
+        right: 0px;
+        bottom: 0px;
+        left: 0px;
+        background-color: rgba(0,0,0,0.45);
       }
 
       &__title {
-        @include title-h1-large;
         position: absolute;
+        color: $base-white;
+      }
+
+      &__text {
+        @include text-body;
+        position: absolute;
+        color: $base-grey-light;
+      }
+
+      &__arrow {
+        position: absolute;
+        left: 50%;
+        display: flex;
+        flex-direction: column;
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+// Extra small devices
+@media screen and (min-width: $breakpoint-mobile) and (max-width: $breakpoint-tablet - 1){
+  .page-teams {
+    @include navbar-short-light;
+    
+    .team-carousel__slide {
+      &__title {
+        @include title-h1-small;
+        left: 41px;
+        bottom: 294px;
+        max-width: 356px;
+        max-height: 54px;
+        margin-bottom: 15px;
+      }
+  
+      &__text {
+        left: 41px;
+        right: 41px;
+        bottom: 110px;
+        max-width: 327px;
+        max-height: 249px;
+        text-align: justify;
+      }
+  
+      &__arrow {
+        bottom: 30px;
+
+        &--top {
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+// Medium devices
+@media screen and (min-width: $breakpoint-tablet) and (max-width: $breakpoint-desktop - 1) {
+  .page-teams {
+    @include navbar-full-light;
+    .team-carousel__slide {
+      &__title {
+        @include title-h1-large;
+        left: 41px;
+        bottom: 246px;
+        max-width: 100%;
+        max-height: 93px;
+        margin-bottom: 20px;
+      }
+  
+      &__text {
+        left: 41px;
+        right: 41px;
+        bottom: 135px;
+        max-width: 723.26px;
+        max-height: 81px;
+        text-align: justify;
+      }
+  
+      &__arrow {
+        bottom: 50px;
+
+        &--top {
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+// Large devices
+@media screen and (min-width: $breakpoint-desktop) and (max-width: $breakpoint-large - 1){
+  .page-teams {
+    @include navbar-full-light;
+    .team-carousel__slide {
+      &__title {
+        @include title-h1-large;
+        left: 41px;
+        bottom: 236px;
+        max-width: 100%;
+        max-height: 93px;
+        margin-bottom: 30px;
+      }
+  
+      &__text {
+        left: 41px;
+        right: 41px;
+        bottom: 125px;
+        max-width: 723.26px;
+        max-height: 81px;
+        text-align: justify;
+      }
+  
+      &__arrow {
+        bottom: 40px;
+
+        &--top {
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+// Desktop Large devices
+@media screen and (min-width: $breakpoint-large) and (max-width: $breakpoint-extra-large - 1){
+  .page-teams {
+    @include navbar-full-light;
+    .team-carousel__slide {
+      &__title {
+        @include title-h1-large;
+        left: 61px;
+        bottom: 216px;
+        max-width: 100%;
+        max-height: 93px;
+        margin-bottom: 30px;
+      }
+  
+      &__text {
+        left: 61px;
+        right: 41px;
+        bottom: 100px;
+        max-width: 500px;
+        max-height: 81px;
+        text-align: justify;
+      }
+  
+      &__arrow {
+        bottom: 25px;
+
+        & > a {
+          margin-bottom: 45px;
+        }
+      }
+    }
+  }
+}
+
+// Desktop Extra large devices
+@media screen and (min-width: $breakpoint-extra-large) {
+  .page-teams {
+    @include navbar-full-light;
+    .team-carousel__slide {
+      &__title {
+        @include title-h1-large;
         left: 148px;
         bottom: 236px;
         width: 927px;
         height: 93px;
         margin-bottom: 30px;
       }
-
+  
       &__text {
-        @include text-body;
-        position: absolute;
         left: 148px;
         bottom: 125px;
         width: 550px;
         height: 81px;
-        color: $base-grey-light;
       }
-
+  
       &__arrow {
-        position: absolute;
         bottom: 100px;
-        left: 50%;
-        display: flex;
-        flex-direction: column;
-        cursor: pointer;
-
+  
         & > a {
           margin-bottom: 65px;
         }
       }
     }
-    
   }
-
-  
-  
 }
-
-
-
-// Extra small devices
-@media screen and (min-width: $breakpoint-mobile) and (max-width: $breakpoint-tablet - 1){}
-
-// Medium devices
-@media screen and (min-width: $breakpoint-tablet) and (max-width: $breakpoint-desktop - 1){}
-
-// Large devices
-@media screen and (min-width: $breakpoint-desktop) and (max-width: $breakpoint-large - 1){}
-
-// Desktop Large devices
-@media screen and (min-width: $breakpoint-large) and (max-width: $breakpoint-extra-large - 1){}
-
-// Desktop Extra large devices
-@media screen and (min-width: $breakpoint-extra-large){}

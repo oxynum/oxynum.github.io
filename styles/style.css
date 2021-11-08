@@ -220,7 +220,7 @@
   }
 }
 
-@media screen and (min-width: 992px) and (max-width: 1199px) {
+@media screen and (min-width: 992px) and (max-width: 1279px) {
   header {
     position: -webkit-sticky;
     position: sticky;
@@ -315,7 +315,7 @@
   }
 }
 
-@media screen and (min-width: 1200px) and (max-width: 1599px) {
+@media screen and (min-width: 1280px) and (max-width: 1599px) {
   header {
     position: -webkit-sticky;
     position: sticky;
@@ -627,7 +627,7 @@
   }
 }
 
-@media screen and (min-width: 992px) and (max-width: 1199px) {
+@media screen and (min-width: 992px) and (max-width: 1279px) {
   .page-error {
     position: relative;
     background-image: url(../images/Icon/Circle-Large.png);
@@ -672,7 +672,7 @@
   }
 }
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1280px) {
   .page-error {
     background-image: url(../images/Icon/Circle-Large.png);
     background-size: contain;
@@ -936,7 +936,7 @@
   }
 }
 
-@media screen and (min-width: 992px) and (max-width: 1199px) {
+@media screen and (min-width: 992px) and (max-width: 1279px) {
   .page-navigation {
     background-image: url(../images/Icon/cover-circle-white.png);
     background-position: right;
@@ -1033,7 +1033,7 @@
   }
 }
 
-@media screen and (min-width: 1200px) and (max-width: 1599px) {
+@media screen and (min-width: 1280px) and (max-width: 1599px) {
   .page-navigation {
     background-image: url(../images/Icon/cover-circle-white.png);
     background-position: right;
@@ -1308,7 +1308,7 @@
   width: auto;
 }
 
-@media screen and (min-width: 992px) and (max-width: 1199px) {
+@media screen and (min-width: 992px) and (max-width: 1279px) {
   .content {
     margin-top: 100px;
   }
@@ -1328,7 +1328,7 @@
   }
 }
 
-@media screen and (min-width: 1200px) and (max-width: 1599px) {
+@media screen and (min-width: 1280px) and (max-width: 1599px) {
   .content {
     margin-top: 110px;
   }
@@ -1548,7 +1548,7 @@
   }
 }
 
-@media screen and (min-width: 992px) and (max-width: 1199px) {
+@media screen and (min-width: 992px) and (max-width: 1279px) {
   .page-agency {
     background-image: url(../images/site-cover-photos/cover-agency-large.png);
     background-repeat: no-repeat;
@@ -1643,7 +1643,7 @@
   }
 }
 
-@media screen and (min-width: 1200px) and (max-width: 1599px) {
+@media screen and (min-width: 1280px) and (max-width: 1599px) {
   .page-agency {
     background-image: url(../images/site-cover-photos/cover-agency-large.png);
     background-repeat: no-repeat;
@@ -1838,100 +1838,39 @@
   background-color: #2A2A2A;
 }
 
-.page-teams header {
-  position: -webkit-sticky;
-  position: sticky;
-  width: 100%;
-  top: 0;
-  z-index: 100;
-}
-
-.page-teams header > nav {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.page-teams header > nav .navbar__logo {
-  padding-top: 48px;
-  padding-left: 23px;
-}
-
-.page-teams header > nav .navbar__logo--mobile {
-  display: none;
-}
-
-.page-teams header > nav .navbar__logo--desktop {
-  max-height: 27px;
-  max-width: 147px;
-}
-
-.page-teams header > nav .navbar__items {
-  padding-top: 48px;
-}
-
-.page-teams header > nav .navbar__items .navbar__links {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.page-teams header > nav .navbar__items .navbar__links__contact > a, .page-teams header > nav .navbar__items .navbar__links__team > a {
-  color: #FFFFFF;
-  text-decoration: none;
-  text-transform: uppercase;
-  font-family: "Roboto";
-  font-weight: bold;
-  font-size: 14px;
-  line-height: 16.8px;
-  letter-spacing: 0.03em;
-  margin-right: 86px;
-}
-
-.page-teams header > nav .navbar__items .navbar__links__burger {
-  margin-right: 52px;
-}
-
-.page-teams header > nav .navbar__items .navbar__links__burger__image {
-  max-height: 24px;
-  max-width: 24px;
-}
-
 .page-teams .team-carousel {
-  width: 100vw;
-  height: 100vh;
   overflow: hidden;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  display: block;
+  position: absolute;
 }
 
 .page-teams .team-carousel__slide {
-  position: relative;
-  color: #FFFFFF;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: none;
 }
 
-.page-teams .team-carousel__slide__image {
-  width: 100vw;
-  height: 100vh;
-  opacity: 0.45;
+.page-teams .team-carousel__slide::before {
+  content: "";
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  background-color: rgba(0, 0, 0, 0.45);
 }
 
 .page-teams .team-carousel__slide__title {
-  font-family: "Martel Sans";
-  font-style: normal;
-  font-weight: bold;
-  font-size: 132px;
-  line-height: 100%;
   position: absolute;
-  left: 148px;
-  bottom: 236px;
-  width: 927px;
-  height: 93px;
-  margin-bottom: 30px;
+  color: #FFFFFF;
 }
 
 .page-teams .team-carousel__slide__text {
@@ -1941,16 +1880,11 @@
   line-height: 25.2px;
   letter-spacing: 0.03em;
   position: absolute;
-  left: 148px;
-  bottom: 125px;
-  width: 550px;
-  height: 81px;
   color: #E5E5E5;
 }
 
 .page-teams .team-carousel__slide__arrow {
   position: absolute;
-  bottom: 100px;
   left: 50%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1962,8 +1896,413 @@
   cursor: pointer;
 }
 
-.page-teams .team-carousel__slide__arrow > a {
-  margin-bottom: 65px;
+@media screen and (min-width: 320px) and (max-width: 767px) {
+  .page-teams header {
+    position: -webkit-sticky;
+    position: sticky;
+    height: 40px;
+    width: 100%;
+    top: 0;
+    z-index: 100;
+  }
+  .page-teams header > nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .page-teams header > nav .navbar__logo {
+    margin-top: 20px;
+    margin-left: 23px;
+  }
+  .page-teams header > nav .navbar__logo--mobile {
+    max-height: 19px;
+    max-width: 37px;
+  }
+  .page-teams header > nav .navbar__logo--desktop {
+    display: none;
+  }
+  .page-teams header > nav .navbar__items {
+    margin-top: 20px;
+    margin-right: 23px;
+  }
+  .page-teams header > nav .navbar__items .navbar__links {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .page-teams header > nav .navbar__items .navbar__links__contact, .page-teams header > nav .navbar__items .navbar__links__team {
+    display: none;
+  }
+  .page-teams header > nav .navbar__items .navbar__links__burger__image {
+    max-height: 24px;
+    max-width: 24px;
+  }
+  .page-teams .team-carousel__slide__title {
+    font-family: "Martel Sans";
+    font-style: normal;
+    font-weight: bold;
+    font-size: 52px;
+    line-height: 100%;
+    left: 41px;
+    bottom: 294px;
+    max-width: 356px;
+    max-height: 54px;
+    margin-bottom: 15px;
+  }
+  .page-teams .team-carousel__slide__text {
+    left: 41px;
+    right: 41px;
+    bottom: 110px;
+    max-width: 327px;
+    max-height: 249px;
+    text-align: justify;
+  }
+  .page-teams .team-carousel__slide__arrow {
+    bottom: 30px;
+  }
+  .page-teams .team-carousel__slide__arrow--top {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  .page-teams header {
+    position: -webkit-sticky;
+    position: sticky;
+    width: 100%;
+    top: 0;
+    z-index: 100;
+  }
+  .page-teams header > nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .page-teams header > nav .navbar__logo {
+    padding-top: 48px;
+    padding-left: 23px;
+  }
+  .page-teams header > nav .navbar__logo--mobile {
+    display: none;
+  }
+  .page-teams header > nav .navbar__logo--desktop {
+    max-height: 27px;
+    max-width: 147px;
+  }
+  .page-teams header > nav .navbar__items {
+    padding-top: 48px;
+  }
+  .page-teams header > nav .navbar__items .navbar__links {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .page-teams header > nav .navbar__items .navbar__links__contact > a, .page-teams header > nav .navbar__items .navbar__links__team > a {
+    color: #FFFFFF;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: "Roboto";
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 16.8px;
+    letter-spacing: 0.03em;
+    margin-right: 86px;
+  }
+  .page-teams header > nav .navbar__items .navbar__links__burger {
+    margin-right: 52px;
+  }
+  .page-teams header > nav .navbar__items .navbar__links__burger__image {
+    max-height: 24px;
+    max-width: 24px;
+  }
+  .page-teams .team-carousel__slide__title {
+    font-family: "Martel Sans";
+    font-style: normal;
+    font-weight: bold;
+    font-size: 132px;
+    line-height: 100%;
+    left: 41px;
+    bottom: 246px;
+    max-width: 100%;
+    max-height: 93px;
+    margin-bottom: 20px;
+  }
+  .page-teams .team-carousel__slide__text {
+    left: 41px;
+    right: 41px;
+    bottom: 135px;
+    max-width: 723.26px;
+    max-height: 81px;
+    text-align: justify;
+  }
+  .page-teams .team-carousel__slide__arrow {
+    bottom: 50px;
+  }
+  .page-teams .team-carousel__slide__arrow--top {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 992px) and (max-width: 1279px) {
+  .page-teams header {
+    position: -webkit-sticky;
+    position: sticky;
+    width: 100%;
+    top: 0;
+    z-index: 100;
+  }
+  .page-teams header > nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .page-teams header > nav .navbar__logo {
+    padding-top: 48px;
+    padding-left: 23px;
+  }
+  .page-teams header > nav .navbar__logo--mobile {
+    display: none;
+  }
+  .page-teams header > nav .navbar__logo--desktop {
+    max-height: 27px;
+    max-width: 147px;
+  }
+  .page-teams header > nav .navbar__items {
+    padding-top: 48px;
+  }
+  .page-teams header > nav .navbar__items .navbar__links {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .page-teams header > nav .navbar__items .navbar__links__contact > a, .page-teams header > nav .navbar__items .navbar__links__team > a {
+    color: #FFFFFF;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: "Roboto";
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 16.8px;
+    letter-spacing: 0.03em;
+    margin-right: 86px;
+  }
+  .page-teams header > nav .navbar__items .navbar__links__burger {
+    margin-right: 52px;
+  }
+  .page-teams header > nav .navbar__items .navbar__links__burger__image {
+    max-height: 24px;
+    max-width: 24px;
+  }
+  .page-teams .team-carousel__slide__title {
+    font-family: "Martel Sans";
+    font-style: normal;
+    font-weight: bold;
+    font-size: 132px;
+    line-height: 100%;
+    left: 41px;
+    bottom: 236px;
+    max-width: 100%;
+    max-height: 93px;
+    margin-bottom: 30px;
+  }
+  .page-teams .team-carousel__slide__text {
+    left: 41px;
+    right: 41px;
+    bottom: 125px;
+    max-width: 723.26px;
+    max-height: 81px;
+    text-align: justify;
+  }
+  .page-teams .team-carousel__slide__arrow {
+    bottom: 40px;
+  }
+  .page-teams .team-carousel__slide__arrow--top {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 1280px) and (max-width: 1599px) {
+  .page-teams header {
+    position: -webkit-sticky;
+    position: sticky;
+    width: 100%;
+    top: 0;
+    z-index: 100;
+  }
+  .page-teams header > nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .page-teams header > nav .navbar__logo {
+    padding-top: 48px;
+    padding-left: 23px;
+  }
+  .page-teams header > nav .navbar__logo--mobile {
+    display: none;
+  }
+  .page-teams header > nav .navbar__logo--desktop {
+    max-height: 27px;
+    max-width: 147px;
+  }
+  .page-teams header > nav .navbar__items {
+    padding-top: 48px;
+  }
+  .page-teams header > nav .navbar__items .navbar__links {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .page-teams header > nav .navbar__items .navbar__links__contact > a, .page-teams header > nav .navbar__items .navbar__links__team > a {
+    color: #FFFFFF;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: "Roboto";
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 16.8px;
+    letter-spacing: 0.03em;
+    margin-right: 86px;
+  }
+  .page-teams header > nav .navbar__items .navbar__links__burger {
+    margin-right: 52px;
+  }
+  .page-teams header > nav .navbar__items .navbar__links__burger__image {
+    max-height: 24px;
+    max-width: 24px;
+  }
+  .page-teams .team-carousel__slide__title {
+    font-family: "Martel Sans";
+    font-style: normal;
+    font-weight: bold;
+    font-size: 132px;
+    line-height: 100%;
+    left: 61px;
+    bottom: 216px;
+    max-width: 100%;
+    max-height: 93px;
+    margin-bottom: 30px;
+  }
+  .page-teams .team-carousel__slide__text {
+    left: 61px;
+    right: 41px;
+    bottom: 100px;
+    max-width: 500px;
+    max-height: 81px;
+    text-align: justify;
+  }
+  .page-teams .team-carousel__slide__arrow {
+    bottom: 25px;
+  }
+  .page-teams .team-carousel__slide__arrow > a {
+    margin-bottom: 45px;
+  }
+}
+
+@media screen and (min-width: 1600px) {
+  .page-teams header {
+    position: -webkit-sticky;
+    position: sticky;
+    width: 100%;
+    top: 0;
+    z-index: 100;
+  }
+  .page-teams header > nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .page-teams header > nav .navbar__logo {
+    padding-top: 48px;
+    padding-left: 23px;
+  }
+  .page-teams header > nav .navbar__logo--mobile {
+    display: none;
+  }
+  .page-teams header > nav .navbar__logo--desktop {
+    max-height: 27px;
+    max-width: 147px;
+  }
+  .page-teams header > nav .navbar__items {
+    padding-top: 48px;
+  }
+  .page-teams header > nav .navbar__items .navbar__links {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .page-teams header > nav .navbar__items .navbar__links__contact > a, .page-teams header > nav .navbar__items .navbar__links__team > a {
+    color: #FFFFFF;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: "Roboto";
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 16.8px;
+    letter-spacing: 0.03em;
+    margin-right: 86px;
+  }
+  .page-teams header > nav .navbar__items .navbar__links__burger {
+    margin-right: 52px;
+  }
+  .page-teams header > nav .navbar__items .navbar__links__burger__image {
+    max-height: 24px;
+    max-width: 24px;
+  }
+  .page-teams .team-carousel__slide__title {
+    font-family: "Martel Sans";
+    font-style: normal;
+    font-weight: bold;
+    font-size: 132px;
+    line-height: 100%;
+    left: 148px;
+    bottom: 236px;
+    width: 927px;
+    height: 93px;
+    margin-bottom: 30px;
+  }
+  .page-teams .team-carousel__slide__text {
+    left: 148px;
+    bottom: 125px;
+    width: 550px;
+    height: 81px;
+  }
+  .page-teams .team-carousel__slide__arrow {
+    bottom: 100px;
+  }
+  .page-teams .team-carousel__slide__arrow > a {
+    margin-bottom: 65px;
+  }
 }
 
 html, body {
