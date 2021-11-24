@@ -16,8 +16,7 @@
 
     &__slide { 
       height: 100%;
-      width: 100%;
-      position:absolute; 
+      width: 100%; 
       background: {
         size: cover;
         position: center;
@@ -58,7 +57,7 @@
 }
 
 // Extra small devices
-@media screen and (min-width: $breakpoint-mobile) and (max-width: $breakpoint-tablet - 1){
+@media screen and (min-width: $breakpoint-mobile) {
   .page-teams {
     @include navbar-short-light;
     
@@ -93,7 +92,7 @@
 }
 
 // Medium devices
-@media screen and (min-width: $breakpoint-tablet) and (max-width: $breakpoint-desktop - 1) {
+@media screen and (min-width: $breakpoint-tablet) {
   .page-teams {
     @include navbar-full-light;
     .team-carousel__slide {
@@ -127,7 +126,7 @@
 }
 
 // Large devices
-@media screen and (min-width: $breakpoint-desktop) and (max-width: $breakpoint-large - 1){
+@media screen and (min-width: $breakpoint-desktop) {
   .page-teams {
     @include navbar-full-light;
     .team-carousel__slide {
@@ -161,7 +160,7 @@
 }
 
 // Desktop Large devices
-@media screen and (min-width: $breakpoint-large) and (max-width: $breakpoint-extra-large - 1){
+@media screen and (min-width: $breakpoint-large) {
   .page-teams {
     @include navbar-full-light;
     .team-carousel__slide {
@@ -185,6 +184,10 @@
   
       &__arrow {
         bottom: 25px;
+
+        &--top {
+          display: block;
+        }
 
         & > a {
           margin-bottom: 45px;
@@ -217,6 +220,10 @@
   
       &__arrow {
         bottom: 100px;
+
+        &--top {
+          display: block;
+        }
   
         & > a {
           margin-bottom: 65px;

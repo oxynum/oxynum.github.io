@@ -2,6 +2,12 @@
 
 .page-error {
   @include cover-base;
+  position: relative;
+  background: {
+    size: contain;
+    position: center;
+    repeat: no-repeat;
+  }
 
   &__container {
     width: 100%;
@@ -11,6 +17,8 @@
       repeat: no-repeat;
       position: center;
     }
+    top: 45%;
+    position: absolute;
 
     & > div {
       text-align: center;
@@ -31,7 +39,7 @@
   }
 
   &__footer{
-    text-align: center;
+    position: absolute;
 
     .page-error__backlink{
       text-decoration: none;
@@ -46,8 +54,10 @@
 }
 
 // Extra small devices
-@media screen and (min-width: $breakpoint-mobile) and (max-width: $breakpoint-tablet - 1){
+@media screen and (min-width: $breakpoint-mobile) {
   .page-error {
+    background-image: url(#{$assetPath}/Icon/Circle.png);
+
     .header__logo{
       padding: {
         left: 23px;
@@ -55,6 +65,7 @@
       } 
 
       &--mobile{
+        display: block;
         width: 37px;
         height: 19px;
       }
@@ -63,28 +74,20 @@
       }
     }
 
-    &__container {
-      height: 486px;
-      margin-top: 2.5rem;
-      background: {
-        image: url(#{$assetPath}/Icon/Circle.png);
-        size: contain;
-      }
-
-      & > div {
-        .error {
-          &__title {
-            font-size: 36px;
-          }
-          &__text{
-            font-size: 24px;
-          }
+    &__container > div {
+      .error {
+        &__title {
+          font-size: 36px;
+        }
+        &__text{
+          font-size: 24px;
         }
       }
     }
 
     &__footer{
-      margin-top: 1.12rem;
+      top: 86%;
+      left: 35%;
 
       & .page-error__backlink{
         &__icon {
@@ -101,9 +104,10 @@
 }
 
 // Medium devices
-@media screen and (min-width: $breakpoint-tablet) and (max-width: $breakpoint-desktop - 1){
+@media screen and (min-width: $breakpoint-tablet) {
   .page-error {
-    
+    background-image: url(#{$assetPath}/Icon/Circle-medium.png);
+
     .header__logo{
       padding: {
         left: 23px;
@@ -114,42 +118,35 @@
         display: none;
       }
       &--desktop{
+        display: block;
         width: 147px;
         height: 27px;
       }
     }
 
-    &__container {
-      height: 486px;
-      margin-top: 8rem;
-      background: {
-        image: url(#{$assetPath}/Icon/Circle-Large.png);
-        size: contain;
-      }
-
-      & > div {
-        .error {
-          &__title {
-            font-size: 36px;
-          }
-          &__text{
-            font-size: 24px;
-          }
+    &__container > div {
+      .error {
+        &__title {
+          font-size: 72px;
+        }
+        &__text{
+          font-size: 48px;
         }
       }
     }
 
     &__footer{
-      margin-top: 5rem;
+      top: 86%;
+      left: 38%;
 
       .page-error__backlink{
         &__icon {
-          width: 25.33px;
-          height: 12.67px;
+          width: 34.67px;
+          height: 17.33px;
           margin-right: 10.33px;
         }
         &__back-home {
-          font-size: 24px;
+          font-size: 36px;
         }
       }
     } 
@@ -157,15 +154,9 @@
 }
 
 // Large devices
-@media screen and (min-width: $breakpoint-desktop) and (max-width: $breakpoint-large - 1){
+@media screen and (min-width: $breakpoint-desktop) {
   .page-error {
-    position: relative;
-    background: {
-      image: url(#{$assetPath}/Icon/Circle-Large.png);
-      size: contain;
-      position: center;
-      repeat: no-repeat;
-    }
+    background-image: url(#{$assetPath}/Icon/Circle-medium.png);
 
     .header__logo{
       padding: {
@@ -177,44 +168,15 @@
         display: none;
       }
       &--desktop{
+        display: block;
         width: 147px;
         height: 27px;
       }
     }
 
-    &__container {
-      position: absolute;
-      top: 40%;
-      
-      & > div {
-        .error {
-          &__title {
-            font-size: 36px;
-          }
-          &__text{
-            font-size: 24px;
-          }
-        }
-      }
-    }
-
     &__footer{
-      position: absolute;
-      top: 59%;
-      margin-top: 5rem;
-      left: 44%;
-
-      .page-error__backlink{
-        
-        &__icon {
-          width: 25.33px;
-          height: 12.67px;
-          margin-right: 10.33px;
-        }
-        &__back-home {
-          font-size: 24px;
-        }
-      }
+      top: 88%;
+      left: 42%;
     } 
   }
 }
@@ -222,12 +184,7 @@
 // Desktop Large and Extra Large devices
 @media screen and (min-width: $breakpoint-large) {
   .page-error {
-    background: {
-      image: url(#{$assetPath}/Icon/Circle-Large.png);
-      size: contain;
-      repeat: no-repeat;
-      position: center;
-    }
+    background-image: url(#{$assetPath}/Icon/Circle-Large.png);
 
     .header__logo{
       padding: {
@@ -239,29 +196,26 @@
         display: none;
       }
       &--desktop{
+        display: block;
         width: 147px;
         height: 27px;
       }
     }
 
-    &__container {
-      height: 50vh;
-      margin: auto;
-      
-      & > div {
-        .error {
-          &__title {
-            font-size: 72px;
-          }
-          &__text{
-            font-size: 48px;
-          }
+    &__container > div {
+      .error {
+        &__title {
+          font-size: 72px;
+        }
+        &__text{
+          font-size: 48px;
         }
       }
     }
 
     &__footer{
-      margin-top: 5rem;
+      top: 80%;
+      left: 43%;
 
       .page-error__backlink{
         &__icon {

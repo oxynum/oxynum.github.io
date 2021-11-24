@@ -1,3 +1,5 @@
+@import "variables";
+
 @mixin navbar-link {
   color: $base-white;
   text: {
@@ -55,7 +57,7 @@
 
 @mixin list-item-small {
   font: {
-    family: $second-font-family;
+    family: $base-font-family;
     style: normal;
     weight: bold;
     size: 70px;
@@ -65,7 +67,7 @@
 
 @mixin list-item-medium {
   font: {
-    family: $second-font-family;
+    family: $base-font-family;
     style: normal;
     weight: bold;
     size: 80px;
@@ -75,7 +77,7 @@
 
 @mixin list-item-large {
   font: {
-    family: $second-font-family;
+    family: $base-font-family;
     style: normal;
     weight: bold;
     size: 150px;

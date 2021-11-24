@@ -4,7 +4,6 @@
 
 .page-home{
   @include cover-base;
-
   main {
     padding-top: 45px;
 
@@ -17,13 +16,12 @@
         @include text-body;
         color: $base-grey-light;
       }
-
     }
   }
 }
 
 // Extra small devices
-@media screen and (min-width: $breakpoint-mobile) and (max-width: $breakpoint-tablet - 1){
+@media screen and (min-width: $breakpoint-mobile) {
   @include navbar-short-light;
 
   .section-agency{
@@ -64,20 +62,29 @@
 }
 
 // Medium devices
-@media screen and (min-width: $breakpoint-tablet) and (max-width: $breakpoint-desktop - 1){
-  @include navbar-short-light;
-
+@media screen and (min-width: $breakpoint-tablet) {
   .section-agency{
     flex-direction: column;
 
     &__text{
       order:2;
       &__title{
-        @include title-h1-small;
+        font: {
+          family: $base-font-family;
+          style: normal;
+          weight: bold;
+          size: 72px;
+        }
+        line-height: 100%;
         margin-left: 41px;
       }
       &__presentation{
-        margin: 50px 46px 52px 41px;
+        margin: {
+          top: 50px;
+          right: 46px;
+          bottom: 52px;
+          left: 41px;
+        }
       }
     }
 
@@ -95,7 +102,7 @@
 
       & > img{
         flex: 1;
-        min-width: 40%;
+        min-width: 20%;
         margin: 10px;
       }
     }
@@ -103,7 +110,7 @@
 }
 
 // Large devices
-@media screen and (min-width: $breakpoint-desktop) and (max-width: $breakpoint-large - 1){
+@media screen and (min-width: $breakpoint-desktop) {
   @include navbar-full-light;
 
   .section-agency{
@@ -149,22 +156,16 @@
 }
 
 // Desktop Large devices
-@media screen and (min-width: $breakpoint-large) and (max-width: $breakpoint-extra-large - 1){
-  @include navbar-full-light;
-
+@media screen and (min-width: $breakpoint-large) {
   .section-agency{
     position: relative;
     &__text{
-      max-width: 35rem;
-      padding: 10rem 0rem 10rem 12rem;
+      max-width: 40rem;
+      padding: 10rem 0rem 5rem 10rem;
       z-index: 10;
 
       &__title{
         @include title-h1-large;
-      }
-  
-      &__presentation{
-        margin-top: 34px;
       }
     }
 
@@ -172,7 +173,7 @@
       width: 60%;
       position:absolute;
       top: 3rem;
-      right: 1rem;
+      right: 5rem;
       height: auto;
     }
   }
@@ -185,44 +186,42 @@
         gap: 3rem;
       }
       margin: 0 10rem 5rem 10rem;
-
-      & > img{
-        width: 100%;
-        height: auto;
-      }
     }
   }
 }
 
 // Desktop Extra large devices
 @media screen and (min-width: $breakpoint-extra-large) {
-  @include navbar-full-light;
-
   .section-agency{
     position: relative;
     &__text{
       max: {
-        width: 45rem;
-        height: 25rem;
+        width: 100%;
+        height: 100%;
       }
-      padding: 15rem 0rem 0rem 38rem;
+      padding: 15rem 0rem 0rem 28rem;
       z-index: 10;
 
       &__title{
-        @include title-h1-large;
+        max: {
+          width: 636px;
+          height: 285px;
+        }
       }
-  
+
       &__presentation{
-        margin-top: 34px;
+        max: {
+          width: 723.26px;
+          height: 81px;
+        }
+        margin-right: 0;
       }
     }
 
     &__image > picture > img {
-      width: auto;
       position:absolute;
       top: 0;
-      right: 20rem;
-      height: 53rem;
+      right: 10rem;
     }
   }
 
@@ -233,12 +232,7 @@
         template-columns: repeat(6, 1fr);
         gap: 1rem 6rem;
       }
-      margin: 15rem 33rem 0rem 33rem;
-
-      & > img{
-        width: 100%;
-        height: auto;
-      }
+      margin: 5rem 33rem 0rem 28rem;
     }
   }
 }

@@ -43,7 +43,7 @@
 }
 
 // Large devices
-@media screen and (min-width: $breakpoint-desktop) and (max-width: $breakpoint-large - 1) {
+@media screen and (min-width: $breakpoint-desktop) {
   .content {
     margin-top: 100px;
     
@@ -63,7 +63,7 @@
 }
 
 // Desktop Large devices
-@media screen and (min-width: $breakpoint-large) and (max-width: $breakpoint-extra-large - 1) {
+@media screen and (min-width: $breakpoint-large) {
   .content {
     margin-top: 110px;
     

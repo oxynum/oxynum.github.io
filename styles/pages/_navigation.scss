@@ -11,13 +11,9 @@
       flex-direction: column;
       list-style-type: none; 
 
-      & > li {
-        padding-bottom: 6px;
-
-        & > a {
-          text-decoration: none;
-          color: $base-grey-medium;
-        }
+      & > li > a {
+        text-decoration: none;
+        color: $base-grey-medium;
       }
     }
   }
@@ -43,7 +39,7 @@
 }
 
 // Extra small devices
-@media screen and (min-width: $breakpoint-mobile) and (max-width: $breakpoint-tablet - 1){
+@media screen and (min-width: $breakpoint-mobile) {
   .page-navigation {
     @include navbar-short-dark;
 
@@ -58,8 +54,11 @@
         margin-top: 100px;
         margin-left: 41px;
   
-        & > li > a{
-          @include list-item-small;
+        & > li {
+          padding-bottom: 6px;
+          & > a{
+            @include list-item-small;
+          }
         }
         &__home{
           order: 1;
@@ -102,24 +101,25 @@
 }
 
 // Medium devices
-@media screen and (min-width: $breakpoint-tablet) and (max-width: $breakpoint-desktop - 1){
+@media screen and (min-width: $breakpoint-tablet) {
   .page-navigation {
-    @include navbar-short-dark;
-
     background: {
-      image: url(#{$assetPath}/Icon/cover-circle-white-mobile.png);
-      position: center 100px;
-      size: 99.9% 100%;
+      image: url(#{$assetPath}/Icon/cover-circle-white-tablet.png);
+      position: cover;
       repeat: no-repeat;
     }
 
     .content {
       &-item {
-        margin-top: 100px;
+        margin-top: 200px;
         margin-left: 87px;
   
-        & > li > a{
-          @include list-item-small;
+        & > li {
+          padding-bottom: 40px;
+
+          & > a{
+            @include list-item-small;
+          }
         }
         &__home{
           order: 1;
@@ -134,28 +134,39 @@
           }
         }
         &__clients{
-          display: none;
+          order: 4;
+          display: block;
         }
       }
     }
   
     footer {
-      margin-top: 94px;
-  
-      & .footer-contact {
-        width: 276px;
-        margin-left: 87px;
-        margin-bottom: 46px;
-        font-size: 18px;
-        line-height: 100%;
-  
-        &__address{
-          margin-top: 12px;
+      & > div {
+        display: flex;
+        justify-content: space-between;
+
+        & .footer-contact {
+          max-width: 276px;
+          margin: {
+            left: 87px;
+            right: 87px;
+          }
+          font-size: 18px;
+          line-height: 100%;
+    
+          &__address{
+            margin-top: 12px;
+          }
         }
       }
   
       & .footer-social-link {
-        margin-top: 90px;
+        display: block;
+        margin: {
+          bottom: 95px;
+          top: 100px;
+        }
+        text-align: center;
   
         & > a {
           font-family: $second-font-family;
@@ -164,7 +175,7 @@
           line-height: 100%;
           color: $base-grey-medium-2;
           text-decoration: none;
-          margin-left: 87px;
+          margin-right: 50px;
         }
       }
     }
@@ -172,7 +183,7 @@
 }
 
 // Large devices
-@media screen and (min-width: $breakpoint-desktop) and (max-width: $breakpoint-large - 1){
+@media screen and (min-width: $breakpoint-desktop) {
   .page-navigation {
     @include navbar-full-dark;
 
@@ -193,6 +204,7 @@
         }
 
         &__team__illustration{
+          display: block;
           margin-left: -80px;
           padding-right: 37px;
         }
@@ -237,10 +249,8 @@
 }
 
 // Desktop Large devices
-@media screen and (min-width: $breakpoint-large) and (max-width: $breakpoint-extra-large - 1){
+@media screen and (min-width: $breakpoint-large) {
   .page-navigation {
-    @include navbar-full-dark;
-
     background: {
       image: url(#{$assetPath}/Icon/cover-circle-white.png);
       position: right;
@@ -306,10 +316,8 @@
 }
 
 // Desktop Extra large devices
-@media screen and (min-width: $breakpoint-extra-large){
+@media screen and (min-width: $breakpoint-extra-large) {
   .page-navigation {
-    @include navbar-full-dark;
-
     background: {
       image: url(#{$assetPath}/Icon/cover-circle-white.png);
       position: right;
