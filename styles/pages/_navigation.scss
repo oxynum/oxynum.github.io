@@ -5,15 +5,21 @@
 .page-navigation {
   @include cover-light;
 
-  .content {
-    &-item {
-      display: flex;
-      flex-direction: column;
-      list-style-type: none; 
+  main {
+    display: flex;
 
-      & > li > a {
-        text-decoration: none;
-        color: $base-grey-medium;
+    section {
+      width: 100%;
+
+      & .content-item {
+        display: flex;
+        flex-direction: column;
+        list-style-type: none; 
+  
+        & > li > a {
+          text-decoration: none;
+          color: $base-grey-medium;
+        }
       }
     }
   }
@@ -35,6 +41,15 @@
         color: $base-grey-dark-2;
       }
     }
+    & .footer-social-link > a {
+      font-family: $second-font-family;
+      font-weight: 300;
+      font-size: 18px;
+      line-height: 100%;
+      color: $base-grey-medium-2;
+      text-decoration: none;
+      margin-right: 50px;
+    }
   }
 }
 
@@ -45,35 +60,27 @@
 
     background: {
       image: url(#{$assetPath}/Icon/cover-circle-white-mobile.png);
-      position: center 60px;
+      size: cover;
       repeat: no-repeat;
     }
-  
-    .content {
-      &-item {
-        margin-top: 100px;
-        margin-left: 41px;
-  
-        & > li {
-          padding-bottom: 6px;
-          & > a{
-            @include list-item-small;
-          }
-        }
-        &__home{
-          order: 1;
-        }
-        &__agency{
-          order: 2;
-        }
-        &__team{
-          order: 3;
-          &__illustration{
-            display: none;
-          }
-        }
-        &__clients{
-          display: none;
+
+    main > .container__arrow {
+      display: none;
+    }
+    
+    section > .content-item  {
+      margin-top: 10%;
+      margin-left: 41px;
+
+      & > .content-item__clients {
+        display: none;
+      }
+
+      & > li {
+        padding-bottom: 6px;
+
+        & > a{
+          @include list-item-small;
         }
       }
     }
@@ -93,7 +100,7 @@
         }
       }
   
-      & .footer-social-link{
+      & .footer-social-link {
         display: none;
       }
     }
@@ -103,40 +110,21 @@
 // Medium devices
 @media screen and (min-width: $breakpoint-tablet) {
   .page-navigation {
-    background: {
-      image: url(#{$assetPath}/Icon/cover-circle-white-tablet.png);
-      position: cover;
-      repeat: no-repeat;
-    }
+    background-image: url(#{$assetPath}/Icon/cover-circle-white-tablet.png);
 
-    .content {
-      &-item {
-        margin-top: 200px;
-        margin-left: 87px;
-  
-        & > li {
-          padding-bottom: 40px;
+    section > .content-item {
+      margin-left: 87px;
 
-          & > a{
-            @include list-item-small;
-          }
+      & > li {
+        padding-bottom: 40px;
+
+        & > a{
+          @include list-item-small;
         }
-        &__home{
-          order: 1;
-        }
-        &__agency{
-          order: 2;
-        }
-        &__team{
-          order: 3;
-          &__illustration{
-            display: none;
-          }
-        }
-        &__clients{
-          order: 4;
-          display: block;
-        }
+      }
+
+      & > .content-item__clients {
+        display: block;
       }
     }
   
@@ -167,16 +155,6 @@
           top: 100px;
         }
         text-align: center;
-  
-        & > a {
-          font-family: $second-font-family;
-          font-weight: 300;
-          font-size: 18px;
-          line-height: 100%;
-          color: $base-grey-medium-2;
-          text-decoration: none;
-          margin-right: 50px;
-        }
       }
     }
   }
@@ -186,65 +164,6 @@
 @media screen and (min-width: $breakpoint-desktop) {
   .page-navigation {
     @include navbar-full-dark;
-
-    background: {
-      image: url(#{$assetPath}/Icon/cover-circle-white.png);
-      position: right;
-      size: contain;
-      repeat: no-repeat;
-    }
-  
-    .content {
-      &-item {
-        margin-top: 30px;
-        margin-left: 160px;
-  
-        & > li > a {
-          @include list-item-small;
-        }
-
-        &__team__illustration{
-          display: block;
-          margin-left: -80px;
-          padding-right: 37px;
-        }
-      }
-    }
-  
-    footer {
-      display: flex;
-      margin-left: 160px;
-      margin-bottom: 57px;
-      margin-top: 34px;
-  
-      & .footer-contact {
-        font-size: 18px;
-        line-height: 100%;
-        margin-right: 61px;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-
-        &__address {
-          margin-top: 12px;
-        }
-      }
-  
-      & .footer-social-link {
-        display: flex;
-        align-self: flex-end;
-      
-        & > a{
-          font-family: $second-font-family;
-          font-weight: 300;
-          font-size: 18px;
-          line-height: 100%;
-          color: $base-grey-medium-2;
-          text-decoration: none;
-          margin-right: 40px;
-        }
-      }
-    }
   }
 }
 
@@ -257,58 +176,62 @@
       size: contain;
       repeat: no-repeat;
     }
-    
-    .content {
-      &-item {
-        margin-top: 130px;
-        margin-left: 293px;
-  
-        & > li > a {
-          @include list-item-medium;
-        }
 
-        &__team__illustration{
-          margin: {
-            left: -80px;
-            bottom: 10px;
-          }
-          padding-right: 37px;
-        }
+    main > .container__arrow {
+      display: block;
+      width: 20%;
+
+      & .container__arrow__illustration {
+        float: right;
+        margin-top: 90%;
       }
     }
-  
+    
+    section > .content-item {
+      margin-top: 5%;
+
+      & > li > a {
+        @include list-item-medium;
+      }
+    }
+
     footer {
       display: flex;
-      margin-left: 293px;;
-      margin-bottom: 57px;
-      margin-top: 110px;
-  
-      & .footer-contact {
-        font-size: 18px;
-        line-height: 100%;
-        margin-right: 61px;
+      margin: {
+        left: 293px;
+        bottom: 57px;
+        top: 40px;
+      }
+
+      & > div {
         display: flex;
-        flex-direction: column;
         justify-content: space-between;
 
-        &__address {
-          margin-top: 12px;
+        & .footer-contact {
+          font-size: 18px;
+          line-height: 100%;
+          margin: {
+            left: 40px;
+            right: 61px;
+            bottom: 0px;
+          }
+          display: flex;
+          flex-direction: column;
+          justify-content: start;
+  
+          &__address {
+            margin-top: 12px;
+          }
         }
       }
   
       & .footer-social-link {
         display: flex;
         align-self: flex-end;
-        margin-left: 99px;
-      
-        & > a{
-          font-family: $second-font-family;
-          font-weight: 300;
-          font-size: 18px;
-          line-height: 100%;
-          color: $base-grey-medium-2;
-          text-decoration: none;
-          margin-right: 50px;
+        justify-content: start;
+        margin: {
+          top: 0px;
+          bottom: 0px;
         }
       }
     }
@@ -318,64 +241,18 @@
 // Desktop Extra large devices
 @media screen and (min-width: $breakpoint-extra-large) {
   .page-navigation {
-    background: {
-      image: url(#{$assetPath}/Icon/cover-circle-white.png);
-      position: right;
-      size: contain;
-      repeat: no-repeat;
-    }
-  
-    .content {
-      &-item {
-        margin-top: 130px;
-        margin-left: 293px;
-  
-        & > li > a {
-          @include list-item-large;
-        }
+    section > .content-item {
+      margin-top: 130px;
 
-        &__team__illustration{
-          margin: {
-            left: -80px;
-            bottom: 40px;
-          }
-          padding-right: 37px;
-        }
+      & > li > a {
+        @include list-item-large;
       }
     }
-  
+
     footer {
-      display: flex;
-      margin-left: 293px;
-      margin-top: 110px;
-  
-      & .footer-contact {
-        font-size: 18px;
-        line-height: 100%;
-        margin-right: 61px;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-
-        &__address {
-          margin-top: 12px;
-        }
-      }
-  
-      & .footer-social-link {
-        display: flex;
-        align-self: flex-end;
-        margin-left: 99px;
-      
-        & > a{
-          font-family: $second-font-family;
-          font-weight: 300;
-          font-size: 18px;
-          line-height: 100%;
-          color: $base-grey-medium-2;
-          text-decoration: none;
-          margin-right: 50px;
-        }
+      margin: {
+        left: 480px;
+        top: 110px;
       }
     }
   }

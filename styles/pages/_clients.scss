@@ -7,8 +7,6 @@
   @include navbar-full-dark;
   
   background: {
-    image: url(#{$assetPath}/Icon/cover-circle-white.png);
-    position: right;
     size: contain;
     repeat: no-repeat;
     attachment: fixed;
@@ -27,7 +25,6 @@
         width: 34.67px;
         height: 17.33px;
         float:right;
-        padding-right: 47.67px;
       }
     } 
 
@@ -42,21 +39,36 @@
   }
 }
 
-// Large devices
-@media screen and (min-width: $breakpoint-desktop) {
-  .content {
-    margin-top: 100px;
-    
-    &__sidebar {
-      top: 60%;
-    } 
+// Extra small devices
+@media screen and (min-width: $breakpoint-mobile) {
+  .page-clients {
+    display: none;
+  }
+}
 
-    &__list-clients{
-      @include list-item-medium;
+// Medium devices
+@media screen and (min-width: $breakpoint-tablet) {
+  .page-clients {
+    display: block;
+    background-image: url(#{$assetPath}/Icon/cover-circle-white-tablet.png);
 
-      & > li {
-        padding-bottom: 60px;
-        height: auto;
+    .content {
+      padding-top: 60px;
+      
+      &__sidebar {
+        top: 50%;
+
+        & > img {
+          margin-right: 37px;
+        } 
+      } 
+  
+      &__list-clients{
+        @include list-item-medium;
+  
+        & > li {
+          height: 100px;
+        }
       }
     }
   }
@@ -64,18 +76,25 @@
 
 // Desktop Large devices
 @media screen and (min-width: $breakpoint-large) {
-  .content {
-    margin-top: 110px;
-    
-    &__sidebar {
-      top: 50%;
-    } 
+  .page-clients {
+    background: {
+      image: url(#{$assetPath}/Icon/cover-circle-white.png);
+      position: right;
+    }
 
-    &__list-clients{
-      @include list-item-large;
+    .content {
+      padding-top: 110px;
 
-      & > li {
-        height: 190px;
+      &__sidebar > img {
+        margin-right: 45px;
+      } 
+
+      &__list-clients {
+        @include list-item-large;
+
+        & > li {
+          height: 150px;
+        }
       }
     }
   }
@@ -83,18 +102,11 @@
 
 // Desktop Extra large devices
 @media screen and (min-width: $breakpoint-extra-large) {
-  .content {
-    margin-top: 320px;
-    
-    &__sidebar {
-      top: 50%;
-    } 
-
-    &__list-clients{
-      @include list-item-large;
-
-      & > li {
-        padding-bottom: 30px;
+  .page-clients {
+    .content {
+      padding-top: 300px;
+  
+      &__list-clients > li {
         height: 198px;
       }
     }

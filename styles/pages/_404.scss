@@ -86,8 +86,8 @@
     }
 
     &__footer{
-      top: 86%;
-      left: 35%;
+      top: 93%;
+      left: 33%;
 
       & .page-error__backlink{
         &__icon {
@@ -228,5 +228,16 @@
         }
       }
     } 
+  }
+}
+
+// Desktop Extra large devices
+@media screen and (min-width: $breakpoint-extra-large) { 
+  .page-error {
+    background-image: url(#{$assetPath}/Icon/Circle-Large.png);
+
+    &__footer{
+      left: 46%;
+    }
   }
 }

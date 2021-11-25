@@ -3,6 +3,7 @@
     position: sticky;
     top: 0;
     background-color: transparent;
+    height: auto;
   
     .navbar {
       display: flex;
@@ -39,6 +40,7 @@
     position: sticky;
     top: 0;
     background-color: transparent;
+    height: auto;
 
     .navbar {
       display: flex;
@@ -79,6 +81,7 @@
     width: 100%;
     top: 0;
     z-index: 100;
+    height: auto;
 
     & > nav {
       display: flex;
@@ -134,7 +137,7 @@
 @mixin navbar-short-light {
   header {
     position: sticky;
-    height: 40px;
+    height: auto;
     width: 100%;
     top: 0;
     z-index: 100;
