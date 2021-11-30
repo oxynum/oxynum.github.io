@@ -8,10 +8,12 @@
       display: flex;
       &__text__title {
         color: $base-white;
+        display: block;
       }
       &__text__presentation{
         @include text-body;
         color: $base-grey-light;
+        display: block;
       }
       &__image > picture > #presentation-picture {
         display: none;
@@ -116,16 +118,17 @@
   .section-agency{
     position: relative;
     &__text{
-      max-width: 28rem;
       padding: 8rem 0rem 8rem 8rem;
       z-index: 10;
 
       &__title{
         @include title-h1-medium;
+        max-width: 28rem;
       }
   
       &__presentation{
         margin-top: 34px;
+        max-width: 28rem;
       }
     }
 
@@ -160,12 +163,15 @@
   .section-agency{
     position: relative;
     &__text{
-      max-width: 40rem;
       padding: 10rem 0rem 5rem 10rem;
       z-index: 10;
 
       &__title{
         @include title-h1-large;
+        max-width: 40rem;
+      }
+      &__presentation{
+        max-width: 33rem;
       }
     }
 

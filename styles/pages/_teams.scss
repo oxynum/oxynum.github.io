@@ -34,11 +34,13 @@
         position: absolute;
         &__title {
           color: $base-white;
+          display: block;
         }
   
         &__text {
           @include text-body;
           color: $base-grey-light;
+          display: block;
         }
       }
 
@@ -98,8 +100,8 @@
       &__title {
         @include title-h1-large;
         max-width: 100%;
-        max-height: 93px;
-        margin-bottom: 60px;
+        max-height: 100%;
+        margin-bottom: 0;
       }
   
       &__text {
