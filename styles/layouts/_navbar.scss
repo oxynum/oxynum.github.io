@@ -35,9 +35,9 @@
   }
 }
 
-@mixin navbar-full-dark {
+@mixin navbar-full-dark($position: sticky) {
   header {
-    position: sticky;
+    position: $position;
     top: 0;
     background-color: transparent;
     height: auto;
@@ -75,9 +75,9 @@
   }
 }
 
-@mixin navbar-full-light {
+@mixin navbar-full-light($position: sticky) {
   header {
-    position: sticky;
+    position: $position;
     width: 100%;
     top: 0;
     z-index: 100;
@@ -134,9 +134,9 @@
   }
 }
 
-@mixin navbar-short-light {
+@mixin navbar-short-light($position: sticky) {
   header {
-    position: sticky;
+    position: $position;
     height: auto;
     width: 100%;
     top: 0;

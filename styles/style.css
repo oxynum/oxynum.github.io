@@ -28,50 +28,6 @@
   src: url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 }
 
-@-webkit-keyframes slideTransitionNextSlide {
-  0% {
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
-  }
-  100% {
-    -webkit-transform: translateY(100%);
-            transform: translateY(100%);
-  }
-}
-
-@keyframes slideTransitionNextSlide {
-  0% {
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
-  }
-  100% {
-    -webkit-transform: translateY(100%);
-            transform: translateY(100%);
-  }
-}
-
-@-webkit-keyframes slideTransitionPrevioustSlide {
-  0% {
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
-  }
-  100% {
-    -webkit-transform: translateY(-100%);
-            transform: translateY(-100%);
-  }
-}
-
-@keyframes slideTransitionPrevioustSlide {
-  0% {
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
-  }
-  100% {
-    -webkit-transform: translateY(-100%);
-            transform: translateY(-100%);
-  }
-}
-
 .page-home {
   background-color: #2A2A2A;
 }
@@ -1348,34 +1304,71 @@
 
 .page-teams .team-carousel {
   overflow: hidden;
-  left: 0;
-  right: 0;
-  top: 0;
-  bottom: 0;
   display: block;
-  position: absolute;
+  -webkit-transition: all 1s;
+  transition: all 1s;
 }
 
 .page-teams .team-carousel__slide {
-  height: 100%;
-  width: 100%;
+  height: 100vh;
+  width: 100vw;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  display: none;
+  display: block;
+  position: relative;
 }
 
-.page-teams .team-carousel__slide::before {
-  content: "";
-  position: absolute;
-  top: 0px;
-  right: 0px;
-  bottom: 0px;
-  left: 0px;
-  background-color: rgba(0, 0, 0, 0.45);
+.page-teams .team-carousel__slide.benoit {
+  background-image: url(../images/photos-teams/pexels-photo-1181715.jpeg);
+}
+
+.page-teams .team-carousel__slide.maxime {
+  background-image: url(../images/photos-teams/maxime.jpg);
+}
+
+.page-teams .team-carousel__slide.thomas {
+  background-image: url(../images/photos-teams/thomas.jpg);
+}
+
+.page-teams .team-carousel__slide.madeleine {
+  background-image: url(../images/photos-teams/maddy.jpg);
+}
+
+.page-teams .team-carousel__slide.hugo {
+  background-image: url(../images/photos-teams/hugo.jpg);
+}
+
+.page-teams .team-carousel__slide.jessica {
+  background-image: url(../images/photos-teams/jessica.jpg);
+}
+
+.page-teams .team-carousel__slide.jonathan {
+  background-image: url(../images/photos-teams/jonathan.jpg);
+}
+
+.page-teams .team-carousel__slide.pascal {
+  background-image: url(../images/photos-teams/pascal.jpg);
+}
+
+.page-teams .team-carousel__slide.pierrick {
+  background-image: url(../images/photos-teams/pierrick.jpg);
+}
+
+.page-teams .team-carousel__slide.rudy {
+  background-image: url(../images/photos-teams/rudy.jpg);
+}
+
+.page-teams .team-carousel__slide.sandrine {
+  background-image: url(../images/photos-teams/sandrine.jpg);
+}
+
+.page-teams .team-carousel__slide.annelaure {
+  background-image: url(../images/photos-teams/pexels-photo-1181715.jpeg);
 }
 
 .page-teams .team-carousel__slide__content {
+  display: block;
   position: absolute;
 }
 
@@ -1409,8 +1402,7 @@
 
 @media screen and (min-width: 280px) {
   .page-teams header {
-    position: -webkit-sticky;
-    position: sticky;
+    position: fixed;
     height: auto;
     width: 100%;
     top: 0;
@@ -1485,8 +1477,7 @@
 
 @media screen and (min-width: 768px) {
   .page-teams header {
-    position: -webkit-sticky;
-    position: sticky;
+    position: fixed;
     width: 100%;
     top: 0;
     z-index: 100;
@@ -1578,11 +1569,6 @@
 }
 
 @media screen and (min-width: 1280px) {
-  .page-teams .team-carousel__slide {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-  }
   .page-teams .team-carousel__slide__content {
     bottom: 125px;
     left: 61px;
@@ -1603,11 +1589,6 @@
 }
 
 @media screen and (min-width: 1600px) {
-  .page-teams .team-carousel__slide {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-  }
   .page-teams .team-carousel__slide__content__text {
     max-width: 100%;
   }

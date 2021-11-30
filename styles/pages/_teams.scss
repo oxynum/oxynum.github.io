@@ -3,34 +3,61 @@
 
   .team-carousel {
     overflow:hidden;
-    left:0; 
-    right:0; 
-    top:0; 
-    bottom:0; 
     display: block;
-    position:absolute; 
+    transition: all 1s;
+    //background-color: rgba(0,0,0,0.45);
+    
 
     &__slide { 
-      height: 100%;
-      width: 100%; 
+      height: 100vh;
+      width: 100vw; 
       background: {
         size: cover;
         position: center;
         repeat: no-repeat;
       };
-      display: none;
+      display: block;
+      position: relative;
 
-      &::before {
-        content: "";
-        position: absolute;
-        top: 0px;
-        right: 0px;
-        bottom: 0px;
-        left: 0px;
-        background-color: rgba(0,0,0,0.45);
+      &.benoit {
+        background-image: url(#{$assetPath}/photos-teams/pexels-photo-1181715.jpeg);
       }
-
+      &.maxime {
+        background-image: url(#{$assetPath}/photos-teams/maxime.jpg);
+      }
+      &.thomas {
+        background-image: url(#{$assetPath}/photos-teams/thomas.jpg);
+      }
+      &.madeleine {
+        background-image: url(#{$assetPath}/photos-teams/maddy.jpg);
+      }
+      &.hugo {
+        background-image: url(#{$assetPath}/photos-teams/hugo.jpg);
+      }
+      &.jessica {
+        background-image: url(#{$assetPath}/photos-teams/jessica.jpg);
+      }
+      &.jonathan {
+        background-image: url(#{$assetPath}/photos-teams/jonathan.jpg);
+      }
+      &.pascal {
+        background-image: url(#{$assetPath}/photos-teams/pascal.jpg);
+      }
+      &.pierrick {
+        background-image: url(#{$assetPath}/photos-teams/pierrick.jpg);
+      }
+      &.rudy {
+        background-image: url(#{$assetPath}/photos-teams/rudy.jpg);
+      }
+      &.sandrine {
+        background-image: url(#{$assetPath}/photos-teams/sandrine.jpg);
+      }
+      &.annelaure {
+        background-image: url(#{$assetPath}/photos-teams/pexels-photo-1181715.jpeg);
+      }
+      
       &__content {
+        display: block;
         position: absolute;
         &__title {
           color: $base-white;
@@ -58,7 +85,7 @@
 // Extra small devices
 @media screen and (min-width: $breakpoint-mobile) {
   .page-teams {
-    @include navbar-short-light;
+    @include navbar-short-light(fixed);
     .team-carousel__slide__content {
       bottom: 110px;
       left: 41px;
@@ -91,7 +118,7 @@
 // Medium devices
 @media screen and (min-width: $breakpoint-tablet) {
   .page-teams {
-    @include navbar-full-light;
+    @include navbar-full-light(fixed);
     .team-carousel__slide__content {
       bottom: 135px;
       left: 41px;
@@ -130,8 +157,6 @@
 // Desktop Large devices
 @media screen and (min-width: $breakpoint-large) {
   .page-teams .team-carousel__slide {
-    display: flex;
-
     &__content {
       bottom: 125px;
       left: 61px;
@@ -158,8 +183,6 @@
 // Desktop Extra large devices
 @media screen and (min-width: $breakpoint-extra-large) {
   .page-teams .team-carousel__slide {
-    display: flex;
-
     &__content__text {
       max-width: 100%;
     }
