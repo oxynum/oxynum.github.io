@@ -40,6 +40,10 @@ function showSlides(n) {
   for (i = 0; i < slides.length; i++) {
       slides[i].style.display = "none";
   }
+  console.log(slides[slideIndex-1]);
+  console.log(slides[slideIndex]);
+  //slides[slideIndex-1].addClassName == 'animation0';
   slides[slideIndex-1].style.backgroundImage = "url(" + imagePath + imagesTeamList[slideIndex-1] + ")", 
   slides[slideIndex-1].style.display = "block";
+  slides[slideIndex-1].style.animation = "slideTransitionNextSlide 1.3s linear";
 }

@@ -8,6 +8,13 @@
   <!--styles-->
   <link rel="stylesheet" href="styles/base/reset.css">
   <link rel="stylesheet" href="styles/style.css">
+  <!--fonts-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Martel+Sans:wght@200;300;400;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Martel+Sans:wght@200;300;400;600;700;800;900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
 </head>
 
 <body class="page-home">
@@ -19,7 +26,7 @@
           class="navbar__logo--mobile"
         >
           <img 
-            src="images/logo-oxynum/Logo_Short_Light.png" 
+            src="images/logo-oxynum/Logo_Short_Light.svg" 
             alt="logo oxynum version mobile"
           >
         </a>
@@ -28,7 +35,7 @@
           class="navbar__logo--desktop"
         >
           <img 
-            src="images/logo-oxynum/Logo_Full_Light.png" 
+            src="images/logo-oxynum/Logo_Full_Light.svg" 
             alt="logo oxynum version desktop"
           >
         </a>
@@ -44,7 +51,7 @@
           <li class="navbar__links__burger">
             <a href="navigation.html">
               <img 
-                src="images/Icon/Menu-Burger.png"
+                src="images/Icon/Menu-Burger.svg"
                 alt="icone menu burger pour ouvrir la page de navigation"
                 class="navbar__links__burger__image"
               >
@@ -67,23 +74,27 @@
           <source srcset="images/site-cover-photos/home-mobile-cover.png" media="(max-width: 767px)">
           <source srcset="images/site-cover-photos/cover-home-tablet.jpg" media="(max-width: 991px)">
           <source srcset="images/site-cover-photos/cover-home.jpg" media="(min-width: 992px)">
-          <img src="" alt="Image d'illustration pour la page d'accueil">
+          <img src="" alt="Image d'illustration pour la page d'accueil" id="image-cover">
+          <img src="" alt="Image d'illustration clients" id="presentation-picture">
         </picture>
       </div>
     </section>
     <section class="section-clients">
       <figure class="section-clients__logo">
         <img 
+          id="imvitro"
           src="images/logo-clients/ImVitro.png" 
           alt="logo ImVitro"
-          onclick="displayPresentationImage(this);"
-          onmouseover="displayPresentationVideo(this);"
+          onclick="displayPresentationImage(this.id);"
+          onmouseover="displayPresentationVideo(this.id);"
+          onmouseout="displayNormalImg(this.id)"
         >
         <img 
+          id="accor"
           src="images/logo-clients/Logo-Accor.png" 
           alt="logo Accor"
-          onclick="displayPresentationImage(this);"
-          onmouseover="displayPresentationVideo(this);"
+          onclick="displayPresentationImage(this.id);"
+          onmouseover="displayPresentationVideo(this.id);"
         >
         <img 
           src="images/logo-clients/Logo-Novotel.png" 

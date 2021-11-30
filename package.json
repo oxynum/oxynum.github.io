@@ -17,5 +17,8 @@
     "url": "https://github.com/oxynum/oxynum.github.io/issues"
   },
   "homepage": "https://github.com/oxynum/oxynum.github.io#readme",
-  "browserslist": "last 4 versions"
+  "browserslist": "last 4 versions",
+  "dependencies": {
+    "animate.css": "^4.1.1"
+  }
 }

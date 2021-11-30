@@ -1,4 +1,12 @@
 @import "utils/variables";
+@import "utils/fonts";
+@import "utils/typo";
+@import "utils/animations";
+
+
+@import "layouts/cover";
+@import "layouts/navbar";
+
 
 @import "pages/index";
 @import "pages/404";

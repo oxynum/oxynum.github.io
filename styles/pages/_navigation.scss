@@ -1,10 +1,6 @@
-@import "../layouts/cover";
-@import "../layouts/navbar";
-@import "../utils/typo";
-
 .page-navigation {
   @include cover-light;
-
+  
   main {
     display: flex;
 
@@ -183,7 +179,7 @@
 
       & .container__arrow__illustration {
         float: right;
-        margin-top: 90%;
+        margin-top: 80%;
       }
     }
     

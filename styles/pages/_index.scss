@@ -1,9 +1,6 @@
-@import "../utils/typo";
-@import "../layouts/cover";
-@import "../layouts/navbar";
-
 .page-home{
   @include cover-base;
+
   main {
     padding-top: 45px;
 
@@ -15,6 +12,9 @@
       &__text__presentation{
         @include text-body;
         color: $base-grey-light;
+      }
+      &__image > picture > #presentation-picture {
+        display: none;
       }
     }
   }
