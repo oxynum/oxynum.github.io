@@ -1,13 +1,11 @@
 .page-teams {
   @include cover-base;
+  overflow:hidden;
 
   .team-carousel {
-    overflow:hidden;
     display: block;
     transition: all 1s;
-    //background-color: rgba(0,0,0,0.45);
     
-
     &__slide { 
       height: 100vh;
       width: 100vw; 
@@ -20,40 +18,40 @@
       position: relative;
 
       &.benoit {
-        background-image: url(#{$assetPath}/photos-teams/pexels-photo-1181715.jpeg);
+        background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url(#{$assetPath}/photos-teams/pexels-photo-1181715.jpeg);
       }
       &.maxime {
-        background-image: url(#{$assetPath}/photos-teams/maxime.jpg);
+        background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url(#{$assetPath}/photos-teams/maxime.jpg);
       }
       &.thomas {
-        background-image: url(#{$assetPath}/photos-teams/thomas.jpg);
+        background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url(#{$assetPath}/photos-teams/thomas.jpg);
       }
       &.madeleine {
-        background-image: url(#{$assetPath}/photos-teams/maddy.jpg);
+        background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url(#{$assetPath}/photos-teams/maddy.jpg);
       }
       &.hugo {
-        background-image: url(#{$assetPath}/photos-teams/hugo.jpg);
+        background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url(#{$assetPath}/photos-teams/hugo.jpg);
       }
       &.jessica {
-        background-image: url(#{$assetPath}/photos-teams/jessica.jpg);
+        background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url(#{$assetPath}/photos-teams/jessica.jpg);
       }
       &.jonathan {
-        background-image: url(#{$assetPath}/photos-teams/jonathan.jpg);
+        background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url(#{$assetPath}/photos-teams/jonathan.jpg);
       }
       &.pascal {
-        background-image: url(#{$assetPath}/photos-teams/pascal.jpg);
+        background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url(#{$assetPath}/photos-teams/pascal.jpg);
       }
       &.pierrick {
-        background-image: url(#{$assetPath}/photos-teams/pierrick.jpg);
+        background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url(#{$assetPath}/photos-teams/pierrick.jpg);
       }
       &.rudy {
-        background-image: url(#{$assetPath}/photos-teams/rudy.jpg);
+        background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)),  url(#{$assetPath}/photos-teams/rudy.jpg);
       }
       &.sandrine {
-        background-image: url(#{$assetPath}/photos-teams/sandrine.jpg);
+        background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url(#{$assetPath}/photos-teams/sandrine.jpg);
       }
       &.annelaure {
-        background-image: url(#{$assetPath}/photos-teams/pexels-photo-1181715.jpeg);
+        background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url(#{$assetPath}/photos-teams/pexels-photo-1181715.jpeg);
       }
       
       &__content {
@@ -61,19 +59,17 @@
         position: absolute;
         &__title {
           color: $base-white;
-          display: block;
         }
   
         &__text {
           @include text-body;
           color: $base-grey-light;
-          display: block;
         }
       }
 
       &__arrow {
         position: absolute;
-        left: 50%;
+        left: 45%;
         display: flex;
         flex-direction: column;
         cursor: pointer;
@@ -94,7 +90,6 @@
       &__title {
         @include title-h1-small;
         max-width: 356px;
-        max-height: 54px;
         margin-bottom: 15px;
       }
   
@@ -125,7 +120,7 @@
       right: 41px;
 
       &__title {
-        @include title-h1-large;
+        @include title-h1-large(100);
         max-width: 100%;
         max-height: 100%;
         margin-bottom: 0;
@@ -158,9 +153,12 @@
 @media screen and (min-width: $breakpoint-large) {
   .page-teams .team-carousel__slide {
     &__content {
-      bottom: 125px;
-      left: 61px;
+      bottom: 110px;
       max-width: 927px;
+
+      &__title {
+        margin-bottom: 10px;
+      }
   
       &__text {
         max-width: 500px;

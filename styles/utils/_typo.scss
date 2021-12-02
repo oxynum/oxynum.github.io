@@ -15,32 +15,32 @@
   letter-spacing: 0.03em;
 }
 
-@mixin title-h1-small {
+@mixin title-h1-small($fontsize: 52) {
   font: {
     family: $base-font-family;
     style: normal;
     weight: bold;
-    size: 52px;
+    size: $fontsize + px;
   }
   line-height: 100%;
 }
 
-@mixin title-h1-medium {
+@mixin title-h1-medium($fontsize: 90) {
   font: {
     family: $base-font-family;
     style: normal;
     weight: bold;
-    size: 90px;
+    size: $fontsize + px;
   }
   line-height: 100%;
 }
 
-@mixin title-h1-large {
+@mixin title-h1-large($fontsize: 132) {
   font: {
     family: $base-font-family;
     style: normal;
     weight: bold;
-    size: 132px;
+    size: $fontsize + px;
   }
   line-height: 100%;
 }
@@ -55,32 +55,32 @@
   letter-spacing: 0.03em;
 }
 
-@mixin list-item-small {
+@mixin list-item-small($fontsize: 70) {
   font: {
     family: $base-font-family;
     style: normal;
     weight: bold;
-    size: 70px;
+    size: $fontsize + px;
   }
   line-height: 100%;
 }
 
-@mixin list-item-medium {
+@mixin list-item-medium($fontsize: 80) {
   font: {
     family: $base-font-family;
     style: normal;
     weight: bold;
-    size: 80px;
+    size: $fontsize + px;
   }
   line-height: 100%;
 }
 
-@mixin list-item-large {
+@mixin list-item-large($fontsize: 150) {
   font: {
     family: $base-font-family;
     style: normal;
     weight: bold;
-    size: 150px;
+    size: $fontsize + px;
   }
   line-height: 100%;
 }

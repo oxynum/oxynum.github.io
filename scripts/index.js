@@ -1,39 +1,24 @@
-const imgContainerCover = document.getElementById("image-cover");
-const imgPresentation = document.getElementById("presentation-picture");
 
-function displayPresentationImage(element) {
+const section = document.querySelector('.section-clients');
 
-  switch(element) {
-    case 'imvitro':
-      //imgContainerCover.style.display = "none";
-      //imgPresentation.style.display = "block";
-      //imgContainerCover.src="./images/mobile-image-clients/imvitro.jpg";
-      //console.log("hello");
-      break;
-    case 'accor':
-      //console.log("coucou");
-      break;
+window.addEventListener("load", (event) => {
+  if(logosIsVisible() == true){
+    section.classList.add("js-show-logo");
+  } else {
+    window.addEventListener("scroll", (event) =>  {
+      if(logosIsVisible() == true){
+        section.classList.add("js-show-logo");
+      } else {
+        section.classList.remove("js-show-logo");
+      }
+    });
   }
-  // if element === truc {}
-  //utiliser le switch 
-  //pointer l'élément img class="section-agency-image--mobile"
-  //element.setAttribute('src', './images/mobile-image-clients/imvitro.jpg');
-}
+})
 
-function displayPresentationVideo(element) {
-
-  switch(element) {
-    case 'imvitro':
-      imgContainerCover.style.display = "none";
-      break;
-    case 'accor':
-      //console.log("coucou");
-      break;
-  }
-
-  //element.setAttribute('src', './images/videos-clients/all-live.mp4');
-}
-
-function displayNormalImg(element) {
-  imgContainerCover.style.display = "block";
+function logosIsVisible() {
+  const element = section.getBoundingClientRect();
+  const elemTop = element.top;
+  const elemBottom = element.bottom;
+  let isVisible = elemTop < (window.innerHeight - 90) && elemBottom >= 0; 
+  return isVisible;
 }

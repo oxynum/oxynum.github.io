@@ -1,0 +1,3 @@
+function animateNavPage(){
+  alert('Hello');
+}

@@ -1,17 +1,19 @@
-var pos = 0;
-
-// Next controls
-function plusSlides() {
-  showSlides();
-}
+let position = 0;
+const carousel = document.querySelector(".team-carousel");
 
 // Previous controls
 function previousSlide() {
-  document.querySelector(".team-carousel").style.transform = "translateY("+ -pos +"vh)"
+  if(position !== 0) {
+    position = position + 100;
+    carousel.style.transform = "translateY(" + position + "vh)";
+  }
 }
 
-
-function showSlides() {
-  pos = pos - 100;
-  document.querySelector(".team-carousel").style.transform = "translateY("+ pos +"vh)"
+// Next controls
+function nextSlide() {
+  if(position !== -1100) {
+    position = position - 100;
+    carousel.style.transform = "translateY(" + position + "vh)";
+    
+  } 
 }
