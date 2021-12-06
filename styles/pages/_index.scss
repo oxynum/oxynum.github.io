@@ -6,6 +6,7 @@
 
     .section-agency { 
       display: flex;
+      
       &__text__title {
         color: $base-white;
         display: block;
@@ -16,6 +17,9 @@
         display: block;
       }
       &__image > picture > #presentation-picture {
+        display: none;
+      }
+      &__video {
         display: none;
       }
     }
@@ -54,16 +58,6 @@
         left: 0;
         right: 0;
         margin: auto;
-      }
-      &__video {
-        position: absolute;
-        top: 0;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        margin: auto;
-        width: 80%;
-        height: 80%;
       }
     }
   }
@@ -209,9 +203,12 @@
 @media screen and (min-width: $breakpoint-large) {
   .section-agency{
     position: relative;
+    flex-direction: row;
+
     &__text{
       padding: 10rem 0rem 5rem 10rem;
       z-index: 10;
+      order: 1;
 
       &__title{
         @include title-h1-large;
@@ -228,6 +225,16 @@
       top: 3rem;
       right: 5rem;
       height: auto;
+    }
+
+    &__video {
+      order: 2;
+      padding-top: 6rem;
+
+      & > video {
+        width: 550px;
+        height: 450px;
+      }
     }
   }
 
@@ -276,6 +283,15 @@
       position:absolute;
       top: 0;
       right: 10rem;
+    }
+
+    &__video {
+      padding-top: 8rem;
+
+      & > video {
+        width: auto;
+        height: 550px;
+      }
     }
   }
 

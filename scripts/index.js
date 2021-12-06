@@ -88,50 +88,57 @@ function displayPresentationImage(element) {
     case 'peugeot':
       image.src="./images/mobile-image-clients/peugeot.jpeg";
       break;
+    case 'vitalliance':
+      console.log('vitalliance');
+      // TODO
+      break;
   }
 }
 
 // function sur l'event mouseover pour l'affichage d'une vidéo liée au logo client (desktop)
 function displayPresentationVideo(element) {
-  const elSource = document.querySelector('#videoClient');
-  const video = document.querySelector('.overlay__video');
+  const elSource = document.querySelector('#mp4Source');
+  const video = document.querySelector('.video');
+  document.querySelector('.section-agency__image').style.display = "none";
+  document.querySelector('.section-agency__video').style.display = "block";
 
-  overlay.style.display = "block";
   setTimeout(() => {
     switch(element) {
       case 'imvitro':
-        elSource.src="./images/videos-clients/all-live.mp4";
-        video.play();
+        video.src="./images/videos-clients/all-live.mp4";
         break;
       case 'accor':
-        // TODO
+        video.src="./images/videos-clients/all-live.mp4";
         break;
       case 'novotel':
-        // TODO
+        video.src="./images/videos-clients/novotel.mp4";
         break;
       case 'antonelle':
-        // TODO
+        video.src="./images/videos-clients/antonelle.mp4";
         break;
       case 'clubmed':
-        // TODO
+        video.src="./images/videos-clients/clubmed.mp4";
         break;
       case 'emmaus':
-        // TODO
+        video.src="./images/videos-clients/emmausfrance.mp4";
         break;
       case 'ibismusic':
-        // TODO
+        video.src="./images/videos-clients/ibis-music.mp4";
         break;
       case 'loreal':
-        // TODO
+        video.src="./images/videos-clients/loreal.mp4";
         break;
       case 'maisondumonde':
-        // TODO
+        video.src="./images/videos-clients/maisondumonde.mp4";
         break;
       case 'marionnaud':
-        // TODO
+        video.src="./images/videos-clients/marionnaud.mp4";
         break;
       case 'peugeot':
-        // TODO
+        video.src="./images/videos-clients/peugeot.mp4";
+        break;
+      case 'vitalliance':
+        video.src="./images/videos-clients/vitalliance.mp4";
         break;
     }
   }, 250);
