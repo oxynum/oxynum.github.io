@@ -16,7 +16,7 @@ function previousSlide() {
 
 // Next controls
 function nextSlide() {
-  if(position !== -1200) {
+  if(position !== -700) { //-1200
     position = position - 100;
     carousel.style.top = position + "vh";
     
