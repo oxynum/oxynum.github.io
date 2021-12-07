@@ -35,13 +35,13 @@ const overlay = document.querySelector('.overlay');
 const logoClient = document.querySelectorAll('.logo-client');
 
 if(docWidth <= 1280) {
-  for (var i = 0; i < logoClient.length; i++) {
+  for (let i = 0; i < logoClient.length; i++) {
     logoClient[i].addEventListener("click", (event) => {
       displayPresentationImage(event.target.id);
     })
   }
 } else {
-  for (var i = 0; i < logoClient.length; i++) {
+  for (let i = 0; i < logoClient.length; i++) {
     logoClient[i].addEventListener("mouseover", (event) => {
       displayPresentationVideo(event.target.id);
     })

@@ -1397,6 +1397,8 @@
   display: block;
   -webkit-transition: all 1s;
   transition: all 1s;
+  position: relative;
+  top: 0;
 }
 
 .page-teams .team-carousel__slide {
@@ -1439,19 +1441,9 @@
   background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url(../images/photos-teams/jessica.jpg);
 }
 
-.page-teams .team-carousel__slide.jonathan {
-  background-image: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.45)), to(rgba(0, 0, 0, 0.45))), url(../images/photos-teams/jonathan.jpg);
-  background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url(../images/photos-teams/jonathan.jpg);
-}
-
 .page-teams .team-carousel__slide.pascal {
   background-image: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.45)), to(rgba(0, 0, 0, 0.45))), url(../images/photos-teams/pascal.jpg);
   background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url(../images/photos-teams/pascal.jpg);
-}
-
-.page-teams .team-carousel__slide.pierrick {
-  background-image: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.45)), to(rgba(0, 0, 0, 0.45))), url(../images/photos-teams/pierrick.jpg);
-  background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url(../images/photos-teams/pierrick.jpg);
 }
 
 .page-teams .team-carousel__slide.rudy {
@@ -1465,6 +1457,21 @@
 }
 
 .page-teams .team-carousel__slide.annelaure {
+  background-image: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.45)), to(rgba(0, 0, 0, 0.45))), url(../images/photos-teams/pexels-photo-1181715.jpeg);
+  background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url(../images/photos-teams/pexels-photo-1181715.jpeg);
+}
+
+.page-teams .team-carousel__slide.virabo {
+  background-image: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.45)), to(rgba(0, 0, 0, 0.45))), url(../images/photos-teams/pexels-photo-1181715.jpeg);
+  background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url(../images/photos-teams/pexels-photo-1181715.jpeg);
+}
+
+.page-teams .team-carousel__slide.marc {
+  background-image: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.45)), to(rgba(0, 0, 0, 0.45))), url(../images/photos-teams/pexels-photo-1181715.jpeg);
+  background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url(../images/photos-teams/pexels-photo-1181715.jpeg);
+}
+
+.page-teams .team-carousel__slide.david {
   background-image: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.45)), to(rgba(0, 0, 0, 0.45))), url(../images/photos-teams/pexels-photo-1181715.jpeg);
   background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url(../images/photos-teams/pexels-photo-1181715.jpeg);
 }

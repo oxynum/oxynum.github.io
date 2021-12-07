@@ -5,6 +5,8 @@
   .team-carousel {
     display: block;
     transition: all 1s;
+    position: relative;
+    top: 0;
     
     &__slide { 
       height: 100vh;
@@ -35,14 +37,8 @@
       &.jessica {
         background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url(#{$assetPath}/photos-teams/jessica.jpg);
       }
-      &.jonathan {
-        background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url(#{$assetPath}/photos-teams/jonathan.jpg);
-      }
       &.pascal {
         background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url(#{$assetPath}/photos-teams/pascal.jpg);
-      }
-      &.pierrick {
-        background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url(#{$assetPath}/photos-teams/pierrick.jpg);
       }
       &.rudy {
         background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)),  url(#{$assetPath}/photos-teams/rudy.jpg);
@@ -53,10 +49,23 @@
       &.annelaure {
         background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url(#{$assetPath}/photos-teams/pexels-photo-1181715.jpeg);
       }
+      &.virabo {
+        background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url(#{$assetPath}/photos-teams/pexels-photo-1181715.jpeg);
+      }
+      &.marc {
+        background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url(#{$assetPath}/photos-teams/pexels-photo-1181715.jpeg);
+      }
+      &.david {
+        background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url(#{$assetPath}/photos-teams/pexels-photo-1181715.jpeg);
+      }
       
       &__content {
         display: block;
         position: absolute;
+        // transform: translateY(40px);
+        // opacity: 0;
+        // transition: all 2s ease-in-out;
+
         &__title {
           color: $base-white;
         }
@@ -65,6 +74,10 @@
           @include text-body;
           color: $base-grey-light;
         }
+        // &.js-show-text {
+        //   opacity: 1;
+        //   transform: translateY(0);
+        // }
       }
 
       &__arrow {
