@@ -57,10 +57,6 @@
   display: block;
 }
 
-.page-home main .section-agency__image > picture > #presentation-picture {
-  display: none;
-}
-
 .page-home main .section-agency__video {
   display: none;
 }
@@ -181,9 +177,8 @@
     -webkit-box-ordinal-group: 2;
         -ms-flex-order: 1;
             order: 1;
-    max-width: 100%;
-    max-height: 100%;
     right: 0px;
+    max-width: 100%;
   }
   .section-clients__logo {
     display: -webkit-box;
@@ -202,17 +197,6 @@
 }
 
 @media screen and (min-width: 768px) {
-  .section-agency {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-  }
-  .section-agency__text {
-    -webkit-box-ordinal-group: 3;
-        -ms-flex-order: 2;
-            order: 2;
-  }
   .section-agency__text__title {
     font-family: "Martel Sans";
     font-style: normal;
@@ -228,18 +212,7 @@
     margin-left: 41px;
   }
   .section-agency__image > picture > img {
-    -webkit-box-ordinal-group: 2;
-        -ms-flex-order: 1;
-            order: 1;
-    width: 100%;
     margin-bottom: 8rem;
-  }
-  .section-clients__logo {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
   }
   .section-clients__logo > img {
     -webkit-box-flex: 1;
@@ -311,9 +284,6 @@
     max-height: 24px;
     max-width: 24px;
   }
-  .section-agency {
-    position: relative;
-  }
   .section-agency__text {
     padding: 8rem 0rem 8rem 4rem;
     z-index: 10;
@@ -329,13 +299,6 @@
   .section-agency__text__presentation {
     margin-top: 34px;
     max-width: 28rem;
-  }
-  .section-agency__image > picture > img {
-    width: 60%;
-    position: absolute;
-    top: 4rem;
-    right: 0;
-    height: auto;
   }
   .section-clients__logo {
     display: -ms-grid;
@@ -353,18 +316,14 @@
 
 @media screen and (min-width: 1280px) {
   .section-agency {
-    position: relative;
     -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
   }
   .section-agency__text {
     padding: 10rem 0rem 5rem 10rem;
     z-index: 10;
-    -webkit-box-ordinal-group: 2;
-        -ms-flex-order: 1;
-            order: 1;
   }
   .section-agency__text__title {
     font-family: "Martel Sans";
@@ -377,18 +336,14 @@
   .section-agency__text__presentation {
     max-width: 33rem;
   }
+  .section-agency__image {
+    padding: 5rem 5rem 0 0;
+  }
   .section-agency__image > picture > img {
-    width: 60%;
-    position: absolute;
-    top: 3rem;
-    right: 5rem;
-    height: auto;
+    margin-bottom: 0;
   }
   .section-agency__video {
-    -webkit-box-ordinal-group: 3;
-        -ms-flex-order: 2;
-            order: 2;
-    padding-top: 6rem;
+    padding: 6rem 6rem 0 0;
   }
   .section-agency__video > video {
     width: 550px;
@@ -409,9 +364,6 @@
 }
 
 @media screen and (min-width: 1600px) {
-  .section-agency {
-    position: relative;
-  }
   .section-agency__text {
     max-width: 100%;
     max-height: 100%;
@@ -427,18 +379,15 @@
     max-height: 81px;
     margin-right: 0;
   }
-  .section-agency__image > picture > img {
-    position: absolute;
-    top: 0;
-    right: 10rem;
-    width: 50%;
+  .section-agency__image {
+    padding: 0 30rem 0 0;
   }
   .section-agency__video {
-    padding-top: 8rem;
+    padding: 8rem 30rem 0 8rem;
   }
   .section-agency__video > video {
-    width: auto;
-    height: 550px;
+    width: 750px;
+    height: 600px;
   }
   .section-clients__logo {
     display: -ms-grid;
@@ -1390,7 +1339,6 @@
 
 .page-teams {
   background-color: #2A2A2A;
-  overflow: hidden;
 }
 
 .page-teams .team-carousel {
@@ -1462,8 +1410,8 @@
 }
 
 .page-teams .team-carousel__slide.virabo {
-  background-image: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.45)), to(rgba(0, 0, 0, 0.45))), url(../images/photos-teams/pexels-photo-1181715.jpeg);
-  background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url(../images/photos-teams/pexels-photo-1181715.jpeg);
+  background-image: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.45)), to(rgba(0, 0, 0, 0.45))), url(../images/photos-teams/virabo.jpg);
+  background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url(../images/photos-teams/virabo.jpg);
 }
 
 .page-teams .team-carousel__slide.marc {

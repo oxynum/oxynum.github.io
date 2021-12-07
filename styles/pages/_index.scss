@@ -16,9 +16,6 @@
         color: $base-grey-light;
         display: block;
       }
-      &__image > picture > #presentation-picture {
-        display: none;
-      }
       &__video {
         display: none;
       }
@@ -82,35 +79,27 @@
     }
     &__image > picture > img {
       order:1;
-      max: {
-        width: 100%;
-        height: 100%;
-      }
       right: 0px;
+      max-width: 100%;
     }
   }
 
-  .section-clients{
-    &__logo{
-      display: flex;
-      flex-wrap: wrap;
+  .section-clients__logo {
+    display: flex;
+    flex-wrap: wrap;
 
-      & > img{
-        flex: 1;
-        min-width: 30%;
-        margin: 10px;
-      }
+    & > img{
+      flex: 1;
+      min-width: 30%;
+      margin: 10px;
     }
   }
 }
 
 // Medium devices
 @media screen and (min-width: $breakpoint-tablet) {
-  .section-agency{
-    flex-direction: column;
-
+  .section-agency {
     &__text{
-      order:2;
       &__title{
         font: {
           family: $base-font-family;
@@ -132,23 +121,14 @@
     }
 
     &__image > picture > img {
-      order:1;
-      width: 100%;
       margin-bottom: 8rem;
     }
   }
 
-  .section-clients{
-    &__logo{
-      display: flex;
-      flex-wrap: wrap;
-
-      & > img{
-        flex: 1;
-        min-width: 20%;
-        margin: 10px;
-      }
-    }
+  .section-clients__logo > img {
+    flex: 1;
+    min-width: 20%;
+    margin: 10px;
   }
 }
 
@@ -156,59 +136,44 @@
 @media screen and (min-width: $breakpoint-desktop) {
   @include navbar-full-light;
 
-  .section-agency{
-    position: relative;
-    &__text{
-      padding: 8rem 0rem 8rem 4rem;
-      z-index: 10;
+  .section-agency__text {
+    padding: 8rem 0rem 8rem 4rem;
+    z-index: 10;
 
-      &__title{
-        @include title-h1-medium;
-        max-width: 28rem;
-      }
-  
-      &__presentation{
-        margin-top: 34px;
-        max-width: 28rem;
-      }
+    &__title{
+      @include title-h1-medium;
+      max-width: 28rem;
     }
 
-    &__image > picture > img {
-      width: 60%;
-      position:absolute;
-      top: 4rem;
-      right: 0;
-      height: auto;
+    &__presentation{
+      margin-top: 34px;
+      max-width: 28rem;
     }
   }
 
-  .section-clients{
-    &__logo{
-      display: grid;
-      grid: {
-        template-columns: repeat(6, 1fr);
-        gap: 3rem;
-      }
-      margin: 0 8rem 8rem 8rem;
+  .section-clients__logo{
+    display: grid;
+    grid: {
+      template-columns: repeat(6, 1fr);
+      gap: 3rem;
+    }
+    margin: 0 8rem 8rem 8rem;
 
-      & > img{
-        width: 100%;
-        height: auto;
-      }
+    & > img{
+      width: 100%;
+      height: auto;
     }
   }
 }
 
 // Desktop Large devices
 @media screen and (min-width: $breakpoint-large) {
-  .section-agency{
-    position: relative;
-    flex-direction: row;
+  .section-agency {
+    flex-direction: row-reverse;
 
     &__text{
       padding: 10rem 0rem 5rem 10rem;
       z-index: 10;
-      order: 1;
 
       &__title{
         @include title-h1-large;
@@ -219,17 +184,16 @@
       }
     }
 
-    &__image > picture > img {
-      width: 60%;
-      position:absolute;
-      top: 3rem;
-      right: 5rem;
-      height: auto;
+    &__image {
+      padding: 5rem 5rem 0 0;
+
+      & > picture > img {
+        margin-bottom: 0;
+      }
     }
 
     &__video {
-      order: 2;
-      padding-top: 6rem;
+      padding: 6rem 6rem 0 0;
 
       & > video {
         width: 550px;
@@ -238,18 +202,16 @@
     }
   }
 
-  .section-clients{
-    &__logo{
-      cursor: pointer;
-      display: grid;
-      grid: {
-        template-columns: repeat(6, 1fr);
-        gap: 0.5rem 3rem;
-      }
-      margin: 0 10rem 5rem 10rem;
-      & > img {
-        margin: 0;
-      }
+  .section-clients__logo{
+    cursor: pointer;
+    display: grid;
+    grid: {
+      template-columns: repeat(6, 1fr);
+      gap: 0.5rem 3rem;
+    }
+    margin: 0 10rem 5rem 10rem;
+    & > img {
+      margin: 0;
     }
   }
 }
@@ -257,7 +219,6 @@
 // Desktop Extra large devices
 @media screen and (min-width: $breakpoint-extra-large) {
   .section-agency {
-    position: relative;
     &__text{
       max: {
         width: 100%;
@@ -282,32 +243,27 @@
       }
     }
 
-    &__image > picture > img {
-      position:absolute;
-      top: 0;
-      right: 10rem;
-      width: 50%;
+    &__image {
+      padding: 0 30rem 0 0;
     }
 
     &__video {
-      padding-top: 8rem;
+      padding: 8rem 30rem 0 8rem;
 
       & > video {
-        width: auto;
-        height: 550px;
+        width: 750px;
+        height: 600px;
       }
     }
   }
 
-  .section-clients{
-    &__logo{
-      display: grid;
-      grid: {
-        template-columns: repeat(6, 1fr);
-        gap: 1rem 6rem;
-      }
-      margin: 5rem 33rem 0rem 28rem;
+  .section-clients__logo{
+    display: grid;
+    grid: {
+      template-columns: repeat(6, 1fr);
+      gap: 1rem 6rem;
     }
+    margin: 5rem 33rem 0rem 28rem;
   }
 }
 
