@@ -1,0 +1,236 @@
+.page-error {
+  @include cover-base;
+  position: relative;
+  background: {
+    size: contain;
+    position: center;
+    repeat: no-repeat;
+  }
+
+  &__container {
+    width: 100%;
+    display: flex; 
+    flex-direction: column;
+    background: {
+      repeat: no-repeat;
+      position: center;
+    }
+    top: 45%;
+    position: absolute;
+
+    & > div {
+      text-align: center;
+      margin: auto;
+
+      .error {
+        &__title {
+          font-weight: bold;
+          line-height: 100%;
+          color: $base-grey-medium;
+          margin-bottom: 8px;
+        }
+        &__text{
+          color: $base-grey-medium;
+        }
+      }
+    }
+  }
+
+  &__footer{
+    position: absolute;
+
+    .page-error__backlink{
+      text-decoration: none;
+      display: flex;
+
+      &__back-home {
+        font-weight: bold;
+        line-height: 100%;
+        color: $base-grey-medium;
+      }
+    }
+  } 
+}
+
+// Extra small devices
+@media screen and (min-width: $breakpoint-mobile) {
+  .page-error {
+    background-image: url(#{$assetPath}/Icon/Circle.png);
+
+    .header__logo{
+      padding: {
+        left: 23px;
+        top: 20px;
+      } 
+
+      &--mobile{
+        display: block;
+        width: 37px;
+        height: 19px;
+      }
+      &--desktop{
+        display: none;
+      }
+    }
+
+    &__container > div {
+      .error {
+        &__title {
+          font-size: 36px;
+        }
+        &__text{
+          font-size: 24px;
+        }
+      }
+    }
+
+    &__footer{
+      top: 93%;
+      left: 33%;
+
+      & .page-error__backlink{
+        &__icon {
+          margin-right: 10.33px;
+        }
+        &__back-home {
+          font-size: 24px;
+        }
+      }
+    } 
+  }
+}
+
+// Medium devices
+@media screen and (min-width: $breakpoint-tablet) {
+  .page-error {
+    background-image: url(#{$assetPath}/Icon/Circle-medium.png);
+
+    .header__logo{
+      padding: {
+        left: 23px;
+        top: 20px;
+      } 
+
+      &--mobile{
+        display: none;
+      }
+      &--desktop{
+        display: block;
+        width: 147px;
+        height: 27px;
+      }
+    }
+
+    &__container > div {
+      .error {
+        &__title {
+          font-size: 72px;
+        }
+        &__text{
+          font-size: 48px;
+        }
+      }
+    }
+
+    &__footer{
+      top: 86%;
+      left: 38%;
+
+      .page-error__backlink{
+        &__icon {
+          margin-right: 10.33px;
+        }
+        &__back-home {
+          font-size: 36px;
+        }
+      }
+    } 
+  }
+}
+
+// Large devices
+@media screen and (min-width: $breakpoint-desktop) {
+  .page-error {
+    background-image: url(#{$assetPath}/Icon/Circle-medium.png);
+
+    .header__logo{
+      padding: {
+        left: 29px;
+        top: 48px;
+      } 
+
+      &--mobile{
+        display: none;
+      }
+      &--desktop{
+        display: block;
+        width: 147px;
+        height: 27px;
+      }
+    }
+
+    &__footer{
+      top: 88%;
+      left: 42%;
+    } 
+  }
+}
+
+// Desktop Large and Extra Large devices
+@media screen and (min-width: $breakpoint-large) {
+  .page-error {
+    background-image: url(#{$assetPath}/Icon/Circle-Large.png);
+
+    .header__logo{
+      padding: {
+        left: 29px;
+        top: 48px;
+      } 
+
+      &--mobile{
+        display: none;
+      }
+      &--desktop{
+        display: block;
+        width: 147px;
+        height: 27px;
+      }
+    }
+
+    &__container > div {
+      .error {
+        &__title {
+          font-size: 72px;
+        }
+        &__text{
+          font-size: 48px;
+        }
+      }
+    }
+
+    &__footer{
+      top: 80%;
+      left: 43%;
+
+      .page-error__backlink{
+        &__icon {
+          margin-right: 10.33px;
+        }
+        &__back-home {
+          font-size: 36px;
+        }
+      }
+    } 
+  }
+}
+
+// Desktop Extra large devices
+@media screen and (min-width: $breakpoint-extra-large) { 
+  .page-error {
+    background-image: url(#{$assetPath}/Icon/Circle-Large.png);
+
+    &__footer{
+      left: 46%;
+    }
+  }
+}

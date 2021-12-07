@@ -1,0 +1,209 @@
+.page-teams {
+  @include cover-base;
+  overflow:hidden;
+
+  .team-carousel {
+    display: block;
+    transition: all 1s;
+    position: relative;
+    top: 0;
+    
+    &__slide { 
+      height: 100vh;
+      width: 100vw; 
+      background: {
+        size: cover;
+        position: center;
+        repeat: no-repeat;
+      };
+      display: block;
+      position: relative;
+
+      &.benoit {
+        background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url(#{$assetPath}/photos-teams/pexels-photo-1181715.jpeg);
+      }
+      &.maxime {
+        background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url(#{$assetPath}/photos-teams/maxime.jpg);
+      }
+      &.thomas {
+        background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url(#{$assetPath}/photos-teams/thomas.jpg);
+      }
+      &.madeleine {
+        background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url(#{$assetPath}/photos-teams/maddy.jpg);
+      }
+      &.hugo {
+        background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url(#{$assetPath}/photos-teams/hugo.jpg);
+      }
+      &.jessica {
+        background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url(#{$assetPath}/photos-teams/jessica.jpg);
+      }
+      &.pascal {
+        background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url(#{$assetPath}/photos-teams/pascal.jpg);
+      }
+      &.rudy {
+        background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)),  url(#{$assetPath}/photos-teams/rudy.jpg);
+      }
+      &.sandrine {
+        background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url(#{$assetPath}/photos-teams/sandrine.jpg);
+      }
+      &.annelaure {
+        background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url(#{$assetPath}/photos-teams/pexels-photo-1181715.jpeg);
+      }
+      &.virabo {
+        background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url(#{$assetPath}/photos-teams/pexels-photo-1181715.jpeg);
+      }
+      &.marc {
+        background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url(#{$assetPath}/photos-teams/pexels-photo-1181715.jpeg);
+      }
+      &.david {
+        background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url(#{$assetPath}/photos-teams/pexels-photo-1181715.jpeg);
+      }
+      
+      &__content {
+        display: block;
+        position: absolute;
+        // transform: translateY(40px);
+        // opacity: 0;
+        // transition: all 2s ease-in-out;
+
+        &__title {
+          color: $base-white;
+        }
+  
+        &__text {
+          @include text-body;
+          color: $base-grey-light;
+        }
+        // &.js-show-text {
+        //   opacity: 1;
+        //   transform: translateY(0);
+        // }
+      }
+
+      &__arrow {
+        position: absolute;
+        left: 45%;
+        display: flex;
+        flex-direction: column;
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+// Extra small devices
+@media screen and (min-width: $breakpoint-mobile) {
+  .page-teams {
+    @include navbar-short-light(fixed);
+    .team-carousel__slide__content {
+      bottom: 110px;
+      left: 41px;
+      right: 41px;
+
+      &__title {
+        @include title-h1-small;
+        max-width: 356px;
+        margin-bottom: 15px;
+      }
+  
+      &__text {
+        max-width: 327px;
+        max-height: 249px;
+        text-align: justify;
+      }
+    }
+
+    .team-carousel__slide__arrow {
+      bottom: 30px;
+
+      &--top {
+        display: none;
+      }
+    }
+  }
+}
+
+// Medium devices
+@media screen and (min-width: $breakpoint-tablet) {
+  .page-teams {
+    @include navbar-full-light(fixed);
+    .team-carousel__slide__content {
+      bottom: 135px;
+      left: 41px;
+      right: 41px;
+
+      &__title {
+        @include title-h1-large(100);
+        max-width: 100%;
+        max-height: 100%;
+        margin-bottom: 0;
+      }
+  
+      &__text {
+        max-width: 723.26px;
+        max-height: 81px;
+      }
+    }
+
+    .team-carousel__slide__arrow {
+      bottom: 50px;
+    }
+  }
+}
+
+// Large devices
+@media screen and (min-width: $breakpoint-desktop) {
+  .page-teams .team-carousel__slide__content {
+    bottom: 185px;
+
+    &__text {
+      max-width: 100%;
+    }
+  }
+}
+
+// Desktop Large devices
+@media screen and (min-width: $breakpoint-large) {
+  .page-teams .team-carousel__slide {
+    &__content {
+      bottom: 110px;
+      max-width: 927px;
+
+      &__title {
+        margin-bottom: 10px;
+      }
+  
+      &__text {
+        max-width: 500px;
+      }
+    }
+    
+    &__arrow {
+      bottom: 50px;
+
+      &--top {
+        display: block;
+      }
+      & > a {
+        margin-bottom: 45px;
+      }
+    }
+  }
+}
+
+// Desktop Extra large devices
+@media screen and (min-width: $breakpoint-extra-large) {
+  .page-teams .team-carousel__slide {
+    &__content__text {
+      max-width: 100%;
+    }
+    
+    &__arrow {
+      bottom: 100px;
+
+      & > a {
+        margin-bottom: 65px;
+      }
+    }
+  }
+}
