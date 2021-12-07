@@ -400,8 +400,11 @@
     display: grid;
     -ms-grid-columns: (1fr)[6];
         grid-template-columns: repeat(6, 1fr);
-    grid-gap: 3rem;
+    grid-gap: 0.5rem 3rem;
     margin: 0 10rem 5rem 10rem;
+  }
+  .section-clients__logo > img {
+    margin: 0;
   }
 }
 
@@ -428,6 +431,7 @@
     position: absolute;
     top: 0;
     right: 10rem;
+    width: 50%;
   }
   .section-agency__video {
     padding-top: 8rem;
@@ -738,21 +742,19 @@
     margin-top: 10%;
     margin-left: 41px;
   }
-  .page-navigation section > .content-item > .content-item__clients {
-    display: none;
-  }
   .page-navigation section > .content-item > li {
     padding-bottom: 6px;
+    padding-top: 10px;
   }
   .page-navigation section > .content-item > li > a {
     font-family: "Martel Sans";
     font-style: normal;
     font-weight: bold;
-    font-size: 70px;
+    font-size: 55px;
     line-height: 100%;
   }
   .page-navigation footer {
-    margin-top: 94px;
+    margin-top: 84px;
   }
   .page-navigation footer .footer-contact {
     width: 276px;
@@ -778,6 +780,7 @@
   }
   .page-navigation section > .content-item > li {
     padding-bottom: 40px;
+    padding-top: 0;
   }
   .page-navigation section > .content-item > li > a {
     font-family: "Martel Sans";
@@ -785,9 +788,6 @@
     font-weight: bold;
     font-size: 70px;
     line-height: 100%;
-  }
-  .page-navigation section > .content-item > .content-item__clients {
-    display: block;
   }
   .page-navigation footer > div {
     display: -webkit-box;
@@ -945,7 +945,6 @@
 
 .page-clients {
   background-color: #F0F0F0;
-  background-size: contain;
   background-repeat: no-repeat;
   background-attachment: fixed;
 }
@@ -1020,20 +1019,36 @@
 
 @media screen and (min-width: 280px) {
   .page-clients {
-    display: none;
-  }
-}
-
-@media screen and (min-width: 768px) {
-  .page-clients {
-    display: block;
     background-image: url(../images/Icon/cover-circle-white-tablet.png);
+    background-size: cover;
   }
   .page-clients .content {
     padding-top: 60px;
   }
   .page-clients .content__sidebar {
-    top: 50%;
+    display: none;
+  }
+  .page-clients .content__list-clients {
+    font-family: "Martel Sans";
+    font-style: normal;
+    font-weight: bold;
+    font-size: 55px;
+    line-height: 100%;
+    margin-left: 35px;
+  }
+  .page-clients .content__list-clients > li {
+    height: auto;
+    margin-top: 10px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .page-clients .content {
+    padding-top: 60px;
+  }
+  .page-clients .content__sidebar {
+    display: block;
+    top: 45%;
   }
   .page-clients .content__sidebar > img {
     margin-right: 37px;
@@ -1044,9 +1059,11 @@
     font-weight: bold;
     font-size: 80px;
     line-height: 100%;
+    margin-left: 0;
   }
   .page-clients .content__list-clients > li {
-    height: 100px;
+    height: auto;
+    margin-top: 10px;
   }
 }
 
@@ -1054,9 +1071,13 @@
   .page-clients {
     background-image: url(../images/Icon/cover-circle-white.png);
     background-position: right;
+    background-size: contain;
   }
   .page-clients .content {
     padding-top: 110px;
+  }
+  .page-clients .content__sidebar {
+    top: 50%;
   }
   .page-clients .content__sidebar > img {
     margin-right: 45px;
@@ -1067,9 +1088,7 @@
     font-weight: bold;
     font-size: 150px;
     line-height: 100%;
-  }
-  .page-clients .content__list-clients > li {
-    height: auto;
+    margin-top: 0;
   }
 }
 

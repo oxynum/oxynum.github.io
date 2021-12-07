@@ -11,7 +11,7 @@
         color: $base-white;
         display: block;
       }
-      &__text__presentation{
+      &__text__presentation {
         @include text-body;
         color: $base-grey-light;
         display: block;
@@ -244,16 +244,19 @@
       display: grid;
       grid: {
         template-columns: repeat(6, 1fr);
-        gap: 3rem;
+        gap: 0.5rem 3rem;
       }
       margin: 0 10rem 5rem 10rem;
+      & > img {
+        margin: 0;
+      }
     }
   }
 }
 
 // Desktop Extra large devices
 @media screen and (min-width: $breakpoint-extra-large) {
-  .section-agency{
+  .section-agency {
     position: relative;
     &__text{
       max: {
@@ -283,6 +286,7 @@
       position:absolute;
       top: 0;
       right: 10rem;
+      width: 50%;
     }
 
     &__video {

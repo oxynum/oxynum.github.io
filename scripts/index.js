@@ -25,7 +25,7 @@ function logosIsVisible() {
   const element = section.getBoundingClientRect();
   const elemTop = element.top;
   const elemBottom = element.bottom;
-  let isVisible = elemTop < (window.innerHeight - 90) && elemBottom >= 0; 
+  let isVisible = elemTop < (window.innerHeight - 93) && elemBottom >= 0; 
   return isVisible;
 }
 
