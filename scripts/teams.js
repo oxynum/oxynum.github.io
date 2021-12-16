@@ -16,11 +16,10 @@ function previousSlide() {
 
 // Next controls
 function nextSlide() {
-  if(position !== -800) { //-1200
+  if(position !== -1300) { //-1400
     console.log(position);
     position = position - 100;
-    carousel.style.top = position + "vh";
-    
+    carousel.style.top = position + "vh"; 
   } 
 }
 

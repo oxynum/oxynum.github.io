@@ -42,7 +42,7 @@
 
       &__arrow {
         position: absolute;
-        left: 45%;
+        left: 48%;
         display: flex;
         flex-direction: column;
         cursor: pointer;
@@ -57,7 +57,7 @@
     @include navbar-short-light(fixed);
     .team-carousel__slide {
       &.benoit {
-        background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url(#{$assetPath}/photos-teams/pexels-photo-1181715.jpeg);
+        background-image: url(#{$assetPath}/photos-teams-mobile/benoit.jpg);
       }
       &.maxime {
         background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url(#{$assetPath}/photos-teams-mobile/maxime.jpg);
@@ -84,16 +84,22 @@
         background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url(#{$assetPath}/photos-teams-mobile/sandrine.jpg);
       }
       &.annelaure {
-        background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url(#{$assetPath}/photos-teams/pexels-photo-1181715.jpeg);
+        background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url(#{$assetPath}/photos-teams-mobile/pexels-photo-1181715.jpeg);
       }
       &.virabo {
         background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url(#{$assetPath}/photos-teams-mobile/virabo.jpg);
       }
       &.marc {
-        background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url(#{$assetPath}/photos-teams/pexels-photo-1181715.jpeg);
+        background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url(#{$assetPath}/photos-teams-mobile/marc.jpg);
       }
       &.david {
-        background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url(#{$assetPath}/photos-teams/pexels-photo-1181715.jpeg);
+        background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url(#{$assetPath}/photos-teams-mobile/david.jpg);
+      }
+      &.antoine {
+        background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url(#{$assetPath}/photos-teams-mobile/antoine.jpg);
+      }
+      &.mohammed {
+        background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url(#{$assetPath}/photos-teams-mobile/mohammed.jpg);
       }
 
       &__content {
@@ -168,7 +174,7 @@
 @media screen and (min-width: $breakpoint-large) {
   .page-teams .team-carousel__slide {
     &.benoit {
-      background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url(#{$assetPath}/photos-teams/pexels-photo-1181715.jpeg);
+      background-image: url(#{$assetPath}/photos-teams/benoit.jpg);
     }
     &.maxime {
       background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url(#{$assetPath}/photos-teams/maxime.jpg);
@@ -201,10 +207,16 @@
       background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url(#{$assetPath}/photos-teams/virabo.jpg);
     }
     &.marc {
-      background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url(#{$assetPath}/photos-teams/pexels-photo-1181715.jpeg);
+      background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url(#{$assetPath}/photos-teams/marc.jpg);
     }
     &.david {
-      background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url(#{$assetPath}/photos-teams/pexels-photo-1181715.jpeg);
+      background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url(#{$assetPath}/photos-teams/david.jpg);
+    }
+    &.antoine {
+      background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url(#{$assetPath}/photos-teams/antoine.jpg);
+    }
+    &.mohammed {
+      background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url(#{$assetPath}/photos-teams/mohammed.jpg);
     }
 
     &__content {
