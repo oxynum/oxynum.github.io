@@ -1,5 +1,6 @@
 .page-teams {
   @include cover-base;
+  overflow: scroll;
 
   .team-carousel {
     display: block;
