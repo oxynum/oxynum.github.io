@@ -2,8 +2,6 @@
   @include cover-base;
 
   main {
-    padding-top: 45px;
-
     .section-agency { 
       display: flex;
       
@@ -134,20 +132,22 @@
 
 // Large devices
 @media screen and (min-width: $breakpoint-desktop) {
-  @include navbar-full-light;
+  @include navbar-full-light(fixed);
 
-  .section-agency__text {
-    padding: 8rem 0rem 8rem 4rem;
-    z-index: 10;
+  .section-agency {
+    &__text {
+      padding: 8rem 0rem 8rem 4rem;
+      z-index: 10;
 
-    &__title{
-      @include title-h1-medium;
-      max-width: 28rem;
-    }
+      &__title{
+        @include title-h1-medium;
+        max-width: 28rem;
+      }
 
-    &__presentation{
-      margin-top: 34px;
-      max-width: 28rem;
+      &__presentation{
+        margin-top: 34px;
+        max-width: 28rem;
+      }
     }
   }
 
@@ -169,9 +169,9 @@
 // Desktop Large devices
 @media screen and (min-width: $breakpoint-large) {
   .section-agency {
-    flex-direction: row-reverse;
-
+    flex-direction: row;
     &__text{
+      position: absolute;
       padding: 10rem 0rem 5rem 10rem;
       z-index: 10;
 
@@ -186,6 +186,7 @@
 
     &__image {
       padding: 5rem 5rem 0 0;
+      width: 50vw;
 
       & > picture > img {
         margin-bottom: 0;
@@ -193,16 +194,24 @@
     }
 
     &__video {
-      padding: 6rem 6rem 0 0;
+      position: relative;
+      height: 100vh;
+      width: 100vw;
+      background: black;
+      opacity: 0.25;
 
       & > video {
-        width: 550px;
-        height: 450px;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        position: fixed;
+        z-index: -1;
       }
     }
   }
 
   .section-clients__logo{
+    position: absolute;
     cursor: pointer;
     display: grid;
     grid: {
@@ -245,15 +254,6 @@
 
     &__image {
       padding: 0 30rem 0 0;
-    }
-
-    &__video {
-      padding: 8rem 30rem 0 8rem;
-
-      & > video {
-        width: 750px;
-        height: 600px;
-      }
     }
   }
 

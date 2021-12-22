@@ -1,6 +1,6 @@
-@mixin navbar-short-dark {
+@mixin navbar-short-dark($position: sticky) {
   header {
-    position: sticky;
+    position: $position;
     top: 0;
     background-color: transparent;
     height: auto;

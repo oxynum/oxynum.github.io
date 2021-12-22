@@ -1,6 +1,10 @@
 .page-teams {
   @include cover-base;
-  overflow: scroll;
+  overflow: auto;
+
+  main {
+    height: 100vh;
+  }
 
   .team-carousel {
     display: block;
