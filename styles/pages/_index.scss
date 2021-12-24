@@ -1,9 +1,12 @@
 .page-home{
   @include cover-base;
 
-  main {
-    padding-top: 45px;
+  .background-video {
+    display: none;
+  }
 
+  main {
+    position: relative;
     .section-agency { 
       display: flex;
       
@@ -16,9 +19,9 @@
         color: $base-grey-light;
         display: block;
       }
-      &__video {
-        display: none;
-      }
+      // &__video {
+      //   display: none;
+      // }
     }
     .section-clients {
       transform: translateY(40px);
@@ -134,20 +137,22 @@
 
 // Large devices
 @media screen and (min-width: $breakpoint-desktop) {
-  @include navbar-full-light;
+  @include navbar-full-light(fixed);
 
-  .section-agency__text {
-    padding: 8rem 0rem 8rem 4rem;
-    z-index: 10;
+  .section-agency {
+    &__text {
+      padding: 8rem 0rem 8rem 4rem;
+      z-index: 10;
 
-    &__title{
-      @include title-h1-medium;
-      max-width: 28rem;
-    }
+      &__title{
+        @include title-h1-medium;
+        max-width: 28rem;
+      }
 
-    &__presentation{
-      margin-top: 34px;
-      max-width: 28rem;
+      &__presentation{
+        margin-top: 34px;
+        max-width: 28rem;
+      }
     }
   }
 
@@ -168,12 +173,28 @@
 
 // Desktop Large devices
 @media screen and (min-width: $breakpoint-large) {
-  .section-agency {
-    flex-direction: row-reverse;
+  .background-video {
+    height: 100vh;
+    width: 100vw;
+    background: black;
+    opacity: 0.25;
+    position: fixed;
+    top: 0;
+    z-index: -1;
 
+    & > video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  .section-agency {
+    flex-direction: row;
     &__text{
       padding: 10rem 0rem 5rem 10rem;
       z-index: 10;
+      order: 0;
 
       &__title{
         @include title-h1-large;
@@ -185,24 +206,16 @@
     }
 
     &__image {
-      padding: 5rem 5rem 0 0;
+      padding: 8rem 5rem 0 0;
 
       & > picture > img {
         margin-bottom: 0;
       }
     }
-
-    &__video {
-      padding: 6rem 6rem 0 0;
-
-      & > video {
-        width: 550px;
-        height: 450px;
-      }
-    }
   }
 
   .section-clients__logo{
+    position: absolute;
     cursor: pointer;
     display: grid;
     grid: {
@@ -244,16 +257,7 @@
     }
 
     &__image {
-      padding: 0 30rem 0 0;
-    }
-
-    &__video {
-      padding: 8rem 30rem 0 8rem;
-
-      & > video {
-        width: 750px;
-        height: 600px;
-      }
+      padding: 0;
     }
   }
 

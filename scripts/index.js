@@ -100,7 +100,7 @@ function displayPresentationVideo(element) {
   const elSource = document.querySelector('#mp4Source');
   const video = document.querySelector('.video');
   document.querySelector('.section-agency__image').style.display = "none";
-  document.querySelector('.section-agency__video').style.display = "block";
+  document.querySelector('.background-video').style.display = "block";
 
   setTimeout(() => {
     switch(element) {
