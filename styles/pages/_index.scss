@@ -1,7 +1,12 @@
 .page-home{
   @include cover-base;
 
+  .background-video {
+    display: none;
+  }
+
   main {
+    position: relative;
     .section-agency { 
       display: flex;
       
@@ -14,9 +19,9 @@
         color: $base-grey-light;
         display: block;
       }
-      &__video {
-        display: none;
-      }
+      // &__video {
+      //   display: none;
+      // }
     }
     .section-clients {
       transform: translateY(40px);
@@ -168,12 +173,28 @@
 
 // Desktop Large devices
 @media screen and (min-width: $breakpoint-large) {
+  .background-video {
+    height: 100vh;
+    width: 100vw;
+    background: black;
+    opacity: 0.25;
+    position: fixed;
+    top: 0;
+    z-index: -1;
+
+    & > video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
   .section-agency {
     flex-direction: row;
     &__text{
-      position: absolute;
       padding: 10rem 0rem 5rem 10rem;
       z-index: 10;
+      order: 0;
 
       &__title{
         @include title-h1-large;
@@ -185,27 +206,10 @@
     }
 
     &__image {
-      padding: 5rem 5rem 0 0;
-      width: 50vw;
+      padding: 8rem 5rem 0 0;
 
       & > picture > img {
         margin-bottom: 0;
-      }
-    }
-
-    &__video {
-      position: relative;
-      height: 100vh;
-      width: 100vw;
-      background: black;
-      opacity: 0.25;
-
-      & > video {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        position: fixed;
-        z-index: -1;
       }
     }
   }
@@ -253,7 +257,7 @@
     }
 
     &__image {
-      padding: 0 30rem 0 0;
+      padding: 0;
     }
   }
 
