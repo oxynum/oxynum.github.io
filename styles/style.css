@@ -125,7 +125,7 @@
   }
   header > nav .navbar__logo {
     margin-top: 48px;
-    margin-left: 32px;
+    margin-left: 35px;
   }
   header > nav .navbar__logo--mobile {
     display: block;
@@ -137,7 +137,7 @@
   }
   header > nav .navbar__items {
     margin-top: 48px;
-    margin-right: 32px;
+    margin-right: 35px;
   }
   header > nav .navbar__items .navbar__links {
     display: -webkit-box;
@@ -244,7 +244,7 @@
   }
   header > nav .navbar__logo {
     margin-top: 48px;
-    margin-left: 23px;
+    margin-left: 35px;
   }
   header > nav .navbar__logo--mobile {
     display: none;
@@ -256,6 +256,7 @@
   }
   header > nav .navbar__items {
     margin-top: 48px;
+    margin-right: 35px;
   }
   header > nav .navbar__items .navbar__links {
     display: -webkit-box;
@@ -275,9 +276,6 @@
     line-height: 16.8px;
     letter-spacing: 0.03em;
     margin-right: 86px;
-  }
-  header > nav .navbar__items .navbar__links__burger {
-    margin-right: 52px;
   }
   header > nav .navbar__items .navbar__links__burger__image {
     max-height: 24px;
@@ -359,8 +357,10 @@
   .section-agency__image > picture > img {
     margin-bottom: 0;
   }
-  .section-clients__logo {
+  .section-clients {
     position: absolute;
+  }
+  .section-clients__logo {
     cursor: pointer;
     display: -ms-grid;
     display: grid;
@@ -368,6 +368,7 @@
         grid-template-columns: repeat(6, 1fr);
     grid-gap: 0.5rem 3rem;
     margin: 0 10rem 5rem 10rem;
+    padding-bottom: 1rem;
   }
   .section-clients__logo > img {
     margin: 0;
@@ -392,6 +393,7 @@
   }
   .section-agency__image {
     padding: 0;
+    width: 100%;
   }
   .section-clients__logo {
     display: -ms-grid;
@@ -674,7 +676,7 @@
   }
   .page-navigation header .navbar__logo {
     margin-top: 48px;
-    margin-left: 23px;
+    margin-left: 35px;
   }
   .page-navigation header .navbar__logo--mobile {
     display: block;
@@ -686,7 +688,7 @@
   }
   .page-navigation header .navbar__closing {
     margin-top: 48px;
-    margin-right: 23px;
+    margin-right: 35px;
   }
   .page-navigation main > .container__arrow {
     display: none;
@@ -1073,7 +1075,7 @@
   }
   .page-agency header > nav .navbar__logo {
     margin-top: 48px;
-    margin-left: 32px;
+    margin-left: 35px;
   }
   .page-agency header > nav .navbar__logo--mobile {
     display: block;
@@ -1085,7 +1087,7 @@
   }
   .page-agency header > nav .navbar__items {
     margin-top: 48px;
-    margin-right: 32px;
+    margin-right: 35px;
   }
   .page-agency header > nav .navbar__items .navbar__links {
     display: -webkit-box;
@@ -1166,7 +1168,7 @@
   }
   .page-agency header > nav .navbar__logo {
     margin-top: 48px;
-    margin-left: 23px;
+    margin-left: 35px;
   }
   .page-agency header > nav .navbar__logo--mobile {
     display: none;
@@ -1178,6 +1180,7 @@
   }
   .page-agency header > nav .navbar__items {
     margin-top: 48px;
+    margin-right: 35px;
   }
   .page-agency header > nav .navbar__items .navbar__links {
     display: -webkit-box;
@@ -1197,9 +1200,6 @@
     line-height: 16.8px;
     letter-spacing: 0.03em;
     margin-right: 86px;
-  }
-  .page-agency header > nav .navbar__items .navbar__links__burger {
-    margin-right: 52px;
   }
   .page-agency header > nav .navbar__items .navbar__links__burger__image {
     max-height: 24px;
@@ -1384,7 +1384,7 @@
   }
   .page-teams header > nav .navbar__logo {
     margin-top: 48px;
-    margin-left: 32px;
+    margin-left: 35px;
   }
   .page-teams header > nav .navbar__logo--mobile {
     display: block;
@@ -1396,7 +1396,7 @@
   }
   .page-teams header > nav .navbar__items {
     margin-top: 48px;
-    margin-right: 32px;
+    margin-right: 35px;
   }
   .page-teams header > nav .navbar__items .navbar__links {
     display: -webkit-box;
@@ -1517,7 +1517,7 @@
   }
   .page-teams header > nav .navbar__logo {
     margin-top: 48px;
-    margin-left: 23px;
+    margin-left: 35px;
   }
   .page-teams header > nav .navbar__logo--mobile {
     display: none;
@@ -1529,6 +1529,7 @@
   }
   .page-teams header > nav .navbar__items {
     margin-top: 48px;
+    margin-right: 35px;
   }
   .page-teams header > nav .navbar__items .navbar__links {
     display: -webkit-box;
@@ -1548,9 +1549,6 @@
     line-height: 16.8px;
     letter-spacing: 0.03em;
     margin-right: 86px;
-  }
-  .page-teams header > nav .navbar__items .navbar__links__burger {
-    margin-right: 52px;
   }
   .page-teams header > nav .navbar__items .navbar__links__burger__image {
     max-height: 24px;

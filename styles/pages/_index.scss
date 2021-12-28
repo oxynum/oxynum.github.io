@@ -213,20 +213,23 @@
       }
     }
   }
-
-  .section-clients__logo{
+  .section-clients {
     position: absolute;
-    cursor: pointer;
-    display: grid;
-    grid: {
-      template-columns: repeat(6, 1fr);
-      gap: 0.5rem 3rem;
-    }
-    margin: 0 10rem 5rem 10rem;
-    & > img {
-      margin: 0;
+    &__logo{
+      cursor: pointer;
+      display: grid;
+      grid: {
+        template-columns: repeat(6, 1fr);
+        gap: 0.5rem 3rem;
+      }
+      margin: 0 10rem 5rem 10rem;
+      padding-bottom: 1rem;
+      & > img {
+        margin: 0;
+      }
     }
   }
+  
 }
 
 // Desktop Extra large devices
@@ -258,6 +261,7 @@
 
     &__image {
       padding: 0;
+      width: 100%;
     }
   }
 
