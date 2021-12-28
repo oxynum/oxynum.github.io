@@ -281,34 +281,6 @@
     max-height: 24px;
     max-width: 24px;
   }
-  .section-agency__text {
-    padding: 8rem 0rem 8rem 4rem;
-    z-index: 10;
-  }
-  .section-agency__text__title {
-    font-family: "Martel Sans";
-    font-style: normal;
-    font-weight: bold;
-    font-size: 90px;
-    line-height: 100%;
-    max-width: 28rem;
-  }
-  .section-agency__text__presentation {
-    margin-top: 34px;
-    max-width: 28rem;
-  }
-  .section-clients__logo {
-    display: -ms-grid;
-    display: grid;
-    -ms-grid-columns: (1fr)[6];
-        grid-template-columns: repeat(6, 1fr);
-    grid-gap: 3rem;
-    margin: 0 8rem 8rem 8rem;
-  }
-  .section-clients__logo > img {
-    width: 100%;
-    height: auto;
-  }
 }
 
 @media screen and (min-width: 1280px) {
@@ -339,6 +311,7 @@
     -webkit-box-ordinal-group: 1;
         -ms-flex-order: 0;
             order: 0;
+    width: 50%;
   }
   .section-agency__text__title {
     font-family: "Martel Sans";
@@ -350,17 +323,17 @@
   }
   .section-agency__text__presentation {
     max-width: 33rem;
+    margin-top: 34px;
   }
   .section-agency__image {
-    padding: 8rem 5rem 0 0;
+    width: 50%;
+    margin: auto 0;
   }
   .section-agency__image > picture > img {
     margin-bottom: 0;
   }
-  .section-clients {
-    position: absolute;
-  }
   .section-clients__logo {
+    position: absolute;
     cursor: pointer;
     display: -ms-grid;
     display: grid;
@@ -371,18 +344,20 @@
     padding-bottom: 1rem;
   }
   .section-clients__logo > img {
+    width: 100%;
     margin: 0;
   }
 }
 
 @media screen and (min-width: 1600px) {
+  .section-agency {
+    height: 50vh;
+  }
   .section-agency__text {
-    max-width: 100%;
-    max-height: 100%;
-    padding: 15rem 0rem 0rem 28rem;
-    z-index: 10;
+    padding: 15rem 0rem 0rem 20rem;
   }
   .section-agency__text__title {
+    margin-left: 5rem;
     max-width: 636px;
     max-height: 285px;
   }
@@ -390,10 +365,10 @@
     max-width: 723.26px;
     max-height: 81px;
     margin-right: 0;
+    margin-left: 5rem;
   }
   .section-agency__image {
-    padding: 0;
-    width: 100%;
+    padding-right: 15rem;
   }
   .section-clients__logo {
     display: -ms-grid;
@@ -401,7 +376,8 @@
     -ms-grid-columns: (1fr)[6];
         grid-template-columns: repeat(6, 1fr);
     grid-gap: 1rem 6rem;
-    margin: 5rem 33rem 0rem 28rem;
+    margin: 5rem 20rem;
+    padding-bottom: 0;
   }
 }
 

@@ -19,9 +19,6 @@
         color: $base-grey-light;
         display: block;
       }
-      // &__video {
-      //   display: none;
-      // }
     }
     .section-clients {
       transform: translateY(40px);
@@ -138,37 +135,6 @@
 // Large devices
 @media screen and (min-width: $breakpoint-desktop) {
   @include navbar-full-light(fixed);
-
-  .section-agency {
-    &__text {
-      padding: 8rem 0rem 8rem 4rem;
-      z-index: 10;
-
-      &__title{
-        @include title-h1-medium;
-        max-width: 28rem;
-      }
-
-      &__presentation{
-        margin-top: 34px;
-        max-width: 28rem;
-      }
-    }
-  }
-
-  .section-clients__logo{
-    display: grid;
-    grid: {
-      template-columns: repeat(6, 1fr);
-      gap: 3rem;
-    }
-    margin: 0 8rem 8rem 8rem;
-
-    & > img{
-      width: 100%;
-      height: auto;
-    }
-  }
 }
 
 // Desktop Large devices
@@ -191,31 +157,35 @@
 
   .section-agency {
     flex-direction: row;
-    &__text{
+    &__text {
       padding: 10rem 0rem 5rem 10rem;
       z-index: 10;
       order: 0;
+      width: 50%;
 
       &__title{
         @include title-h1-large;
         max-width: 40rem;
       }
+
       &__presentation{
         max-width: 33rem;
+        margin-top: 34px;
       }
     }
-
     &__image {
-      padding: 8rem 5rem 0 0;
+      width: 50%;
+      margin: auto 0;
 
       & > picture > img {
         margin-bottom: 0;
       }
     }
   }
+
   .section-clients {
-    position: absolute;
     &__logo{
+      position: absolute;
       cursor: pointer;
       display: grid;
       grid: {
@@ -225,6 +195,7 @@
       margin: 0 10rem 5rem 10rem;
       padding-bottom: 1rem;
       & > img {
+        width: 100%;
         margin: 0;
       }
     }
@@ -235,15 +206,12 @@
 // Desktop Extra large devices
 @media screen and (min-width: $breakpoint-extra-large) {
   .section-agency {
+    height: 50vh;
     &__text{
-      max: {
-        width: 100%;
-        height: 100%;
-      }
-      padding: 15rem 0rem 0rem 28rem;
-      z-index: 10;
+      padding: 15rem 0rem 0rem 20rem;
 
       &__title{
+        margin-left: 5rem;
         max: {
           width: 636px;
           height: 285px;
@@ -255,13 +223,14 @@
           width: 723.26px;
           height: 81px;
         }
-        margin-right: 0;
+        margin: {
+          right: 0;
+          left: 5rem;
+        }
       }
     }
-
     &__image {
-      padding: 0;
-      width: 100%;
+      padding-right: 15rem;
     }
   }
 
@@ -271,7 +240,8 @@
       template-columns: repeat(6, 1fr);
       gap: 1rem 6rem;
     }
-    margin: 5rem 33rem 0rem 28rem;
+    margin: 5rem 20rem;
+    padding-bottom: 0;
   }
 }
 
