@@ -8,6 +8,8 @@
       overflow-wrap: break-word;
   
       &__title {
+        display: block;
+        height: 100%;
         color: $base-white;
       }
       &__content {
@@ -43,7 +45,6 @@
     
         &__title {
           @include title-h1-small;
-          height: 156px;
           max-width: 356px;
           margin-bottom: 45px;
         }
@@ -85,25 +86,14 @@
 @media screen and (min-width: $breakpoint-desktop) {
   .page-agency { 
     @include navbar-full-light;
-    background: {
-      position: bottom right;
-      size: 60% 50%;
-    }
 
     main {
       .text-presentation { 
-        margin: {
-          left: 51px;
-          right: 56px;
-          bottom: 75px;
-          top: 93px;
-        }
     
         &__title {
           @include title-h1-medium;
           width: auto;
           max-width: 100%;
-          margin-bottom: 100px;
         }
       }
     }
@@ -118,30 +108,33 @@
       position: top right;
       size: contain;
     }
-  
+
     main {
       display: flex;
-
       .back-home {
         display: block;
-        width: 15%;
+        width: 20%;
 
-        & > a > img{
+        & > a > img {
           float: right;
-          margin: {
-            top: 120px;
-            right: 30px;
-          }
+          margin-top: 199px;
+          margin-right: 70px;
         }
       }
   
       .text-presentation { 
+        margin: {
+          right: 56px;
+          top: 149px;
+        }
+    
         &__title {
-          margin-bottom: 50px;
+          max-width: 1331px;
+          float: right;
         }
 
         &__content {
-          width: 450px;
+          width: 702px;
           height: 100%;
           text-align: left; 
         }
@@ -156,59 +149,17 @@
     background-image: url(#{$assetPath}/site-cover-photos/cover-agency-large.png);
 
     main {
-      display: flex;
-
-      .back-home {
-        display: block;
-        width: 15%;
-
-        & > a > img{
-          float: right;
-          margin: {
-            top: 120px;
-            right: 70px;
-          }
-        }
+      .back-home > a > img {
+        margin-top: 299px;
       }
-  
-      .text-presentation { 
-        &__title {
-          margin-bottom: 50px;
-        }
-
-        &__content {
-          width: 450px;
-          height: 100%;
-          text-align: left; 
-        }
-      }
-    }
-
-    main {
-      .back-home {
-        width: 577px;
-
-        & > a > img {
-          margin-top: 299px;
-          margin-right: 70px;
-        }
-      }
-  
-      .text-presentation { 
+    
+      .text-presentation {
         margin: {
           right: 56px;
           top: 249px;
         }
-    
         &__title {
           @include title-h1-large;
-          max-height: 285px;
-          width: 1331px;
-          margin-bottom: 150px;
-        }
-
-        &__content {
-          width: 702px;
         }
       }
     }
