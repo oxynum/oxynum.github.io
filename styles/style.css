@@ -351,7 +351,7 @@
 
 @media screen and (min-width: 1600px) {
   .section-agency {
-    height: 50vh;
+    height: 60vh;
     position: relative;
     z-index: 3;
   }
@@ -388,13 +388,13 @@
     /* -ms-grid-columns: (1fr)[6]; */
     grid-template-columns: repeat(6, 1fr);
     grid-gap: 1rem 6rem;
-    margin: 5rem 10rem;
+    margin: 5rem 10rem 0;
     padding-bottom: 0;
   }
   .section-clients.js-show-logo {
     position: inherit;
     z-index: 3;
-    height: 50vh;
+    height: 40vh;
     display: flex;
     justify-content: center;
     align-items: flex-end;
