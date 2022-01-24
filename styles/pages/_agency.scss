@@ -1,0 +1,167 @@
+.page-agency { 
+  @include cover-dark;
+
+  main {
+    .text-presentation { 
+      display: flex;
+      flex-direction: column;
+      overflow-wrap: break-word;
+  
+      &__title {
+        display: block;
+        height: 100%;
+        color: $base-white;
+      }
+      &__content {
+        @include text-body;
+        color: $base-grey-light;
+        padding-bottom: 25px;
+      }
+    }
+  }
+}
+
+// Extra small devices
+@media screen and (min-width: $breakpoint-mobile) {
+  .page-agency { 
+    @include navbar-short-light;
+    background: {
+      image: url(#{$assetPath}/site-cover-photos/cover-agency-mobile.png);
+      repeat: no-repeat;
+    }
+  
+    main {
+      .back-home {
+        display: none;
+      }
+  
+      .text-presentation { 
+        margin: {
+          left: 41px;
+          right: 46px;
+          bottom: 75px;
+          top: 480px;
+        }
+    
+        &__title {
+          @include title-h1-small;
+          max-width: 356px;
+          margin-bottom: 45px;
+        }
+        &__content {
+          text-align: justify; 
+        }
+      }
+    }
+  }  
+}
+
+// Medium devices
+@media screen and (min-width: $breakpoint-tablet) {
+  .page-agency { 
+    background: {
+      image: url(#{$assetPath}/site-cover-photos/cover-agency-medium.png);
+      position: top center;
+    }
+  
+    main {
+      .text-presentation { 
+        margin: {
+          left: 51px;
+          right: 56px;
+          bottom: 75px;
+          top: 650px;
+        }
+    
+        &__title {
+          max-width: 456px;
+          margin-bottom: 10px;
+        }
+      }
+    }
+  }  
+}
+
+// Large devices
+@media screen and (min-width: $breakpoint-desktop) {
+  .page-agency { 
+    @include navbar-full-light;
+
+    main {
+      .text-presentation { 
+    
+        &__title {
+          @include title-h1-medium;
+          width: auto;
+          max-width: 100%;
+        }
+      }
+    }
+  }
+}
+
+// Desktop Large devices
+@media screen and (min-width: $breakpoint-large) {
+  .page-agency { 
+    background: {
+      image: url(#{$assetPath}/site-cover-photos/cover-agency-medium.png);
+      position: top right;
+      size: contain;
+    }
+
+    main {
+      display: flex;
+      .back-home {
+        display: block;
+        width: 20%;
+
+        & > a > img {
+          float: right;
+          margin-top: 199px;
+          margin-right: 70px;
+        }
+      }
+  
+      .text-presentation { 
+        margin: {
+          right: 56px;
+          top: 149px;
+        }
+    
+        &__title {
+          max-width: 1331px;
+          float: right;
+        }
+
+        &__content {
+          width: 702px;
+          height: 100%;
+          text-align: left; 
+        }
+      }
+    }
+  }  
+}
+
+// Desktop Extra large devices
+@media screen and (min-width: $breakpoint-extra-large) {
+  .page-agency { 
+    background-image: url(#{$assetPath}/site-cover-photos/cover-agency-large.png);
+
+    main {
+      .back-home > a > img {
+        margin-top: 299px;
+      }
+    
+      .text-presentation {
+        margin: {
+          right: 56px;
+          top: 249px;
+        }
+        &__title {
+          @include title-h1-large;
+        }
+      }
+    }
+  }  
+}

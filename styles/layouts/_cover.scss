@@ -1,0 +1,13 @@
+@mixin cover-base {
+  background-color: $base-background-color;
+}
+
+@mixin cover-light {
+  background-color: $base-background-light;
+}
+
+@mixin cover-dark {
+  background-color: $base-background-dark;
+}
+
+

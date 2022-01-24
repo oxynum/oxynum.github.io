@@ -1,0 +1,86 @@
+@import "variables";
+
+@mixin navbar-link {
+  color: $base-white;
+  text: {
+    decoration: none;
+    transform: uppercase;
+  }
+  font: {
+    family: $second-font-family;
+    weight: bold;
+    size: 14px;
+  }
+  line-height: 16.8px;
+  letter-spacing: 0.03em;
+}
+
+@mixin title-h1-small($fontsize: 52) {
+  font: {
+    family: $base-font-family;
+    style: normal;
+    weight: bold;
+    size: $fontsize + px;
+  }
+  line-height: 100%;
+}
+
+@mixin title-h1-medium($fontsize: 90) {
+  font: {
+    family: $base-font-family;
+    style: normal;
+    weight: bold;
+    size: $fontsize + px;
+  }
+  line-height: 100%;
+}
+
+@mixin title-h1-large($fontsize: 132) {
+  font: {
+    family: $base-font-family;
+    style: normal;
+    weight: bold;
+    size: $fontsize + px;
+  }
+  line-height: 100%;
+}
+
+@mixin text-body {
+  font: {
+    family: $second-font-family;
+    weight: 300;
+    size: 14px;
+  }
+  line-height: 25.2px;
+  letter-spacing: 0.03em;
+}
+
+@mixin list-item-small($fontsize: 70) {
+  font: {
+    family: $base-font-family;
+    style: normal;
+    weight: bold;
+    size: $fontsize + px;
+  }
+  line-height: 100%;
+}
+
+@mixin list-item-medium($fontsize: 80) {
+  font: {
+    family: $base-font-family;
+    style: normal;
+    weight: bold;
+    size: $fontsize + px;
+  }
+  line-height: 100%;
+}
+
+@mixin list-item-large($fontsize: 150) {
+  font: {
+    family: $base-font-family;
+    style: normal;
+    weight: bold;
+    size: $fontsize + px;
+  }
+  line-height: 100%;
+}
