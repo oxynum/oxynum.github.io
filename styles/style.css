@@ -337,8 +337,8 @@
     cursor: pointer;
     display: -ms-grid;
     display: grid;
-    -ms-grid-columns: (1fr)[6];
-        grid-template-columns: repeat(6, 1fr);
+    /* -ms-grid-columns: (1fr)[6]; */
+    grid-template-columns: repeat(6, 1fr);
     grid-gap: 0.5rem 3rem;
     margin: 0 10rem 5rem 10rem;
     padding-bottom: 1rem;
@@ -351,21 +351,33 @@
 
 @media screen and (min-width: 1600px) {
   .section-agency {
-    height: 50vh;
+    height: 60vh;
+    position: relative;
+    z-index: 3;
   }
   .section-agency__text {
-    padding: 15rem 0rem 0rem 20rem;
+    padding: 11rem 0rem 0rem 12rem;
+    width: 67%;
+    position: fixed;
+    z-index: 3;
+  }
+  .section-agency__image > picture {
+    position: absolute;
+    right: 0;
+    z-index: 0;
+    top: 0;
   }
   .section-agency__text__title {
-    margin-left: 5rem;
+    margin-left: 0;
     max-width: 636px;
     max-height: 285px;
   }
-  .section-agency__text__presentation {
+  .section-agency > .section-agency__text > .section-agency__text__presentation {
     max-width: 723.26px;
     max-height: 81px;
+    font-size: 21px;
     margin-right: 0;
-    margin-left: 5rem;
+    margin-left: 0;
   }
   .section-agency__image {
     padding-right: 15rem;
@@ -373,11 +385,19 @@
   .section-clients__logo {
     display: -ms-grid;
     display: grid;
-    -ms-grid-columns: (1fr)[6];
-        grid-template-columns: repeat(6, 1fr);
+    /* -ms-grid-columns: (1fr)[6]; */
+    grid-template-columns: repeat(6, 1fr);
     grid-gap: 1rem 6rem;
-    margin: 5rem 20rem;
+    margin: 5rem 10rem 0;
     padding-bottom: 0;
+  }
+  .section-clients.js-show-logo {
+    position: inherit;
+    z-index: 3;
+    height: 40vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
   }
 }
 
