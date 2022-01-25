@@ -25,7 +25,7 @@ function logosIsVisible() {
   const element = section.getBoundingClientRect();
   const elemTop = element.top;
   const elemBottom = element.bottom;
-  let isVisible = elemTop < (window.innerHeight - 93) && elemBottom >= 0; 
+  let isVisible = elemTop < (window.innerHeight - 93) && elemBottom >= 0;
   return isVisible;
 }
 
@@ -34,25 +34,28 @@ const docWidth = document.documentElement.clientWidth;
 const overlay = document.querySelector('.overlay');
 const logoClient = document.querySelectorAll('.logo-client');
 
-if(docWidth <= 1280) {
+// if(docWidth <= 1080) {
+
+
   for (let i = 0; i < logoClient.length; i++) {
     logoClient[i].addEventListener("click", (event) => {
       displayPresentationImage(event.target.id);
     })
   }
-} else {
+// } else {
   for (let i = 0; i < logoClient.length; i++) {
     logoClient[i].addEventListener("mouseover", (event) => {
       displayPresentationVideo(event.target.id);
     })
   }
-}
+// }
 
 // function sur l'event click pour l'affichage d'une image liée au logo client (mobile/tablette)
 function displayPresentationImage(element) {
   const image = document.querySelector('.overlay__image');
-
-  overlay.style.display = "block";
+  // document.querySelector('.section-agency__image').classList.remove("hide-img");
+  document.querySelector('.background-video').classList.remove("display-video");
+  overlay.classList.add("show-img");
 
   switch(element) {
     case 'imvitro':
@@ -97,10 +100,10 @@ function displayPresentationImage(element) {
 
 // function sur l'event mouseover pour l'affichage d'une vidéo liée au logo client (desktop)
 function displayPresentationVideo(element) {
-  const elSource = document.querySelector('#mp4Source');
   const video = document.querySelector('.video');
-  document.querySelector('.section-agency__image').style.display = "none";
-  document.querySelector('.background-video').style.display = "block";
+  document.querySelector('.section-agency__image').classList.add("hide-img");
+  document.querySelector('.background-video').classList.add("display-video");
+  overlay.classList.remove("show-img");
 
   setTimeout(() => {
     switch(element) {
@@ -146,5 +149,5 @@ function displayPresentationVideo(element) {
 
 // function de fermeture du overlay
 function overlayOff() {
-  overlay.style.display = "none";
+  overlay.classList.remove("show-img");
 }
