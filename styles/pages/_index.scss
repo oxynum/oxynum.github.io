@@ -1,25 +1,36 @@
-.page-home{
+.page-home {
   @include cover-base;
 
-  .background-video {
+  .hide-img {
     display: none;
+  }
+
+  .display-video {
+    display: block;
+  }
+
+  main .overlay.show-img {
+    display: block;
   }
 
   main {
     position: relative;
-    .section-agency { 
+
+    .section-agency {
       display: flex;
-      
+
       &__text__title {
         color: $base-white;
         display: block;
       }
+
       &__text__presentation {
         @include text-body;
         color: $base-grey-light;
         display: block;
       }
     }
+
     .section-clients {
       transform: translateY(40px);
       opacity: 0;
@@ -30,7 +41,8 @@
         transform: translateY(0);
       }
     }
-    .overlay{
+
+    .overlay {
       position: fixed;
       display: none;
       width: 100%;
@@ -39,10 +51,10 @@
       left: 0;
       right: 0;
       bottom: 0;
-      background-color: rgb(0,0,0);
-      background-color: rgba(0,0,0, 0.7);
+      background-color: rgb(0, 0, 0);
+      background-color: rgba(0, 0, 0, 0.7);
       z-index: 1000;
-      cursor: pointer; 
+      cursor: pointer;
 
       &__image {
         max-height: 100%;
@@ -64,21 +76,24 @@
 @media screen and (min-width: $breakpoint-mobile) {
   @include navbar-short-light;
 
-  .section-agency{
+  .section-agency {
     flex-direction: column;
 
-    &__text{
-      order:2;
+    &__text {
+      order: 2;
+
       &__title {
         @include title-h1-small;
         margin-left: 41px;
       }
+
       &__presentation {
         margin: 50px 46px 52px 41px;
       }
     }
-    &__image > picture > img {
-      order:1;
+
+    &__image>picture>img {
+      order: 1;
       right: 0px;
       max-width: 100%;
     }
@@ -88,7 +103,7 @@
     display: flex;
     flex-wrap: wrap;
 
-    & > img{
+    &>img {
       flex: 1;
       min-width: 30%;
       margin: 10px;
@@ -99,18 +114,20 @@
 // Medium devices
 @media screen and (min-width: $breakpoint-tablet) {
   .section-agency {
-    &__text{
-      &__title{
+    &__text {
+      &__title {
         font: {
           family: $base-font-family;
           style: normal;
           weight: bold;
           size: 72px;
         }
+
         line-height: 100%;
         margin-left: 41px;
       }
-      &__presentation{
+
+      &__presentation {
         margin: {
           top: 50px;
           right: 46px;
@@ -120,12 +137,12 @@
       }
     }
 
-    &__image > picture > img {
+    &__image>picture>img {
       margin-bottom: 8rem;
     }
   }
 
-  .section-clients__logo > img {
+  .section-clients__logo>img {
     flex: 1;
     min-width: 20%;
     margin: 10px;
@@ -137,111 +154,165 @@
   @include navbar-full-light(fixed);
 }
 
+@media screen and (max-width: $breakpoint-large) {
+  // .page-home .hide-img {
+  //   display: block;
+  // }
+
+  .background-video,
+  .background-video>video {
+    display: none;
+  }
+
+  .page-home .section-agency .section-agency__image {
+    display: block;
+  }
+}
+
 // Desktop Large devices
 @media screen and (min-width: $breakpoint-large) {
   .background-video {
     height: 100vh;
     width: 100vw;
-    background: black;
+    background: #2a2a2a;
     opacity: 0.25;
     position: fixed;
     top: 0;
     z-index: -1;
+    display: block;
 
-    & > video {
+    &>video {
       width: 100%;
       height: 100%;
       object-fit: cover;
+      display: block;
     }
+  }
+
+  .page-home main .overlay.show-img {
+    display: none;
   }
 
   .section-agency {
     flex-direction: row;
+
     &__text {
       padding: 10rem 0rem 5rem 10rem;
       z-index: 10;
       order: 0;
       width: 50%;
 
-      &__title{
-        @include title-h1-large;
+      &__title {
+        @include title-h1-medium;
         max-width: 40rem;
       }
 
-      &__presentation{
+      &__presentation {
         max-width: 33rem;
         margin-top: 34px;
       }
     }
+
     &__image {
       width: 50%;
       margin: auto 0;
 
-      & > picture > img {
+      &>picture>img {
         margin-bottom: 0;
       }
     }
   }
 
   .section-clients {
-    &__logo{
+    &__logo {
       position: absolute;
       cursor: pointer;
       display: grid;
+
       grid: {
         template-columns: repeat(6, 1fr);
         gap: 0.5rem 3rem;
       }
+
       margin: 0 10rem 5rem 10rem;
       padding-bottom: 1rem;
-      & > img {
+
+      &>img {
         width: 100%;
         margin: 0;
       }
     }
   }
-  
+
 }
 
 // Desktop Extra large devices
 @media screen and (min-width: $breakpoint-extra-large) {
   .section-agency {
-    height: 50vh;
-    &__text{
-      padding: 15rem 0rem 0rem 20rem;
+    height: 60vh;
+    position: relative;
+    z-index: 3;
 
-      &__title{
-        margin-left: 5rem;
+    &__text {
+      padding: 11rem 0rem 0rem 12rem;
+      width: 67%;
+      position: fixed;
+      z-index: 3;
+
+      &__title {
+        margin-left: 0;
+
         max: {
           width: 636px;
           height: 285px;
         }
       }
 
-      &__presentation{
+      &__presentation {
+        font-size: 21px;
+
         max: {
           width: 723.26px;
           height: 81px;
         }
+
         margin: {
           right: 0;
-          left: 5rem;
+          left: 0;
         }
       }
     }
+
     &__image {
       padding-right: 15rem;
+
+      picture {
+        position: absolute;
+        right: 0;
+        z-index: 0;
+        top: 0;
+      }
     }
   }
 
-  .section-clients__logo{
+  .section-clients__logo {
     display: grid;
+
     grid: {
       template-columns: repeat(6, 1fr);
       gap: 1rem 6rem;
     }
-    margin: 5rem 20rem;
+
+    margin: 5rem 10rem 0;
     padding-bottom: 0;
   }
-}
 
+  .section-clients.js-show-logo {
+    position: inherit;
+    z-index: 3;
+    height: 40vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+  }
+}

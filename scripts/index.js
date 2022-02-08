@@ -8,11 +8,11 @@
 const section = document.querySelector('.section-clients');
 
 window.addEventListener("load", (event) => {
-  if(logosIsVisible() == true){
+  if (logosIsVisible() == true) {
     section.classList.add("js-show-logo");
   } else {
-    window.addEventListener("scroll", (event) =>  {
-      if(logosIsVisible() == true){
+    window.addEventListener("scroll", (event) => {
+      if (logosIsVisible() == true) {
         section.classList.add("js-show-logo");
       } else {
         section.classList.remove("js-show-logo");
@@ -34,20 +34,22 @@ const docWidth = document.documentElement.clientWidth;
 const overlay = document.querySelector('.overlay');
 const logoClient = document.querySelectorAll('.logo-client');
 
-// if(docWidth <= 1080) {
+// if (docWidth >= 1080) {
+//   overlay.classList.remove("show-img");
+// }
 
-
-  for (let i = 0; i < logoClient.length; i++) {
-    logoClient[i].addEventListener("click", (event) => {
-      displayPresentationImage(event.target.id);
-    })
-  }
+for (let i = 0; i < logoClient.length; i++) {
+  logoClient[i].addEventListener("click", (event) => {
+    displayPresentationImage(event.target.id);
+    console.log("hello");
+  })
+}
 // } else {
-  for (let i = 0; i < logoClient.length; i++) {
-    logoClient[i].addEventListener("mouseover", (event) => {
-      displayPresentationVideo(event.target.id);
-    })
-  }
+for (let i = 0; i < logoClient.length; i++) {
+  logoClient[i].addEventListener("mouseover", (event) => {
+    displayPresentationVideo(event.target.id);
+  })
+}
 // }
 
 // function sur l'event click pour l'affichage d'une image liée au logo client (mobile/tablette)
@@ -57,39 +59,39 @@ function displayPresentationImage(element) {
   document.querySelector('.background-video').classList.remove("display-video");
   overlay.classList.add("show-img");
 
-  switch(element) {
+  switch (element) {
     case 'imvitro':
-      image.src="./images/mobile-image-clients/imvitro.jpg";
+      image.src = "./images/mobile-image-clients/imvitro.jpg";
       break;
     case 'accor':
-      image.src="./images/mobile-image-clients/accor.jpg";
+      image.src = "./images/mobile-image-clients/accor.jpg";
       break;
     case 'novotel':
-      image.src="./images/mobile-image-clients/novotel.jpg";
+      image.src = "./images/mobile-image-clients/novotel.jpg";
       break;
     case 'antonelle':
-      image.src="./images/mobile-image-clients/antonelle.jpg";
+      image.src = "./images/mobile-image-clients/antonelle.jpg";
       break;
     case 'clubmed':
-      image.src="./images/mobile-image-clients/clubmed.jpg";
+      image.src = "./images/mobile-image-clients/clubmed.jpg";
       break;
     case 'emmaus':
-      image.src="./images/mobile-image-clients/emmaus.jpg";
+      image.src = "./images/mobile-image-clients/emmaus.jpg";
       break;
     case 'ibismusic':
-      image.src="./images/mobile-image-clients/ibis-music.jpg";
+      image.src = "./images/mobile-image-clients/ibis-music.jpg";
       break;
     case 'loreal':
-      image.src="./images/mobile-image-clients/loreal.jpg";
+      image.src = "./images/mobile-image-clients/loreal.jpg";
       break;
     case 'maisondumonde':
-      image.src="./images/mobile-image-clients/maisondumonde.jpeg";
+      image.src = "./images/mobile-image-clients/maisondumonde.jpeg";
       break;
     case 'marionnaud':
-      image.src="./images/mobile-image-clients/marionnaud.jpg";
+      image.src = "./images/mobile-image-clients/marionnaud.jpg";
       break;
     case 'peugeot':
-      image.src="./images/mobile-image-clients/peugeot.jpeg";
+      image.src = "./images/mobile-image-clients/peugeot.jpeg";
       break;
     case 'vitalliance':
       console.log('vitalliance');
@@ -106,42 +108,42 @@ function displayPresentationVideo(element) {
   overlay.classList.remove("show-img");
 
   setTimeout(() => {
-    switch(element) {
+    switch (element) {
       case 'imvitro':
-        video.src="./images/videos-clients/all-live.mp4";
+        video.src = "./images/videos-clients/all-live.mp4";
         break;
       case 'accor':
-        video.src="./images/videos-clients/all-live.mp4";
+        video.src = "./images/videos-clients/all-live.mp4";
         break;
       case 'novotel':
-        video.src="./images/videos-clients/novotel.mp4";
+        video.src = "./images/videos-clients/novotel.mp4";
         break;
       case 'antonelle':
-        video.src="./images/videos-clients/antonelle.mp4";
+        video.src = "./images/videos-clients/antonelle.mp4";
         break;
       case 'clubmed':
-        video.src="./images/videos-clients/clubmed.mp4";
+        video.src = "./images/videos-clients/clubmed.mp4";
         break;
       case 'emmaus':
-        video.src="./images/videos-clients/emmausfrance.mp4";
+        video.src = "./images/videos-clients/emmausfrance.mp4";
         break;
       case 'ibismusic':
-        video.src="./images/videos-clients/ibis-music.mp4";
+        video.src = "./images/videos-clients/ibis-music.mp4";
         break;
       case 'loreal':
-        video.src="./images/videos-clients/loreal.mp4";
+        video.src = "./images/videos-clients/loreal.mp4";
         break;
       case 'maisondumonde':
-        video.src="./images/videos-clients/maisondumonde.mp4";
+        video.src = "./images/videos-clients/maisondumonde.mp4";
         break;
       case 'marionnaud':
-        video.src="./images/videos-clients/marionnaud.mp4";
+        video.src = "./images/videos-clients/marionnaud.mp4";
         break;
       case 'peugeot':
-        video.src="./images/videos-clients/peugeot.mp4";
+        video.src = "./images/videos-clients/peugeot.mp4";
         break;
       case 'vitalliance':
-        video.src="./images/videos-clients/vitalliance.mp4";
+        video.src = "./images/videos-clients/vitalliance.mp4";
         break;
     }
   }, 250);
