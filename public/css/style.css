@@ -25,8 +25,11 @@
 .page-home {
   background-color: #2A2A2A;
 }
+.page-home .background-video {
+  display: none;
+}
 .page-home main {
-  padding-top: 45px;
+  position: relative;
 }
 .page-home main .section-agency {
   display: flex;
@@ -44,9 +47,6 @@
   color: #E5E5E5;
   display: block;
 }
-.page-home main .section-agency__image > picture > #presentation-picture {
-  display: none;
-}
 .page-home main .section-clients {
   transform: translateY(40px);
   opacity: 0;
@@ -55,6 +55,32 @@
 .page-home main .section-clients.js-show-logo {
   opacity: 1;
   transform: translateY(0);
+}
+.page-home main .overlay {
+  position: fixed;
+  display: none;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: black;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 1000;
+  cursor: pointer;
+}
+.page-home main .overlay__image {
+  max-height: 100%;
+  max-width: 100%;
+  width: 80%;
+  height: auto;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
 }
 
 @media screen and (min-width: 280px) {
@@ -72,7 +98,7 @@
   }
   header > nav .navbar__logo {
     margin-top: 48px;
-    margin-left: 32px;
+    margin-left: 35px;
   }
   header > nav .navbar__logo--mobile {
     display: block;
@@ -84,7 +110,7 @@
   }
   header > nav .navbar__items {
     margin-top: 48px;
-    margin-right: 32px;
+    margin-right: 35px;
   }
   header > nav .navbar__items .navbar__links {
     display: flex;
@@ -116,9 +142,8 @@
   }
   .section-agency__image > picture > img {
     order: 1;
-    max-width: 100%;
-    max-height: 100%;
     right: 0px;
+    max-width: 100%;
   }
 
   .section-clients__logo {
@@ -132,12 +157,6 @@
   }
 }
 @media screen and (min-width: 768px) {
-  .section-agency {
-    flex-direction: column;
-  }
-  .section-agency__text {
-    order: 2;
-  }
   .section-agency__text__title {
     font-family: "Martel Sans";
     font-style: normal;
@@ -153,15 +172,9 @@
     margin-left: 41px;
   }
   .section-agency__image > picture > img {
-    order: 1;
-    width: 100%;
     margin-bottom: 8rem;
   }
 
-  .section-clients__logo {
-    display: flex;
-    flex-wrap: wrap;
-  }
   .section-clients__logo > img {
     flex: 1;
     min-width: 20%;
@@ -170,7 +183,7 @@
 }
 @media screen and (min-width: 992px) {
   header {
-    position: sticky;
+    position: fixed;
     width: 100%;
     top: 0;
     z-index: 100;
@@ -183,7 +196,7 @@
   }
   header > nav .navbar__logo {
     margin-top: 48px;
-    margin-left: 23px;
+    margin-left: 35px;
   }
   header > nav .navbar__logo--mobile {
     display: none;
@@ -195,6 +208,7 @@
   }
   header > nav .navbar__items {
     margin-top: 48px;
+    margin-right: 35px;
   }
   header > nav .navbar__items .navbar__links {
     display: flex;
@@ -213,59 +227,35 @@
     letter-spacing: 0.03em;
     margin-right: 86px;
   }
-  header > nav .navbar__items .navbar__links__burger {
-    margin-right: 52px;
-  }
   header > nav .navbar__items .navbar__links__burger__image {
     max-height: 24px;
     max-width: 24px;
   }
-
-  .section-agency {
-    position: relative;
-  }
-  .section-agency__text {
-    padding: 8rem 0rem 8rem 4rem;
-    z-index: 10;
-  }
-  .section-agency__text__title {
-    font-family: "Martel Sans";
-    font-style: normal;
-    font-weight: bold;
-    font-size: 90px;
-    line-height: 100%;
-    max-width: 28rem;
-  }
-  .section-agency__text__presentation {
-    margin-top: 34px;
-    max-width: 28rem;
-  }
-  .section-agency__image > picture > img {
-    width: 60%;
-    position: absolute;
-    top: 4rem;
-    right: 0;
-    height: auto;
-  }
-
-  .section-clients__logo {
-    display: grid;
-    grid-template-columns: repeat(6, 1fr);
-    grid-gap: 3rem;
-    margin: 0 8rem 8rem 8rem;
-  }
-  .section-clients__logo > img {
-    width: 100%;
-    height: auto;
-  }
 }
 @media screen and (min-width: 1280px) {
+  .background-video {
+    height: 100vh;
+    width: 100vw;
+    background: black;
+    opacity: 0.25;
+    position: fixed;
+    top: 0;
+    z-index: -1;
+  }
+  .background-video > video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
   .section-agency {
-    position: relative;
+    flex-direction: row;
   }
   .section-agency__text {
     padding: 10rem 0rem 5rem 10rem;
     z-index: 10;
+    order: 0;
+    width: 50%;
   }
   .section-agency__text__title {
     font-family: "Martel Sans";
@@ -277,33 +267,39 @@
   }
   .section-agency__text__presentation {
     max-width: 33rem;
+    margin-top: 34px;
+  }
+  .section-agency__image {
+    width: 50%;
+    margin: auto 0;
   }
   .section-agency__image > picture > img {
-    width: 60%;
-    position: absolute;
-    top: 3rem;
-    right: 5rem;
-    height: auto;
+    margin-bottom: 0;
   }
 
   .section-clients__logo {
+    position: absolute;
+    cursor: pointer;
     display: grid;
     grid-template-columns: repeat(6, 1fr);
-    grid-gap: 3rem;
+    grid-gap: 0.5rem 3rem;
     margin: 0 10rem 5rem 10rem;
+    padding-bottom: 1rem;
+  }
+  .section-clients__logo > img {
+    width: 100%;
+    margin: 0;
   }
 }
 @media screen and (min-width: 1600px) {
   .section-agency {
-    position: relative;
+    height: 50vh;
   }
   .section-agency__text {
-    max-width: 100%;
-    max-height: 100%;
-    padding: 15rem 0rem 0rem 28rem;
-    z-index: 10;
+    padding: 15rem 0rem 0rem 20rem;
   }
   .section-agency__text__title {
+    margin-left: 5rem;
     max-width: 636px;
     max-height: 285px;
   }
@@ -311,18 +307,18 @@
     max-width: 723.26px;
     max-height: 81px;
     margin-right: 0;
+    margin-left: 5rem;
   }
-  .section-agency__image > picture > img {
-    position: absolute;
-    top: 0;
-    right: 10rem;
+  .section-agency__image {
+    padding-right: 15rem;
   }
 
   .section-clients__logo {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
     grid-gap: 1rem 6rem;
-    margin: 5rem 33rem 0rem 28rem;
+    margin: 5rem 20rem;
+    padding-bottom: 0;
   }
 }
 .page-error {
@@ -556,7 +552,7 @@
   }
   .page-navigation header .navbar__logo {
     margin-top: 48px;
-    margin-left: 23px;
+    margin-left: 35px;
   }
   .page-navigation header .navbar__logo--mobile {
     display: block;
@@ -568,7 +564,7 @@
   }
   .page-navigation header .navbar__closing {
     margin-top: 48px;
-    margin-right: 23px;
+    margin-right: 35px;
   }
   .page-navigation main > .container__arrow {
     display: none;
@@ -577,21 +573,19 @@
     margin-top: 10%;
     margin-left: 41px;
   }
-  .page-navigation section > .content-item > .content-item__clients {
-    display: none;
-  }
   .page-navigation section > .content-item > li {
     padding-bottom: 6px;
+    padding-top: 10px;
   }
   .page-navigation section > .content-item > li > a {
     font-family: "Martel Sans";
     font-style: normal;
     font-weight: bold;
-    font-size: 70px;
+    font-size: 55px;
     line-height: 100%;
   }
   .page-navigation footer {
-    margin-top: 94px;
+    margin-top: 84px;
   }
   .page-navigation footer .footer-contact {
     width: 276px;
@@ -616,6 +610,7 @@
   }
   .page-navigation section > .content-item > li {
     padding-bottom: 40px;
+    padding-top: 0;
   }
   .page-navigation section > .content-item > li > a {
     font-family: "Martel Sans";
@@ -623,9 +618,6 @@
     font-weight: bold;
     font-size: 70px;
     line-height: 100%;
-  }
-  .page-navigation section > .content-item > .content-item__clients {
-    display: block;
   }
   .page-navigation footer > div {
     display: flex;
@@ -752,7 +744,6 @@
 }
 .page-clients {
   background-color: #F0F0F0;
-  background-size: contain;
   background-repeat: no-repeat;
   background-attachment: fixed;
 }
@@ -784,18 +775,6 @@
   margin-top: 48px;
   margin-right: 35px;
 }
-.page-clients .content {
-  display: flex;
-  justify-content: space-between;
-}
-.page-clients .content__sidebar {
-  width: 294px;
-  position: sticky;
-  height: 100%;
-}
-.page-clients .content__sidebar > img {
-  float: right;
-}
 .page-clients .content__list-clients {
   width: 100%;
   color: #ADADAD;
@@ -806,22 +785,28 @@
 
 @media screen and (min-width: 280px) {
   .page-clients {
-    display: none;
-  }
-}
-@media screen and (min-width: 768px) {
-  .page-clients {
-    display: block;
     background-image: url(../images/Icon/cover-circle-white-tablet.png);
+    background-size: cover;
   }
   .page-clients .content {
     padding-top: 60px;
   }
-  .page-clients .content__sidebar {
-    top: 50%;
+  .page-clients .content__list-clients {
+    font-family: "Martel Sans";
+    font-style: normal;
+    font-weight: bold;
+    font-size: 55px;
+    line-height: 100%;
+    padding-left: 35px;
   }
-  .page-clients .content__sidebar > img {
-    margin-right: 37px;
+  .page-clients .content__list-clients > li {
+    height: auto;
+    margin-top: 10px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .page-clients .content {
+    padding-top: 60px;
   }
   .page-clients .content__list-clients {
     font-family: "Martel Sans";
@@ -831,19 +816,18 @@
     line-height: 100%;
   }
   .page-clients .content__list-clients > li {
-    height: 100px;
+    height: auto;
+    margin-top: 10px;
   }
 }
 @media screen and (min-width: 1280px) {
   .page-clients {
     background-image: url(../images/Icon/cover-circle-white.png);
     background-position: right;
+    background-size: contain;
   }
   .page-clients .content {
     padding-top: 110px;
-  }
-  .page-clients .content__sidebar > img {
-    margin-right: 45px;
   }
   .page-clients .content__list-clients {
     font-family: "Martel Sans";
@@ -851,9 +835,8 @@
     font-weight: bold;
     font-size: 150px;
     line-height: 100%;
-  }
-  .page-clients .content__list-clients > li {
-    height: auto;
+    margin-top: 0;
+    padding-left: 294px;
   }
 }
 @media screen and (min-width: 1600px) {
@@ -873,6 +856,8 @@
   overflow-wrap: break-word;
 }
 .page-agency main .text-presentation__title {
+  display: block;
+  height: 100%;
   color: #FFFFFF;
 }
 .page-agency main .text-presentation__content {
@@ -904,7 +889,7 @@
   }
   .page-agency header > nav .navbar__logo {
     margin-top: 48px;
-    margin-left: 32px;
+    margin-left: 35px;
   }
   .page-agency header > nav .navbar__logo--mobile {
     display: block;
@@ -916,7 +901,7 @@
   }
   .page-agency header > nav .navbar__items {
     margin-top: 48px;
-    margin-right: 32px;
+    margin-right: 35px;
   }
   .page-agency header > nav .navbar__items .navbar__links {
     display: flex;
@@ -943,7 +928,6 @@
     font-weight: bold;
     font-size: 52px;
     line-height: 100%;
-    height: 156px;
     max-width: 356px;
     margin-bottom: 45px;
   }
@@ -968,10 +952,6 @@
   }
 }
 @media screen and (min-width: 992px) {
-  .page-agency {
-    background-position: bottom right;
-    background-size: 60% 50%;
-  }
   .page-agency header {
     position: sticky;
     width: 100%;
@@ -986,7 +966,7 @@
   }
   .page-agency header > nav .navbar__logo {
     margin-top: 48px;
-    margin-left: 23px;
+    margin-left: 35px;
   }
   .page-agency header > nav .navbar__logo--mobile {
     display: none;
@@ -998,6 +978,7 @@
   }
   .page-agency header > nav .navbar__items {
     margin-top: 48px;
+    margin-right: 35px;
   }
   .page-agency header > nav .navbar__items .navbar__links {
     display: flex;
@@ -1016,18 +997,9 @@
     letter-spacing: 0.03em;
     margin-right: 86px;
   }
-  .page-agency header > nav .navbar__items .navbar__links__burger {
-    margin-right: 52px;
-  }
   .page-agency header > nav .navbar__items .navbar__links__burger__image {
     max-height: 24px;
     max-width: 24px;
-  }
-  .page-agency main .text-presentation {
-    margin-left: 51px;
-    margin-right: 56px;
-    margin-bottom: 75px;
-    margin-top: 93px;
   }
   .page-agency main .text-presentation__title {
     font-family: "Martel Sans";
@@ -1037,7 +1009,6 @@
     line-height: 100%;
     width: auto;
     max-width: 100%;
-    margin-bottom: 100px;
   }
 }
 @media screen and (min-width: 1280px) {
@@ -1051,18 +1022,23 @@
   }
   .page-agency main .back-home {
     display: block;
-    width: 15%;
+    width: 20%;
   }
   .page-agency main .back-home > a > img {
     float: right;
-    margin-top: 120px;
-    margin-right: 30px;
+    margin-top: 199px;
+    margin-right: 70px;
+  }
+  .page-agency main .text-presentation {
+    margin-right: 56px;
+    margin-top: 149px;
   }
   .page-agency main .text-presentation__title {
-    margin-bottom: 50px;
+    max-width: 1331px;
+    float: right;
   }
   .page-agency main .text-presentation__content {
-    width: 450px;
+    width: 702px;
     height: 100%;
     text-align: left;
   }
@@ -1071,32 +1047,8 @@
   .page-agency {
     background-image: url(../images/site-cover-photos/cover-agency-large.png);
   }
-  .page-agency main {
-    display: flex;
-  }
-  .page-agency main .back-home {
-    display: block;
-    width: 15%;
-  }
-  .page-agency main .back-home > a > img {
-    float: right;
-    margin-top: 120px;
-    margin-right: 70px;
-  }
-  .page-agency main .text-presentation__title {
-    margin-bottom: 50px;
-  }
-  .page-agency main .text-presentation__content {
-    width: 450px;
-    height: 100%;
-    text-align: left;
-  }
-  .page-agency main .back-home {
-    width: 577px;
-  }
   .page-agency main .back-home > a > img {
     margin-top: 299px;
-    margin-right: 70px;
   }
   .page-agency main .text-presentation {
     margin-right: 56px;
@@ -1108,21 +1060,20 @@
     font-weight: bold;
     font-size: 132px;
     line-height: 100%;
-    max-height: 285px;
-    width: 1331px;
-    margin-bottom: 150px;
-  }
-  .page-agency main .text-presentation__content {
-    width: 702px;
   }
 }
 .page-teams {
   background-color: #2A2A2A;
-  overflow: hidden;
+  overflow: auto;
+}
+.page-teams main {
+  height: 100vh;
 }
 .page-teams .team-carousel {
   display: block;
   transition: all 1s;
+  position: relative;
+  top: 0;
 }
 .page-teams .team-carousel__slide {
   height: 100vh;
@@ -1132,42 +1083,6 @@
   background-repeat: no-repeat;
   display: block;
   position: relative;
-}
-.page-teams .team-carousel__slide.benoit {
-  background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url(../images/photos-teams/pexels-photo-1181715.jpeg);
-}
-.page-teams .team-carousel__slide.maxime {
-  background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url(../images/photos-teams/maxime.jpg);
-}
-.page-teams .team-carousel__slide.thomas {
-  background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url(../images/photos-teams/thomas.jpg);
-}
-.page-teams .team-carousel__slide.madeleine {
-  background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url(../images/photos-teams/maddy.jpg);
-}
-.page-teams .team-carousel__slide.hugo {
-  background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url(../images/photos-teams/hugo.jpg);
-}
-.page-teams .team-carousel__slide.jessica {
-  background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url(../images/photos-teams/jessica.jpg);
-}
-.page-teams .team-carousel__slide.jonathan {
-  background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url(../images/photos-teams/jonathan.jpg);
-}
-.page-teams .team-carousel__slide.pascal {
-  background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url(../images/photos-teams/pascal.jpg);
-}
-.page-teams .team-carousel__slide.pierrick {
-  background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url(../images/photos-teams/pierrick.jpg);
-}
-.page-teams .team-carousel__slide.rudy {
-  background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url(../images/photos-teams/rudy.jpg);
-}
-.page-teams .team-carousel__slide.sandrine {
-  background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url(../images/photos-teams/sandrine.jpg);
-}
-.page-teams .team-carousel__slide.annelaure {
-  background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url(../images/photos-teams/pexels-photo-1181715.jpeg);
 }
 .page-teams .team-carousel__slide__content {
   display: block;
@@ -1186,7 +1101,7 @@
 }
 .page-teams .team-carousel__slide__arrow {
   position: absolute;
-  left: 45%;
+  left: 48%;
   display: flex;
   flex-direction: column;
   cursor: pointer;
@@ -1207,7 +1122,7 @@
   }
   .page-teams header > nav .navbar__logo {
     margin-top: 48px;
-    margin-left: 32px;
+    margin-left: 35px;
   }
   .page-teams header > nav .navbar__logo--mobile {
     display: block;
@@ -1219,7 +1134,7 @@
   }
   .page-teams header > nav .navbar__items {
     margin-top: 48px;
-    margin-right: 32px;
+    margin-right: 35px;
   }
   .page-teams header > nav .navbar__items .navbar__links {
     display: flex;
@@ -1230,6 +1145,51 @@
   .page-teams header > nav .navbar__items .navbar__links__burger__image {
     max-height: 24px;
     max-width: 24px;
+  }
+  .page-teams .team-carousel__slide.benoit {
+    background-image: url(../images/photos-teams-mobile/benoit.jpg);
+  }
+  .page-teams .team-carousel__slide.maxime {
+    background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url(../images/photos-teams-mobile/maxime.jpg);
+  }
+  .page-teams .team-carousel__slide.thomas {
+    background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url(../images/photos-teams-mobile/thomas.jpg);
+  }
+  .page-teams .team-carousel__slide.madeleine {
+    background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url(../images/photos-teams-mobile/maddy.jpg);
+  }
+  .page-teams .team-carousel__slide.hugo {
+    background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url(../images/photos-teams-mobile/hugo.jpg);
+  }
+  .page-teams .team-carousel__slide.jessica {
+    background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url(../images/photos-teams-mobile/jessica.jpg);
+  }
+  .page-teams .team-carousel__slide.pascal {
+    background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url(../images/photos-teams-mobile/pascal.jpg);
+  }
+  .page-teams .team-carousel__slide.rudy {
+    background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url(../images/photos-teams-mobile/rudy.jpg);
+  }
+  .page-teams .team-carousel__slide.sandrine {
+    background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url(../images/photos-teams-mobile/sandrine.jpg);
+  }
+  .page-teams .team-carousel__slide.annelaure {
+    background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url(../images/photos-teams-mobile/pexels-photo-1181715.jpeg);
+  }
+  .page-teams .team-carousel__slide.virabo {
+    background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url(../images/photos-teams-mobile/virabo.jpg);
+  }
+  .page-teams .team-carousel__slide.marc {
+    background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url(../images/photos-teams-mobile/marc.jpg);
+  }
+  .page-teams .team-carousel__slide.david {
+    background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url(../images/photos-teams-mobile/david.jpg);
+  }
+  .page-teams .team-carousel__slide.antoine {
+    background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url(../images/photos-teams-mobile/antoine.jpg);
+  }
+  .page-teams .team-carousel__slide.mohammed {
+    background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url(../images/photos-teams-mobile/mohammed.jpg);
   }
   .page-teams .team-carousel__slide__content {
     bottom: 110px;
@@ -1272,7 +1232,7 @@
   }
   .page-teams header > nav .navbar__logo {
     margin-top: 48px;
-    margin-left: 23px;
+    margin-left: 35px;
   }
   .page-teams header > nav .navbar__logo--mobile {
     display: none;
@@ -1284,6 +1244,7 @@
   }
   .page-teams header > nav .navbar__items {
     margin-top: 48px;
+    margin-right: 35px;
   }
   .page-teams header > nav .navbar__items .navbar__links {
     display: flex;
@@ -1301,9 +1262,6 @@
     line-height: 16.8px;
     letter-spacing: 0.03em;
     margin-right: 86px;
-  }
-  .page-teams header > nav .navbar__items .navbar__links__burger {
-    margin-right: 52px;
   }
   .page-teams header > nav .navbar__items .navbar__links__burger__image {
     max-height: 24px;
@@ -1341,6 +1299,51 @@
   }
 }
 @media screen and (min-width: 1280px) {
+  .page-teams .team-carousel__slide.benoit {
+    background-image: url(../images/photos-teams/benoit.jpg);
+  }
+  .page-teams .team-carousel__slide.maxime {
+    background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url(../images/photos-teams/maxime.jpg);
+  }
+  .page-teams .team-carousel__slide.thomas {
+    background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url(../images/photos-teams/thomas.jpg);
+  }
+  .page-teams .team-carousel__slide.madeleine {
+    background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url(../images/photos-teams/maddy.jpg);
+  }
+  .page-teams .team-carousel__slide.hugo {
+    background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url(../images/photos-teams/hugo.jpg);
+  }
+  .page-teams .team-carousel__slide.jessica {
+    background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url(../images/photos-teams/jessica.jpg);
+  }
+  .page-teams .team-carousel__slide.pascal {
+    background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url(../images/photos-teams/pascal.jpg);
+  }
+  .page-teams .team-carousel__slide.rudy {
+    background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url(../images/photos-teams/rudy.jpg);
+  }
+  .page-teams .team-carousel__slide.sandrine {
+    background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url(../images/photos-teams/sandrine.jpg);
+  }
+  .page-teams .team-carousel__slide.annelaure {
+    background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url(../images/photos-teams/pexels-photo-1181715.jpeg);
+  }
+  .page-teams .team-carousel__slide.virabo {
+    background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url(../images/photos-teams/virabo.jpg);
+  }
+  .page-teams .team-carousel__slide.marc {
+    background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url(../images/photos-teams/marc.jpg);
+  }
+  .page-teams .team-carousel__slide.david {
+    background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url(../images/photos-teams/david.jpg);
+  }
+  .page-teams .team-carousel__slide.antoine {
+    background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url(../images/photos-teams/antoine.jpg);
+  }
+  .page-teams .team-carousel__slide.mohammed {
+    background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url(../images/photos-teams/mohammed.jpg);
+  }
   .page-teams .team-carousel__slide__content {
     bottom: 110px;
     max-width: 927px;
