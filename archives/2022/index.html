@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <title>Accueil-Oxynum</title>
+  <meta name="description" content="page d'accueil du site internet Oxynum"/>
+  <meta name="viewport" content="width=device-width">
+  <!--styles-->
+  <link rel="stylesheet" href="styles/base/reset.css">
+  <link rel="stylesheet" href="public/css/style.css">
+  <!--fonts-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Martel+Sans:wght@200;300;400;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Martel+Sans:wght@200;300;400;600;700;800;900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+</head>
+
+<body class="page-home">
+  <header>
+    <nav class="navbar">
+      <div class="navbar__logo">
+        <a
+          href="index.html"
+          class="navbar__logo--mobile"
+        >
+          <img
+            src="images/logo-oxynum/Logo_Short_Light.svg"
+            alt="logo oxynum version mobile"
+          >
+        </a>
+        <a
+          href="index.html"
+          class="navbar__logo--desktop"
+        >
+          <img
+            src="images/logo-oxynum/Logo_Full_Light.svg"
+            alt="logo oxynum version desktop"
+          >
+        </a>
+      </div>
+      <div class="navbar__items">
+        <ul class="navbar__links">
+          <li class="navbar__links__contact">
+            <a href="mailto:team@oxynum.fr">contactez-nous</a>
+          </li>
+          <li class="navbar__links__team">
+            <a href="teams.html">notre equipe</a>
+          </li>
+          <li class="navbar__links__burger">
+            <a href="navigation.html" onclick="animateNavPage()">
+              <img
+                src="images/Icon/Menu-Burger.svg"
+                alt="icone menu burger pour ouvrir la page de navigation"
+                class="navbar__links__burger__image"
+              >
+            </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+  <main>
+    <section class="section-agency">
+      <div class="section-agency__text">
+        <h1 class="section-agency__text__title">Creative Agency:</h1>
+        <p class="section-agency__text__presentation">
+          Nous produisons des solutions pour répondre à vos enjeux stratégiques. Coding Base, Design System, Intelligence artificielle, Machine learning. SEO, Social Content Management, Mobile app, Web app, Digital Signage...
+        </p>
+      </div>
+      <div class="section-agency__image">
+        <picture>
+          <source srcset="images/site-cover-photos/home-mobile-cover.png" media="(max-width: 767px)">
+          <source srcset="images/site-cover-photos/cover-home-tablet.jpg" media="(max-width: 991px)">
+          <source srcset="images/site-cover-photos/cover-home.jpg" media="(min-width: 992px)">
+          <img alt="Image d'illustration pour la page d'accueil" id="image-cover">
+        </picture>
+      </div>
+    </section>
+    <section class="section-clients">
+      <figure class="section-clients__logo">
+        <img
+          id="imvitro"
+          src="images/logo-clients/ImVitro.png"
+          alt="logo ImVitro"
+          class="logo-client"
+        >
+        <img
+          id="accor"
+          src="images/logo-clients/Logo-Accor.png"
+          alt="logo Accor"
+          class="logo-client"
+        >
+        <img
+          id="novotel"
+          src="images/logo-clients/Logo-Novotel.png"
+          alt="logo Novotel"
+          class="logo-client"
+        >
+        <img
+          id="ibismusic"
+          src="images/logo-clients/Logo-Ibis-Music.png"
+          alt="logo Ibis Music"
+          class="logo-client"
+        >
+        <img
+          id="loreal"
+          src="images/logo-clients/Logo-L_OREAL.png"
+          alt="logo L'Oreal Paris"
+          class="logo-client"
+        >
+        <img
+          id="clubmed"
+          src="images/logo-clients/Clubmed-Logo.png"
+          alt="logo Club Med"
+          class="logo-client"
+        >
+        <img
+          id="peugeot"
+          src="images/logo-clients/Logo-Peugeot.png"
+          alt="logo Peugeot"
+          class="logo-client"
+        >
+        <img
+          id="maisondumonde"
+          src="images/logo-clients/Maison-du-monde-Logo.png"
+          alt="logo Maisons du monde"
+          class="logo-client"
+        >
+        <img
+          id="marionnaud"
+          src="images/logo-clients/Logo-Marionnaud.png"
+          alt="logo Marionnaud Paris"
+          class="logo-client"
+        >
+        <img
+          id="vitalliance"
+          src="images/logo-clients/Vitalliance-logo.png"
+          alt="logo Vitalliance"
+          class="logo-client"
+        >
+        <img
+          id="emmaus"
+          src="images/logo-clients/Logo-EMMAUS.png"
+          alt="logo Emmaus France"
+          class="logo-client"
+        >
+        <img
+          id="antonelle"
+          src="images/logo-clients/Antonelle-Logo.png"
+          alt="logo Antonelle Paris"
+          class="logo-client"
+        >
+      </figure>
+    </section>
+    <div class="overlay" onclick="overlayOff()">
+      <img class="overlay__image" src="">
+    </div>
+  </main>
+  <div class="background-video">
+    <video
+      autoplay
+      muted
+      loop
+      class="video"
+    >
+      Sorry, your browser doesn't support embedded videos.
+    </video>
+  </div>
+  <script src="scripts/index.js"></script>
+</body>
+</html>

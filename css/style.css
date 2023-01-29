@@ -1,0 +1,663 @@
+    body {
+        font-family: "Biennale", sans-serif;
+        background: url("../esn.svg") rgba(27, 29, 29, 1) fixed;
+        background-size: contain;
+        transform: translateY(150px);
+    }
+
+    .div {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        padding-top: 76px;
+        padding-right: 72px;
+        padding-bottom: 76px;
+        padding-left: 72px;
+    }
+
+    .div-2 {
+        display: flex;
+        flex-direction: row;
+        max-width: 220.5px;
+        justify-content: flex-start;
+        align-items: center;
+    }
+
+    .div-3 {
+        display: flex;
+        position: relative;
+        min-width: 20px;
+        min-height: 20px;
+        max-width: 55.5px;
+        width: 55.5px;
+    }
+
+    .image {
+        object-fit: contain;
+        object-position: center;
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        top: 0;
+        left: 0;
+    }
+
+    .image-sizer {
+        width: 100%;
+        padding-top: 50.45045045045045%;
+        pointer-events: none;
+        font-size: 0;
+    }
+
+    .div-4 {
+        max-width: 145px;
+        margin-left: 20px;
+        color: rgba(255, 255, 255, 1);
+        font-size: 30px;
+        letter-spacing: 0.1em;
+        text-align: left;
+        font-family: "Biennale", sans-serif;
+        font-weight: 700;
+    }
+
+    .div-5 {
+        display: flex;
+        flex-direction: column;
+        max-width: 100%;
+        align-self: stretch;
+        margin-top: 113px;
+    }
+
+    .div-6 {
+        display: flex;
+    }
+
+    @media (max-width: 999px) {
+        .div-6 {
+            flex-direction: column;
+            align-items: stretch;
+        }
+    }
+
+    .column {
+        display: flex;
+        flex-direction: column;
+        line-height: normal;
+        width: calc(61.43% - 10px);
+        margin-left: 0px;
+    }
+
+    @media (max-width: 999px) {
+        .column {
+            width: 100%;
+        }
+    }
+
+    .div-7 {
+        display: flex;
+        flex-direction: column;
+        max-width: 694.5px;
+        padding-top: 10px;
+        padding-right: 10px;
+        padding-bottom: 10px;
+        padding-left: 10px;
+    }
+
+    .div-8 {
+        display: flex;
+    }
+
+    @media (max-width: 999px) {
+        .div-8 {
+            flex-direction: column;
+            align-items: stretch;
+        }
+    }
+
+    .column-2 {
+        display: flex;
+        flex-direction: column;
+        line-height: normal;
+        width: calc(101.35% - 0px);
+        margin-left: 0px;
+    }
+
+    @media (max-width: 999px) {
+        .column-2 {
+            width: 100%;
+        }
+    }
+
+    .nous-recrutons-les-talents-du {
+        max-width: 1000px;
+        color: rgba(255, 255, 255, 1);
+        font-size: 93px;
+        line-height: 96px;
+        letter-spacing: -0.03em;
+        font-weight: 700;
+        text-align: left;
+        font-family: "Biennale", sans-serif;
+        font-weight: 700;
+    }
+
+    .column-3 {
+        display: flex;
+        flex-direction: column;
+        line-height: normal;
+        width: calc(48.47% - 10px);
+        margin-left: 20px;
+        align-items: flex-end;
+    }
+
+    @media (max-width: 999px) {
+        .column-3 {
+            width: 100%;
+        }
+    }
+
+    .div-9 {
+        display: flex;
+        flex-direction: column;
+        max-width: 548px;
+        justify-content: flex-start;
+        align-items: flex-start;
+        padding-top: 300px;
+        padding-right: 10px;
+        padding-bottom: 20px;
+        padding-left: 10px;
+    }
+
+    .en-tant-que-partenaire-de-votr {
+        max-width: 348px;
+        color: rgba(255, 255, 255, 1);
+        font-size: 22px;
+        line-height: 28px;
+        letter-spacing: 0.05em;
+        text-align: left;
+        font-family: "Roboto Serif", sans-serif;
+        font-weight: 100;
+    }
+
+    .rudy-thimothee-fondateur-oxyn {
+        margin-top: 80px;
+        color: rgba(255, 255, 255, 1);
+        font-size: 18px;
+        letter-spacing: 0;
+        text-align: left;
+        font-family: "Maven Pro", Helvetica, sans-serif;
+    }
+
+    .div-10 {
+        display: flex;
+        flex-direction: column;
+        max-width: 100%;
+        justify-content: flex-start;
+        align-self: stretch;
+        width: 1355.5px;
+        align-items: flex-start;
+        margin-top: 113px;
+        padding-bottom: 50px;
+    }
+
+    .div-11 {
+        display: flex;
+        flex-direction: column;
+        max-width: 100%;
+        align-self: stretch;
+        width: 1355.5px;
+        padding-top: 10px;
+        padding-right: 10px;
+        padding-bottom: 50px;
+        padding-left: 10px;
+    }
+
+    .div-12 {
+        display: flex;
+    }
+
+    @media (max-width: 999px) {
+        .div-12 {
+            flex-direction: column;
+            align-items: stretch;
+        }
+    }
+
+    .column-4 {
+        display: flex;
+        flex-direction: column;
+        line-height: normal;
+        width: calc(82.92% - 0px);
+        margin-left: 0px;
+    }
+
+    @media (max-width: 999px) {
+        .column-4 {
+            width: 100%;
+        }
+    }
+
+    h2.div-13 {
+        max-width: 1100px;
+        letter-spacing: -0.03em;
+        background: linear-gradient(90deg, #FF1E56 20.31%, #9C51A1 80.21%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        text-fill-color: transparent;
+        font-size: 158px;
+        text-align: left;
+        font-family: "Biennale", sans-serif;
+        font-weight: 700;
+        margin-bottom: 0;
+    }
+
+    .div-14 {
+        display: flex;
+        flex-direction: column;
+        max-width: 548px;
+        margin-top: 35px;
+        padding-top: 10px;
+        padding-right: 10px;
+        padding-bottom: 10px;
+        padding-left: 10px;
+    }
+
+    .div-15 {
+        display: flex;
+    }
+
+    @media (max-width: 999px) {
+        .div-15 {
+            flex-direction: column;
+            align-items: stretch;
+        }
+    }
+
+    .column-5 {
+        display: flex;
+        flex-direction: column;
+        line-height: normal;
+        width: calc(101.73% - 0px);
+        margin-left: 0px;
+    }
+
+    @media (max-width: 999px) {
+        .column-5 {
+            width: 100%;
+        }
+    }
+
+    .nous-sommes-constamment-en-que {
+        max-width: 528px;
+        color: rgba(255, 255, 255, 1);
+        font-size: 27px;
+        line-height: 35px;
+        letter-spacing: 0.05em;
+        text-align: left;
+        font-family: "Roboto Serif", sans-serif;
+        font-weight: 100;
+    }
+
+    .div-16 {
+        display: flex;
+        flex-direction: row;
+        max-width: 217.5px;
+        justify-content: flex-start;
+        align-items: center;
+        margin-top: 35px;
+    }
+
+    .div-17 {
+        max-width: 151px;
+        color: rgba(255, 255, 255, 1);
+        font-size: 28px;
+        letter-spacing: 0em;
+        text-align: left;
+        font-family: "Maven Pro", sans-serif;
+    }
+
+    .div-18 {
+        display: flex;
+        position: relative;
+        min-width: 20px;
+        min-height: 20px;
+        max-width: 46.5px;
+        width: 46.5px;
+        margin-left: 20px;
+    }
+
+    .image-sizer-2 {
+        width: 100%;
+        padding-top: 49.46236559139785%;
+        pointer-events: none;
+        font-size: 0;
+    }
+
+    .div-19 {
+        display: flex;
+        flex-direction: column;
+        max-width: 100%;
+        align-self: stretch;
+        width: 1355.5px;
+        margin-top: 113px;
+    }
+
+    .div-20 {
+        display: flex;
+    }
+
+    @media (max-width: 999px) {
+        .div-20 {
+            flex-direction: column;
+            align-items: stretch;
+        }
+    }
+
+    .column-6 {
+        display: flex;
+        flex-direction: column;
+        line-height: normal;
+        width: calc(44.88% - 10px);
+        margin-left: 0px;
+    }
+
+    @media (max-width: 999px) {
+        .column-6 {
+            width: 100%;
+        }
+    }
+
+    .div-21 {
+        display: flex;
+        flex-direction: column;
+        max-width: 528px;
+        justify-content: flex-start;
+        align-items: flex-start;
+        margin-bottom: 3em;
+    }
+
+    .div-22 {
+        max-width: 62px;
+        color: rgba(255, 255, 255, 1);
+        font-size: 28px;
+        letter-spacing: -0.03em;
+        text-align: left;
+        font-family: "Biennale", sans-serif;
+        font-weight: 700;
+    }
+
+    .avenue-victor-hugo-75116-p {
+        max-width: 528px;
+        margin-top: 20px;
+        color: rgba(255, 255, 255, 1);
+        font-size: 15px;
+        line-height: 20px;
+        letter-spacing: .05em;
+        text-align: left;
+        font-family: "Roboto Serif", sans-serif;
+        font-weight: 100;
+    }
+
+    .column-7 {
+        display: flex;
+        flex-direction: column;
+        line-height: normal;
+        width: calc(44.88%);
+    }
+
+    @media (max-width: 999px) {
+        .column-7 {
+            width: 100%;
+        }
+    }
+
+    .div-23 {
+        display: flex;
+        flex-direction: column;
+        max-width: 528px;
+        justify-content: flex-start;
+        align-items: flex-start;
+        margin-bottom: 3em;
+    }
+
+    .div-24 {
+        max-width: 231px;
+        color: rgba(255, 255, 255, 1);
+        font-size: 28px;
+        letter-spacing: -0.03em;
+        text-align: left;
+        font-family: "Biennale", sans-serif;
+        font-weight: 700;
+    }
+
+    .rue-de-colombes-92600-asnier {
+        max-width: 528px;
+        margin-top: 20px;
+        color: rgba(255, 255, 255, 1);
+        font-size: 15px;
+        line-height: 20px;
+        letter-spacing: 0.05em;
+        text-align: left;
+        font-family: "Roboto Serif", sans-serif;
+        font-weight: 100;
+    }
+
+    .div-25 {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        max-width: 1355.5px;
+        margin-top: 113px;
+        padding-top: 200px;
+        padding-bottom: 50px;
+    }
+
+    .div-26 {
+        display: flex;
+        width: 100%;
+    }
+
+    @media (max-width: 999px) {
+        .div-26 {
+            flex-direction: column;
+            align-items: stretch;
+        }
+    }
+
+    .column-8 {
+        display: flex;
+        flex-direction: column;
+        line-height: normal;
+        width: calc(33%);
+        margin-left: 0px;
+        align-items: flex-start;
+    }
+
+    @media (max-width: 999px) {
+        .column-8 {
+            width: 100%;
+        }
+    }
+
+    .div-27 {
+        display: flex;
+        flex-direction: column;
+        max-width: 399px;
+    }
+
+    .div-28 {
+        display: flex;
+    }
+
+    @media (max-width: 999px) {
+        .div-28 {
+            flex-direction: column;
+            align-items: stretch;
+        }
+    }
+
+    .column-9 {
+        display: flex;
+        flex-direction: column;
+        line-height: normal;
+        width: calc(102.31% - 0px);
+        margin-left: 0px;
+    }
+
+    @media (max-width: 999px) {
+        .column-9 {
+            width: 100%;
+        }
+    }
+
+    .div-29 {
+        max-width: 399px;
+        color: rgba(255, 255, 255, 1);
+        font-size: 28px;
+        letter-spacing: 0em;
+        display: flex;
+        text-align: left;
+        font-family: "Maven Pro", sans-serif;
+    }
+
+    .column-10 {
+        display: flex;
+        flex-direction: column;
+        line-height: normal;
+        width: calc(33%);
+        align-items: center;
+    }
+
+    @media (max-width: 999px) {
+        .column-10 {
+            width: 100%;
+        }
+    }
+
+    .div-30 {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: flex-start;
+        color: rgba(255, 255, 255, 1);
+        font-size: 18px;
+        letter-spacing: 0;
+        text-align: left;
+        font-family: "Maven Pro", sans-serif;
+    }
+
+    .column-11 {
+        display: flex;
+        flex-direction: column;
+        line-height: normal;
+        width: calc(33%);
+        align-items: flex-end;
+    }
+
+    @media (max-width: 999px) {
+        .column-11 {
+            width: 100%;
+        }
+    }
+
+    .div-31 {
+        display: flex;
+        flex-direction: row;
+        max-width: 277.5px;
+        justify-content: flex-start;
+        align-items: center;
+    }
+
+    .div-32 {
+        display: flex;
+        flex-direction: row;
+        max-width: 211px;
+        justify-content: flex-start;
+        align-items: flex-start;
+        color: rgba(255, 255, 255, 1);
+        font-size: 18px;
+        letter-spacing: 0;
+        text-align: left;
+        font-family: "Maven Pro", sans-serif;
+    }
+
+    .div-33 {
+        display: flex;
+        position: relative;
+        min-width: 20px;
+        min-height: 20px;
+        max-width: 25.5px;
+        width: 25.5px;
+        margin-left: 20px;
+    }
+
+    .image-sizer-3 {
+        width: 100%;
+        padding-top: 49.46236559139785%;
+        pointer-events: none;
+        font-size: 0;
+    }
+    .star {
+        position: fixed;
+        top: 10em;
+        right: 10em;
+        animation: zoom 1s alternate-reverse infinite; 
+    }
+    .left-star {
+        bottom: 7em;
+        top: auto;
+        left: 15em;
+        animation: dezoom 1.5s alternate infinite; 
+    }
+
+    a {
+        color:rgba(255, 255, 255, 1);
+        text-decoration: none;
+    }
+
+    .reveal{
+        position: relative;
+        opacity: 0;
+        transform: translateY(150px);
+      }
+      .reveal.active{
+        animation: ghost 3s ease-in-out .5s forwards;
+	    -webkit-animation: ghost 3s ease-in-out .5s forwards
+      }
+
+
+      .after.reveal.active{
+        animation: ghost 3s ease-in-out 2s forwards;
+	    -webkit-animation: ghost 3s ease-in-out 2s forwards
+      }
+
+@keyframes zoom {
+    0%{
+        transform: scale(.5);
+    }
+    100%{
+        transform: scale(1.5);
+    }
+}
+@keyframes dezoom {
+    100%{
+        transform: scale(.5);
+    }
+    0%{
+        transform: scale(2);
+    }
+}
+
+
+
+@keyframes ghost {
+	0% {
+		opacity: 0;
+        transform: translateY(150px);
+	}
+	100% {
+		opacity: 1;
+        transform: translateY(0);
+	}
+}

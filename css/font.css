@@ -1,0 +1,13 @@
+@font-face {
+    font-family: 'Biennale';
+    src: url('font/Biennale-Bold.eot');
+    src: url('font/Biennale-Bold.eot?#iefix') format('embedded-opentype'),
+        url('font/Biennale-Bold.woff2') format('woff2'),
+        url('font/Biennale-Bold.woff') format('woff'),
+        url('font/Biennale-Bold.ttf') format('truetype'),
+        url('font/Biennale-Bold.svg#Biennale-Bold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+

@@ -1,173 +1,164 @@
-<!DOCTYPE html>
-<html lang="fr">
+<!doctype html>
+<html class="no-js" lang="">
+
 <head>
   <meta charset="utf-8">
-  <title>Accueil-Oxynum</title>
-  <meta name="description" content="page d'accueil du site internet Oxynum"/>
-  <meta name="viewport" content="width=device-width">
-  <!--styles-->
-  <link rel="stylesheet" href="styles/base/reset.css">
-  <link rel="stylesheet" href="public/css/style.css">
-  <!--fonts-->
+  <title></title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta property="og:title" content="">
+  <meta property="og:type" content="">
+  <meta property="og:url" content="">
+  <meta property="og:image" content="">
+
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" href="/star.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="icon.png">
+
+  <link rel="stylesheet" href="css/normalize.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Martel+Sans:wght@200;300;400;600;700;800;900&display=swap" rel="stylesheet">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Martel+Sans:wght@200;300;400;600;700;800;900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Maven+Pro:wght@400;700&family=Roboto+Serif:opsz,wght@8..144,100;8..144,200;8..144,300;8..144,400&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/font.css">
+
+  <link rel="manifest" href="site.webmanifest">
+  <meta name="theme-color" content="#fafafa">
+  <script src="scripts/main.js"></script>
 </head>
 
-<body class="page-home">
-  <header>
-    <nav class="navbar">
-      <div class="navbar__logo">
-        <a
-          href="index.html"
-          class="navbar__logo--mobile"
-        >
-          <img
-            src="images/logo-oxynum/Logo_Short_Light.svg"
-            alt="logo oxynum version mobile"
-          >
-        </a>
-        <a
-          href="index.html"
-          class="navbar__logo--desktop"
-        >
-          <img
-            src="images/logo-oxynum/Logo_Full_Light.svg"
-            alt="logo oxynum version desktop"
-          >
-        </a>
-      </div>
-      <div class="navbar__items">
-        <ul class="navbar__links">
-          <li class="navbar__links__contact">
-            <a href="mailto:team@oxynum.fr">contactez-nous</a>
-          </li>
-          <li class="navbar__links__team">
-            <a href="teams.html">notre equipe</a>
-          </li>
-          <li class="navbar__links__burger">
-            <a href="navigation.html" onclick="animateNavPage()">
-              <img
-                src="images/Icon/Menu-Burger.svg"
-                alt="icone menu burger pour ouvrir la page de navigation"
-                class="navbar__links__burger__image"
-              >
-            </a>
-          </li>
-        </ul>
-      </div>
-    </nav>
-  </header>
-  <main>
-    <section class="section-agency">
-      <div class="section-agency__text">
-        <h1 class="section-agency__text__title">Creative Agency:</h1>
-        <p class="section-agency__text__presentation">
-          Nous produisons des solutions pour répondre à vos enjeux stratégiques. Coding Base, Design System, Intelligence artificielle, Machine learning. SEO, Social Content Management, Mobile app, Web app, Digital Signage...
-        </p>
-      </div>
-      <div class="section-agency__image">
+<body>
+
+  <div class="div">
+    <div class="div-2 reveal">
+      <div class="div-3">
         <picture>
-          <source srcset="images/site-cover-photos/home-mobile-cover.png" media="(max-width: 767px)">
-          <source srcset="images/site-cover-photos/cover-home-tablet.jpg" media="(max-width: 991px)">
-          <source srcset="images/site-cover-photos/cover-home.jpg" media="(min-width: 992px)">
-          <img alt="Image d'illustration pour la page d'accueil" id="image-cover">
+          <source
+            srcset="assets_TEMP_2bc912e2cb1043ad8b486b881e119bf4.webp?format=webp&width=100 100w, assets_TEMP_2bc912e2cb1043ad8b486b881e119bf4.webp?format=webp&width=200 200w, assets_TEMP_2bc912e2cb1043ad8b486b881e119bf4.webp?format=webp&width=400 400w, assets_TEMP_2bc912e2cb1043ad8b486b881e119bf4.webp?format=webp&width=800 800w, assets_TEMP_2bc912e2cb1043ad8b486b881e119bf4.webp?format=webp&width=1200 1200w, assets_TEMP_2bc912e2cb1043ad8b486b881e119bf4.webp?format=webp&width=1600 1600w, assets_TEMP_2bc912e2cb1043ad8b486b881e119bf4.webp?format=webp&width=2000 2000w, assets_TEMP_2bc912e2cb1043ad8b486b881e119bf4.webp"
+            type="image/webp" />
+          <img loading="lazy" src="assets_TEMP_2bc912e2cb1043ad8b486b881e119bf4.webp"
+            srcset="assets_TEMP_2bc912e2cb1043ad8b486b881e119bf4.webp?width=100 100w, assets_TEMP_2bc912e2cb1043ad8b486b881e119bf4.webp?width=200 200w, assets_TEMP_2bc912e2cb1043ad8b486b881e119bf4.webp?width=400 400w, assets_TEMP_2bc912e2cb1043ad8b486b881e119bf4.webp?width=800 800w, assets_TEMP_2bc912e2cb1043ad8b486b881e119bf4.webp?width=1200 1200w, assets_TEMP_2bc912e2cb1043ad8b486b881e119bf4.webp?width=1600 1600w, assets_TEMP_2bc912e2cb1043ad8b486b881e119bf4.webp?width=2000 2000w, assets_TEMP_2bc912e2cb1043ad8b486b881e119bf4.webp"
+            class="image" />
         </picture>
+        <div class="builder-image-sizer image-sizer"></div>
       </div>
-    </section>
-    <section class="section-clients">
-      <figure class="section-clients__logo">
-        <img
-          id="imvitro"
-          src="images/logo-clients/ImVitro.png"
-          alt="logo ImVitro"
-          class="logo-client"
-        >
-        <img
-          id="accor"
-          src="images/logo-clients/Logo-Accor.png"
-          alt="logo Accor"
-          class="logo-client"
-        >
-        <img
-          id="novotel"
-          src="images/logo-clients/Logo-Novotel.png"
-          alt="logo Novotel"
-          class="logo-client"
-        >
-        <img
-          id="ibismusic"
-          src="images/logo-clients/Logo-Ibis-Music.png"
-          alt="logo Ibis Music"
-          class="logo-client"
-        >
-        <img
-          id="loreal"
-          src="images/logo-clients/Logo-L_OREAL.png"
-          alt="logo L'Oreal Paris"
-          class="logo-client"
-        >
-        <img
-          id="clubmed"
-          src="images/logo-clients/Clubmed-Logo.png"
-          alt="logo Club Med"
-          class="logo-client"
-        >
-        <img
-          id="peugeot"
-          src="images/logo-clients/Logo-Peugeot.png"
-          alt="logo Peugeot"
-          class="logo-client"
-        >
-        <img
-          id="maisondumonde"
-          src="images/logo-clients/Maison-du-monde-Logo.png"
-          alt="logo Maisons du monde"
-          class="logo-client"
-        >
-        <img
-          id="marionnaud"
-          src="images/logo-clients/Logo-Marionnaud.png"
-          alt="logo Marionnaud Paris"
-          class="logo-client"
-        >
-        <img
-          id="vitalliance"
-          src="images/logo-clients/Vitalliance-logo.png"
-          alt="logo Vitalliance"
-          class="logo-client"
-        >
-        <img
-          id="emmaus"
-          src="images/logo-clients/Logo-EMMAUS.png"
-          alt="logo Emmaus France"
-          class="logo-client"
-        >
-        <img
-          id="antonelle"
-          src="images/logo-clients/Antonelle-Logo.png"
-          alt="logo Antonelle Paris"
-          class="logo-client"
-        >
-      </figure>
-    </section>
-    <div class="overlay" onclick="overlayOff()">
-      <img class="overlay__image" src="">
+      <div class="div-4">OXYNUM</div>
     </div>
-  </main>
-  <div class="background-video">
-    <video
-      autoplay
-      muted
-      loop
-      class="video"
-    >
-      Sorry, your browser doesn't support embedded videos.
-    </video>
+    <div class="div-5">
+      <div class="builder-columns div-6">
+        <div class="builder-column column reveal">
+          <div class="nous-recrutons-les-talents-du">
+            Nous recrutons les talents du numérique pour des marques
+            prestigieuses.
+          </div>
+        </div>
+        <div class="builder-column column-3 reveal after">
+          <div class="div-9">
+            <div class="en-tant-que-partenaire-de-votr">
+              <p>En tant que partenaire de votre marque, le plus important pour nous
+                est d’apporter un maximum de valeur grâce à notre expertise dans les
+                métiers de la tech. Nous recrutons les meilleurs talents du digital
+                et cela va bien au delà de la maîtrise technique.</p>
+              <p>La coopération, la
+                préservation de l’image de marque, l’entraide et la transmission des
+                connaissances sont au coeur de notre approche.</p>
+            </div>
+            <div class="rudy-thimothee-fondateur-oxyn">
+              <strong>Rudy THIMOTHEE</strong>,<br /><small>Capitaine chez oxynum</small>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="div-10">
+      <div class="div-11">
+        <div class="builder-columns div-12">
+          <div class="builder-column column-4">
+            <h2 class="div-13 reveal">Rejoignez-nous</h2>
+          </div>
+        </div>
+      </div>
+      <div class="div-14">
+        <div class="builder-columns div-15">
+          <div class="builder-column column-5">
+            <div class="nous-sommes-constamment-en-que reveal">
+              <p>Nous sommes constamment en quête de talents innovants et dynamiques.
+              </p>
+              <p>Si vous souhaitez vous joindre à notre équipe et relever de nouveaux
+                défis, n'hésitez pas à postuler.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="div-16">
+        <div class="div-17 reveal"><a href="mailto:teams@oxynum.fr">Postuler ici</a></div>
+        <div class="div-18 reveal">
+          <picture>
+            <source
+              srcset="84777c2add104877b641332264eab41f.png?format=webp&width=100 100w, 84777c2add104877b641332264eab41f.png?format=webp&width=200 200w, 84777c2add104877b641332264eab41f.png?format=webp&width=400 400w, 84777c2add104877b641332264eab41f.png?format=webp&width=800 800w, 84777c2add104877b641332264eab41f.png?format=webp&width=1200 1200w, 84777c2add104877b641332264eab41f.png?format=webp&width=1600 1600w, 84777c2add104877b641332264eab41f.png?format=webp&width=2000 2000w, 84777c2add104877b641332264eab41f.png"
+              type="image/webp" />
+            <img loading="lazy" src="84777c2add104877b641332264eab41f.png"
+              srcset="84777c2add104877b641332264eab41f.png?width=100 100w, 84777c2add104877b641332264eab41f.png?width=200 200w, 84777c2add104877b641332264eab41f.png?width=400 400w, 84777c2add104877b641332264eab41f.png?width=800 800w, 84777c2add104877b641332264eab41f.png?width=1200 1200w, 84777c2add104877b641332264eab41f.png?width=1600 1600w, 84777c2add104877b641332264eab41f.png?width=2000 2000w, 84777c2add104877b641332264eab41f.png"
+              class="image" />
+          </picture>
+          <div class="builder-image-sizer image-sizer-2"></div>
+        </div>
+      </div>
+    </div>
+    <div class="div-19 reveal">
+      <div class="builder-columns div-20">
+        <div class="builder-column column-6">
+          <div class="div-21">
+            <div class="div-22">Paris</div>
+            <div class="avenue-victor-hugo-75116-p">
+              111 avenue Victor Hugo<br />75116 Paris<br />+33.661027526<br />SIRET
+              74994729700018
+            </div>
+          </div>
+        </div>
+        <div class="builder-column column-7">
+          <div class="div-23">
+            <div class="div-24">Asnieres-sur-seine</div>
+            <div class="rue-de-colombes-92600-asnier">
+              3 rue de Colombes<br />92600 Asnières-sur-seine<br />team@oxynum.fr<br />
+              +33.661027526
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="div-25">
+      <div class="builder-columns div-26">
+        <div class="builder-column column-8">
+          <div class="div-30"><a href="http://oxynum.fr" target="_blank">Déclaration de confidentialité</a></div>
+        </div>
+        <div class="builder-column column-10">
+          <div class="div-30"><a href="http://oxynum.fr" target="_blank">Termes et conditions</a></div>
+        </div>
+        <div class="builder-column column-11">
+          <div class="div-30">
+            <div class="div-32"><a href="mailto:partners@oxynum.fr">Contactez-nous</a></div>
+            <div class="div-33">
+              <picture>
+                <source
+                  srcset="84777c2add104877b641332264eab41f.png?format=webp&width=100 100w, 84777c2add104877b641332264eab41f.png?format=webp&width=200 200w, 84777c2add104877b641332264eab41f.png?format=webp&width=400 400w, 84777c2add104877b641332264eab41f.png?format=webp&width=800 800w, 84777c2add104877b641332264eab41f.png?format=webp&width=1200 1200w, 84777c2add104877b641332264eab41f.png?format=webp&width=1600 1600w, 84777c2add104877b641332264eab41f.png?format=webp&width=2000 2000w, 84777c2add104877b641332264eab41f.png"
+                  type="image/webp" />
+                <img loading="lazy" src="84777c2add104877b641332264eab41f.png"
+                  srcset="84777c2add104877b641332264eab41f.png?width=100 100w, 84777c2add104877b641332264eab41f.png?width=200 200w, 84777c2add104877b641332264eab41f.png?width=400 400w, 84777c2add104877b641332264eab41f.png?width=800 800w, 84777c2add104877b641332264eab41f.png?width=1200 1200w, 84777c2add104877b641332264eab41f.png?width=1600 1600w, 84777c2add104877b641332264eab41f.png?width=2000 2000w, 84777c2add104877b641332264eab41f.png"
+                  class="image" />
+              </picture>
+              <div class="builder-image-sizer image-sizer-3"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
-  <script src="scripts/index.js"></script>
+  <img src="star.svg" alt="star" class="star">
+  <img src="star.svg" alt="star" class="star left-star">
 </body>
+
 </html>
