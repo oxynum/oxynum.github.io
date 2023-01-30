@@ -622,14 +622,14 @@ a {
     transform: translateY(150px);
   }
   .reveal.active{
-    animation: ghost 3s ease-in-out .5s forwards;
-    -webkit-animation: ghost 3s ease-in-out .5s forwards
+    animation: ghost 1.5s ease-in-out .5s forwards;
+    -webkit-animation: ghost 1.5s ease-in-out .5s forwards
   }
 
 
   .after.reveal.active{
-    animation: ghost 3s ease-in-out 2s forwards;
-    -webkit-animation: ghost 3s ease-in-out 2s forwards
+    animation: ghost 1.5s ease-in-out 2s forwards;
+    -webkit-animation: ghost 1.5s ease-in-out 2s forwards
   }
 
   @media (max-width: 999px) {
