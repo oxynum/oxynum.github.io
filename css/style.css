@@ -615,9 +615,7 @@ a {
     color:rgba(255, 255, 255, 1);
     text-decoration: none;
 }
-.smooth {
-    opacity: 0;
-}
+
 .smooth.active {
     animation: opacitor 1.5s ease-in-out;
 }
@@ -627,14 +625,14 @@ a {
     transform: translateY(150px);
   }
   .reveal.active{
-    animation: ghost 1.5s ease-in-out .5s forwards;
-    -webkit-animation: ghost 1.5s ease-in-out .5s forwards
+    animation: ghost 1.5s ease-in-out 0s forwards;
+    -webkit-animation: ghost 1.5s ease-in-out .0s forwards
   }
 
 
   .after.reveal.active{
-    animation: ghost 1.5s ease-in-out 2s forwards;
-    -webkit-animation: ghost 1.5s ease-in-out 2s forwards
+    animation: ghost 1.5s ease-in-out 0.5s forwards;
+    -webkit-animation: ghost 1.5s ease-in-out 0.5s forwards
   }
 
   @media (max-width: 999px) {
