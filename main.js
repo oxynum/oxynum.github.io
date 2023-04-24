@@ -2,7 +2,7 @@ import * as THREE from "https://cdn.skypack.dev/three@0.150.1";
 
 import {
     PointerLockControls
-} from 'https://www.oxynum.fr/PointerLockControls.js';
+} from '/PointerLockControls.js';
 
 
 
